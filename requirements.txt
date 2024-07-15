@@ -1,0 +1,4 @@
+laktory
+openai
+pillow
+pytesseract
