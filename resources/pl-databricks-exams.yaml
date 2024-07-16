@@ -1,0 +1,93 @@
+name: pl-databricks-exams
+
+orchestrator: DLT
+
+# --------------------------------------------------------------------------- #
+# DLT                                                                         #
+# --------------------------------------------------------------------------- #
+
+dlt:
+  resource_name: pl-databricks-exams
+  catalog: ${vars.env}
+  target: databricks
+  development: ${vars.is_dev}
+  configuration:
+    pipeline_name: pl-databricks-exams
+
+  clusters:
+    - name : default
+      node_type_id: Standard_DS3_v2
+      autoscale:
+        min_workers: 1
+        max_workers: 2
+
+  libraries:
+    - notebook:
+        path: /.laktory/dlt/dlt_laktory_pl.py
+
+  access_controls:
+    - group_name: account users
+      permission_level: CAN_VIEW
+    - group_name: role-engineers
+      permission_level: CAN_RUN
+
+#udfs:
+#  - module_name: stock_functions
+#    function_name: symbol_to_name
+
+# --------------------------------------------------------------------------- #
+# Nodes                                                                       #
+# --------------------------------------------------------------------------- #
+
+nodes:
+
+  # ------------------------------------------------------------------------- #
+  # Exams                                                                     #
+  # ------------------------------------------------------------------------- #
+
+  - name: brz_exam_questions
+    layer: BRONZE
+    source:
+      path: /Volumes/${vars.env}/sources/landing/events/udemy/databricks-exams/
+#      multiline: True
+    sink:
+      table_name: brz_exam_questions
+    transformer:
+      nodes:
+        - with_column:
+            name: _file
+            sql_expr: _metadata.file_path
+
+  - name: slv_exam_questions
+#    layer: SILVER
+    source:
+      node_name: brz_exam_questions
+    sink:
+      table_name: slv_exam_questions
+    drop_duplicates:
+      - question
+    transformer:
+      nodes:
+        - with_columns:
+          - name: question
+            sql_expr: question
+          - name: choice_a
+            sql_expr: choices.A
+          - name: choice_b
+            sql_expr: choices.B
+          - name: choice_c
+            sql_expr: choices.C
+          - name: choice_d
+            sql_expr: choices.D
+          - name: exam_type
+            sql_expr: exam_type
+          - name: exam_number
+            type: int
+            sql_expr: exam_number
+          - name: question_number
+            type: int
+            sql_expr: question_number
+        - func_name: drop
+          func_args:
+            - _file
+            - choices

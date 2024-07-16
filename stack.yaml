@@ -1,0 +1,36 @@
+name: databricks-teacher
+organization: okube
+description: Lakehouse - Databricks Teacher
+backend: pulumi
+pulumi:
+  config:
+    databricks:host: ${vars.DATABRICKS_HOST}
+    databricks:azure_client_id: ${vars.AZURE_CLIENT_ID}
+    databricks:azure_client_secret: ${vars.AZURE_CLIENT_SECRET}
+    databricks:azure_tenant_id: ${vars.AZURE_TENANT_ID}
+resources:
+#  databricks_notebooks: ${include.resources/notebooks.yaml}
+#  databricks_workspacefiles: ${include.resources/workspacefiles.yaml}
+#  databricks_sqlqueries: ${include.resources/sqlqueries.yaml}
+  pipelines:
+    pl-databricks-exams: ${include.resources/pl-databricks-exams.yaml}
+
+    # This is an alternate version of the same pipeline, but using
+    # a job as an orchestrator instead of DLT
+#    pl-stock-prices: ${include.resources/pl-stock-prices.yaml}
+
+#  databricks_jobs:
+#    job-stock-prices: ${include.resources/job-dlt-stock-prices.yaml}
+
+environments:
+  debug:
+    variables:
+      env: dev
+  dev:
+    variables:
+      env: dev
+      is_dev: true
+  prd:
+    variables:
+      env: prd
+      is_dev: false
