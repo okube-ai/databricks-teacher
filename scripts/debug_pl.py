@@ -50,5 +50,5 @@ pl.execute(spark=spark, write_sinks=False, udfs=udfs)
 # Display Results                                                             #
 # --------------------------------------------------------------------------- #
 
-df = pl.nodes_dict["slv_exam_questions"].output_df
+df = pl.nodes_dict["slv_exam_guides"].output_df
 df.laktory.display()
