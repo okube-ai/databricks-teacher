@@ -19,7 +19,7 @@ databricks_job:
 
 udfs:
   - module_name: custom_functions
-    function_name: read_as_chunk
+    function_name: binary_to_chunk
 
 # --------------------------------------------------------------------------- #
 # Nodes                                                                       #
@@ -118,7 +118,7 @@ nodes:
       - with_columns:
         - name: content
           type: null
-          expr: F.explode(read_as_chunk("content"))
+          expr: F.explode(binary_to_chunk("content"))
         - name: exam_type
           type: null
           sql_expr: regexp_extract(_file, '/([^/.]+).pdf$', 1)
@@ -164,7 +164,7 @@ nodes:
       - with_columns:
         - name: content
           type: null
-          expr: F.explode(read_as_chunk("content"))
+          expr: F.explode(binary_to_chunk("content"))
       - func_name: drop
         func_args:
           - _file
