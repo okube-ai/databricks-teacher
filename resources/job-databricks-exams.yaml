@@ -1,0 +1,18 @@
+name: job-databricks-exams
+tasks:
+  - task_key: pipeline
+    run_job_task:
+#      job_id: ${resources.pipeline-databricks-job-job-pl-databricks-exams.id}
+      job_id: 647710618002379
+#
+  - task_key: table-properties
+    notebook_task:
+      notebook_path: /.laktory/jobs/table_properties.py
+    depends_on:
+      - task_key: pipeline
+
+access_controls:
+  - group_name: account users
+    permission_level: CAN_VIEW
+  - group_name: role-engineers
+    permission_level: CAN_MANAGE_RUN
