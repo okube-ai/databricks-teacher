@@ -40,3 +40,30 @@ def binary_to_chunk(batch_iter: Iterator[pd.Series]) -> Iterator[pd.Series]:
 
     for x in batch_iter:
         yield x.apply(extract_and_split)
+
+
+@F.pandas_udf(T.ArrayType(T.FloatType()))
+def embed(contents: pd.Series) -> pd.Series:
+    import mlflow.deployments
+
+    deploy_client = mlflow.deployments.get_deploy_client("databricks")
+
+    def get_embeddings(batch):
+        response = deploy_client.predict(
+            endpoint="databricks-bge-large-en", inputs={"input": batch}
+        )
+        return [e["embedding"] for e in response.data]
+
+    # Splitting the contents into batches of 150 items each, since the embedding model takes at most 150 inputs per request.
+    max_batch_size = 150
+    batches = [
+        contents.iloc[i : i + max_batch_size]
+        for i in range(0, len(contents), max_batch_size)
+    ]
+
+    # Process each batch and collect the results
+    all_embeddings = []
+    for batch in batches:
+        all_embeddings += get_embeddings(batch.tolist())
+
+    return pd.Series(all_embeddings)

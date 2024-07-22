@@ -20,6 +20,8 @@ databricks_job:
 udfs:
   - module_name: custom_functions
     function_name: binary_to_chunk
+  - module_name: custom_functions
+    function_name: embed
 
 # --------------------------------------------------------------------------- #
 # Nodes                                                                       #
@@ -35,12 +37,14 @@ nodes:
     layer: BRONZE
     source:
       path: /Volumes/${vars.env}/sources/landing/events/udemy/databricks-exams/
+      as_stream: true
 #      multiline: True
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
       table_name: brz_exam_questions
-      mode: OVERWRITE
+      mode: APPEND
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_exam_questions
     transformer:
       nodes:
         - with_column:
@@ -51,11 +55,13 @@ nodes:
 #    layer: SILVER
     source:
       node_name: brz_exam_questions
+      as_stream: true
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
       table_name: slv_exam_questions
-      mode: OVERWRITE
+      mode: APPEND
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_exam_questions
     drop_duplicates:
       - question
     transformer:
@@ -93,11 +99,15 @@ nodes:
     source:
       path: /Volumes/${vars.env}/sources/landing/events/databricks/exam-guides/
       format: BINARYFILE
+      as_stream: true
+      read_options:
+        cloudFiles.schemaEvolutionMode: none
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
       table_name: brz_exam_guides
-      mode: OVERWRITE
+      mode: APPEND
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_exam_guides
     transformer:
       nodes:
         - with_column:
@@ -108,17 +118,22 @@ nodes:
 #    layer: SILVER
     source:
       node_name: brz_exam_guides
+      as_stream: true
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
       table_name: slv_exam_guides
-      mode: OVERWRITE
+      mode: APPEND
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_exam_guides
     transformer:
       nodes:
       - with_columns:
         - name: content
           type: null
           expr: F.explode(binary_to_chunk("content"))
+        - name: embedding
+          type: null
+          expr: embed("content")
         - name: exam_type
           type: null
           sql_expr: regexp_extract(_file, '/([^/.]+).pdf$', 1)
@@ -138,11 +153,15 @@ nodes:
     source:
       path: /Volumes/${vars.env}/sources/landing/events/databricks/documentation/
       format: BINARYFILE
+      as_stream: true
+      read_options:
+        cloudFiles.schemaEvolutionMode: none
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
       table_name: brz_documentation
-      mode: OVERWRITE
+      mode: APPEND
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_documentation
     transformer:
       nodes:
       - with_columns:
@@ -154,17 +173,22 @@ nodes:
 #    layer: SILVER
     source:
       node_name: brz_documentation
+      as_stream: true
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
       table_name: slv_documentation
-      mode: OVERWRITE
+      mode: APPEND
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_documentation
     transformer:
       nodes:
       - with_columns:
         - name: content
           type: null
           expr: F.explode(binary_to_chunk("content"))
+        - name: embedding
+          type: null
+          expr: embed("content")
       - func_name: drop
         func_args:
           - _file
