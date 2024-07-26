@@ -16,6 +16,10 @@ resources:
     pl-databricks-exams: ${include.resources/pl-databricks-exams.yaml}
   databricks_jobs:
     job-databricks-exams: ${include.resources/job-databricks-exams.yaml}
+  databricks_vectorsearchendpoints:
+    vse-databricks-exams:
+      name: databricks-exams
+  databricks_vectorsearchindexes: ${include.resources/vectorsearchindexes.yaml}
 
 environments:
   debug:

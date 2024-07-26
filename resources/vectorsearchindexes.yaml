@@ -1,0 +1,22 @@
+vsi-databricks-exam-guides:
+  name: dev.databricks.slv_exam_guides_vs_index
+  endpoint_name: ${resources.vse-databricks-exams.name}
+  primary_key: id
+  index_type: DELTA_SYNC
+  delta_sync_index_spec:
+    source_table: dev.databricks.slv_exam_guides
+    embedding_vector_columns:
+      - name: embedding
+        embedding_dimension: 1024
+    pipeline_type: TRIGGERED
+vsi-databricks-documentation:
+  name: dev.databricks.slv_documentation_vs_index
+  endpoint_name: ${resources.vse-databricks-exams.name}
+  primary_key: id
+  index_type: DELTA_SYNC
+  delta_sync_index_spec:
+    source_table: dev.databricks.slv_documentation
+    embedding_vector_columns:
+      - name: embedding
+        embedding_dimension: 1024
+    pipeline_type: TRIGGERED

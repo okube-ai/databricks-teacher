@@ -22,6 +22,8 @@ udfs:
     function_name: binary_to_chunk
   - module_name: custom_functions
     function_name: embed
+  - module_name: custom_functions
+    function_name: row_id
 
 # --------------------------------------------------------------------------- #
 # Nodes                                                                       #
@@ -131,6 +133,8 @@ nodes:
         - name: content
           type: null
           expr: F.explode(binary_to_chunk("content"))
+        - name: id
+          expr: row_id("path", "content")
         - name: embedding
           type: null
           expr: embed("content")
@@ -186,6 +190,8 @@ nodes:
         - name: content
           type: null
           expr: F.explode(binary_to_chunk("content"))
+        - name: id
+          expr: row_id("path", "content")
         - name: embedding
           type: null
           expr: embed("content")

@@ -1,5 +1,6 @@
 import io
 import re
+import hashlib
 import pyspark.sql.functions as F
 import pyspark.sql.types as T
 import pandas as pd
@@ -67,3 +68,14 @@ def embed(contents: pd.Series) -> pd.Series:
         all_embeddings += get_embeddings(batch.tolist())
 
     return pd.Series(all_embeddings)
+
+
+@F.pandas_udf(T.StringType())
+def row_id(file: pd.Series, content: pd.Series) -> pd.Series:
+
+    def short_hash(text, length=16):
+        text_bytes = text.encode('utf-8')
+        sha256_hash = hashlib.sha256(text_bytes).hexdigest()
+        return sha256_hash[:length]
+
+    return (file + "_" + content).apply(short_hash)
