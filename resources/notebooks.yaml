@@ -5,3 +5,11 @@ notebook-job-table_properties:
       permission_level: CAN_READ
     - group_name: role-engineers
       permission_level: CAN_RUN
+
+notebook-job-build_dcc:
+  source: ./notebooks/jobs/build_dcc.py
+  access_controls:
+    - group_name: account users
+      permission_level: CAN_READ
+    - group_name: role-engineers
+      permission_level: CAN_RUN
