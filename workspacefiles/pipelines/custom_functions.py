@@ -6,11 +6,25 @@ import pyspark.sql.types as T
 import pandas as pd
 from typing import Iterator
 
-from pdfminer.high_level import extract_text
-from transformers import AutoTokenizer
-from llama_index.core import Document
-from llama_index.core.utils import set_global_tokenizer
-from llama_index.core.langchain_helpers.text_splitter import SentenceSplitter
+# from pdfminer.high_level import extract_text
+# from transformers import AutoTokenizer
+# from llama_index.core import Document
+# from llama_index.core.utils import set_global_tokenizer
+# from llama_index.core.langchain_helpers.text_splitter import SentenceSplitter
+
+
+@F.pandas_udf(T.StringType())
+def binary_to_text(data: pd.Series) -> pd.Series:
+    from pdfminer.high_level import extract_text
+
+    def _binary_to_text(data):
+        text = extract_text(io.BytesIO(data))
+        text = re.sub(r" ?\.", ".", text)
+        text = re.sub("", ".", text)
+
+        return text
+
+    return data.apply(_binary_to_text)
 
 
 @F.pandas_udf(T.ArrayType(T.StringType()))
