@@ -63,18 +63,18 @@ nodes:
       table_name: brz_udemy_exam_questions
       mode: APPEND
       checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_udemy_exam_questions/checkpoint/
-    transformer:
-      nodes:
-        - with_column:
-            name: _file
-            sql_expr: _metadata.file_path
+#    transformer:
+#      nodes:
+#        - with_column:
+#            name: _file
+#            sql_expr: _metadata.file_path
 
   - name: slv_udemy_exam_questions
 #    layer: SILVER
     source:
       node_name: brz_udemy_exam_questions
       as_stream: true
-      filter: exam_type != 'analyst-associate' OR  CAST(exam_number AS int) > 4
+#      filter: exam_type != 'analyst-associate' OR  CAST(exam_number AS int) > 4
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
@@ -86,30 +86,49 @@ nodes:
     transformer:
       nodes:
         - with_columns:
-          - name: question
-            sql_expr: question
-          - name: choice_a
-            sql_expr: choices.A
-          - name: choice_b
-            sql_expr: choices.B
-          - name: choice_c
-            sql_expr: choices.C
-          - name: choice_d
-            sql_expr: choices.D
-          - name: choice_e
-            sql_expr: choices.E
           - name: exam_type
             sql_expr: exam_type
-          - name: exam_number
+          - name: exam_index
             type: int
             sql_expr: exam_number
-          - name: question_number
+          - name: question_index
             type: int
             sql_expr: question_number
-        - func_name: drop
-          func_args:
-            - _file
-            - choices
+          - name: section_index
+            type: int
+            sql_expr: section_index
+          - name: question
+            sql_expr: question
+          - name: A
+            sql_expr: A
+          - name: B
+            sql_expr: B
+          - name: C
+            sql_expr: C
+          - name: D
+            sql_expr: D
+          - name: E
+            sql_expr: E
+          - name: question_and_answers
+            expr: F.concat_ws("\n", "question", F.concat(F.lit("A) "), "A"), F.concat(F.lit("B) "), "B"), F.concat(F.lit("C) "), "C"), F.concat(F.lit("D) "), "D"), F.concat(F.lit("E) "), "E"))
+#        - func_name: drop
+#          func_args:
+#            - _file
+#            - choices
+#        - func_name: laktory.smart_join
+#          func_kwargs:
+#            other:
+#              node_name: slv_exam_guides
+#              selects:
+#                exam_type: exam_type
+#                content: exam_content
+#            "on":
+#              - exam_type
+#        - with_columns:
+#            - name: section_description
+#              expr: get_question_section("question", "exam_content")
+#            - name: section_index
+#              expr: get_question_section_index("section_description")
 
   # ------------------------------------------------------------------------- #
   # Exam Guides                                                               #
@@ -160,6 +179,8 @@ nodes:
         - name: exam_type
           type: null
           sql_expr: regexp_extract(_file, '/([^/.]+).pdf$', 1)
+        - name: summary
+          expr: summarize_guide("content")
       - func_name: drop
         func_args:
           - _file
