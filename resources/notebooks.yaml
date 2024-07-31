@@ -13,3 +13,11 @@ notebook-job-build_dcc:
       permission_level: CAN_READ
     - group_name: role-engineers
       permission_level: CAN_RUN
+
+notebook-job-ingest-exam-sections:
+  source: ./notebooks/jobs/ingest_exam_sections.py
+  access_controls:
+    - group_name: account users
+      permission_level: CAN_READ
+    - group_name: role-engineers
+      permission_level: CAN_RUN

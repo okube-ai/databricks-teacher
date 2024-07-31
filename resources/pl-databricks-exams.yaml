@@ -164,6 +164,68 @@ nodes:
         func_args:
           - _file
           - modificationTime
+
+
+  # ------------------------------------------------------------------------- #
+  # Exam Sections                                                             #
+  # ------------------------------------------------------------------------- #
+
+  - name: brz_exam_sections
+    layer: BRONZE
+    source:
+      path: /Volumes/${vars.env}/sources/landing/events/databricks/exam-sections/
+      format: JSON
+      as_stream: False
+    sink:
+      catalog_name: ${vars.env}
+      schema_name: databricks
+      table_name: brz_exam_sections
+      mode: OVERWRITE
+
+  - name: slv_exam_sections
+#    layer: SILVER
+    source:
+      node_name: brz_exam_sections
+      as_stream: false
+    sink:
+      catalog_name: ${vars.env}
+      schema_name: databricks
+      table_name: slv_exam_sections
+      mode: OVERWRITE
+    transformer:
+      nodes:
+      - with_columns:
+        - name: exam_type
+          type: null
+          sql_expr: exam_type
+        - name: index
+          type: int
+          sql_expr: index
+        - name: name
+          sql_expr: name
+        - name: weight
+          type: double
+          sql_expr: weight
+      - func_name: laktory.smart_join
+        func_kwargs:
+          other:
+            node_name: slv_exam_guides
+            selects:
+              exam_type: exam_type
+              content: exam_content
+          "on":
+            - exam_type
+
+      - with_columns:
+        - name: content
+          expr: get_section_content("exam_content", "name")
+
+      - func_name: drop
+        func_args:
+          - section
+          - exam_content
+
+
 #
 #  # ------------------------------------------------------------------------- #
 #  # Documentation                                                             #
