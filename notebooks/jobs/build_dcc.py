@@ -46,7 +46,9 @@ def get_retriever(persist_dir: str = None):
 
 # Test Retriever
 vectorstore = get_retriever()
-similar_documents = vectorstore.invoke("What are the main topics of Data Engineering Professional certification?")
+similar_documents = vectorstore.invoke(
+    "What are the main topics of Data Engineering Professional certification?"
+)
 print(f"Relevant documents: {similar_documents}")
 
 
@@ -82,11 +84,13 @@ chain = RetrievalQA.from_chain_type(
     llm=chat_model,
     chain_type="stuff",
     retriever=get_retriever(),
-    chain_type_kwargs={"prompt": prompt}
+    chain_type_kwargs={"prompt": prompt},
 )
 
 # Test Chain
-question = {"query": "What are the main topic of the Data Analyst Associate certifications?"}
+question = {
+    "query": "What are the main topic of the Data Analyst Associate certifications?"
+}
 answer = chain.invoke(question)
 print(answer)
 
@@ -96,7 +100,9 @@ mlflow.set_registry_uri("databricks-uc")
 model_name = "databricks_certification_coach"
 model_full_name = f"dev.databricks.{model_name}"
 
-question = {"query": "What are the main topic of the Data Analyst Associate certifications?"}
+question = {
+    "query": "What are the main topic of the Data Analyst Associate certifications?"
+}
 answer = chain.invoke(question)
 
 with mlflow.start_run(run_name=model_name):
@@ -113,5 +119,5 @@ with mlflow.start_run(run_name=model_name):
             f"databricks-vectorsearch",
         ],
         input_example=question,
-        signature=signature
+        signature=signature,
     )
