@@ -1,7 +1,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 0
-  section_index: 2
+  section_index: 3
   question: Which of the following commands can a data engineer use to compact small
     data files of a Delta table into larger ones ?
   A: PARTITION BY
@@ -12,7 +12,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 1
-  section_index: 2
+  section_index: 3
   question: A data engineer is trying to use Delta time travel to rollback a table
     to a previous version, but the data engineer received an error that the data files
     are no longer present. Which of the following commands was run on the table that
@@ -25,7 +25,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 2
-  section_index: 2
+  section_index: 3
   question: In Delta Lake tables, which of the following is the primary format for
     the data files?
   A: Delta
@@ -36,7 +36,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 3
-  section_index: null
+  section_index: 1
   question: Which of the following locations hosts the Databricks web application
     ?
   A: Data plane
@@ -47,7 +47,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 4
-  section_index: 2
+  section_index: 1
   question: In Databricks Repos, which of the following operations a data engineer
     can use to update the local version of a repo from its remote Git repository?
   A: Clone
@@ -58,7 +58,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 5
-  section_index: null
+  section_index: 1
   question: According to the Databricks Lakehouse architecture, which of the following
     is located in the customer's cloud account?
   A: Databricks web application
@@ -69,7 +69,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 6
-  section_index: 2
+  section_index: 1
   question: Which of the following best describes Databricks Lakehouse?
   A: Single, flexible, high-performance system that supports data, analytics, and
     machine learning workloads.
@@ -84,7 +84,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 7
-  section_index: 2
+  section_index: 1
   question: If the default notebook language is SQL, which of the following options
     a data engineer can use to run Python code in this SQL Notebook?
   A: They need first to import the python module in a cell
@@ -98,7 +98,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 8
-  section_index: 2
+  section_index: 1
   question: Which of the following tasks is not supported by Databricks Repos, and
     must be performed in your Git provider?
   A: Clone, push to, or pull from a remote Git repository.
@@ -109,7 +109,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 9
-  section_index: 2
+  section_index: 3
   question: Which of the following statements is Not true about Delta Lake ?
   A: Delta Lake provides ACID transaction guarantees
   B: Delta Lake provides scalable data and metadata handling
@@ -119,7 +119,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 10
-  section_index: 2
+  section_index: 3
   question: How long is the default retention period of the VACUUM command ?
   A: 0 days
   B: 7 days
@@ -156,7 +156,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 13
-  section_index: 1
+  section_index: 2
   question: "A data engineer has developed a code block to completely reprocess data\
     \ based on the following if-condition in Python: if process_mode \u201Cit uial\
     \ cat is_table_exist: This if-condition is returning an invalid syntax error.\
@@ -181,7 +181,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 15
-  section_index: 2
+  section_index: 3
   question: Which of the following commands can a data engineer use to create a new
     table along with a comment?
   A: "CREATE TABLE\nCOMMENT \u201CTria 2 VLAbh Sonhativg 2_transactions"
@@ -196,7 +196,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 16
-  section_index: 2
+  section_index: 3
   question: A junior data engineer usually uses Li!SLRI IN TQ command to write data
     into a Delta table. A senior data engineer suggested using another command that
     avoids writing of duplicate records. Which of the following commands is the one
@@ -209,7 +209,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 17
-  section_index: 2
+  section_index: 3
   question: A data engineer is designing a Delta Live Tables pipeline. The source
     system generates files containing changes captured in the source data. Each change
     event has metadata indicating whether the specified record was inserted, updated,
@@ -225,7 +225,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 18
-  section_index: 2
+  section_index: 1
   question: In PySpark, which of the following commands can you use to query the Delta
     table employees created in
   A: pyspark.sql.read(SELECT * FROM employees)
@@ -234,7 +234,7 @@
   D: spark.table("employees")
   E: Spark SQL tables can not be accessed from PySpark
 - exam_type: engineer-associate
-  exam_number: 1
+  exam_number: 2
   question_number: 19
   section_index: 2
   question: Which of the following code blocks can a data engineer use to create a
@@ -263,7 +263,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 20
-  section_index: 2
+  section_index: 3
   question: When dropping a Delta table, which of the following explains why only
     the table's metadata will be deleted, while the data files will be kept in the
     storage ?
@@ -288,8 +288,8 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 22
-  section_index: null
-  question: 'Given the following command: CRLATL DATABASE If NOL LXISIS ae db ; In
+  section_index: 3
+  question: 'Given the following command: CREATE DATABASE If NOT EXISTS ae db ; In
     which of the following locations will the hr_db database be located?'
   A: dbfs:/user/hive/warehouse
   B: dbfs:/user/hive/db_hr
@@ -299,7 +299,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 23
-  section_index: null
+  section_index: 2
   question: Given the following table faculties, fill in the below blank to get the
     students enrolled in less than 3 courses from the array column students
   A: 'SELECT
@@ -364,7 +364,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 25
-  section_index: 2
+  section_index: 3
   question: Which of the following is used by Auto Loader to load data incrementally?
   A: Multi-hop architecture
   B: Spark Structured Streaming
@@ -387,7 +387,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 28
-  section_index: 2
+  section_index: 3
   question: 'A data engineer has defined the following data quality constraint in
     a Delta Live Tables pipeline: fia 1S NOl NULL: Fill in the above blank so records
     violating this constraint will be added to the target table, and reported in metrics'
@@ -400,7 +400,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 29
-  section_index: 2
+  section_index: 1
   question: Which of the following will utilize Gold tables as their source?
   A: Silver tables
   B: Auto loader
@@ -410,7 +410,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 30
-  section_index: 2
+  section_index: 3
   question: Which of the following code blocks can a data engineer use to query the
     existing streaming table events ?
   A: spark.readStream('events')
@@ -421,7 +421,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 31
-  section_index: 2
+  section_index: 1
   question: In multi-hop architecture, which of the following statements best describes
     the Bronze layer ?
   A: it maintains data that powers analytics, machine learning, and production applications
@@ -432,7 +432,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 33
-  section_index: 2
+  section_index: 3
   question: 'A data engineer has the following query in a Delta Live Tables pipeline:
     CREATE LIVE TABLE aqgregated_sales AS SELECT store_id, sum(total) FROM cleaned_sales
     GROUP BY store_id The pipeline is failing to start due to an error in this query
@@ -451,9 +451,9 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 34
-  section_index: 2
+  section_index: 3
   question: 'A data engineer has defined the following data quality constraint in
-    a Delta Live Tables pipeline: fia 1S NOl NULL: Fill in the above blank so records
+    a Delta Live Tables pipeline: fia 1S NOT NULL: Fill in the above blank so records
     violating this constraint will be dropped, and reported in metrics'
   A: ON VIOLATION DROP ROW
   B: ON VIOLATION FAIL UPDATE
@@ -464,7 +464,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 35
-  section_index: null
+  section_index: 1
   question: Which of the following compute resources is available in Databricks SQL
     ?
   A: Single-node clusters
@@ -475,7 +475,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 36
-  section_index: 2
+  section_index: 1
   question: Which of the following is the benefit of using the Auto Stop feature of
     Databricks SQL warehouses ?
   A: Improves the performance of the warehouse by automatically stopping ideal services
@@ -487,7 +487,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 37
-  section_index: 3
+  section_index: 4
   question: Which of the following alert destinations is Not supported in Databricks
     SQL ?
   A: Slack
@@ -498,7 +498,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 38
-  section_index: 2
+  section_index: 4
   question: A data engineering team has a long-running multi-tasks Job. The team members
     need to be notified when the run of this job completes. Which of the following
     approaches can be used to send emails to the team members when the job completes
@@ -511,7 +511,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 39
-  section_index: 2
+  section_index: 1
   question: A data engineer wants to increase the cluster size of an existing Databricks
     SQL warehouse. Which of the following is the benefit of increasing the cluster
     size of Databricks SQL warehouses ?
@@ -525,7 +525,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 41
-  section_index: 2
+  section_index: 4
   question: The data engineer team has a DLT pipeline that updates all the tables
     at defined intervals until manually stopped. The compute resources terminate when
     the pipeline is stopped. Which of the following best describes the execution modes
@@ -538,7 +538,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 42
-  section_index: 2
+  section_index: 5
   question: Which part of the Databricks Platform can a data engineer use to grant
     permissions on tables to users ?
   A: Data Studio
@@ -549,7 +549,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 43
-  section_index: 2
+  section_index: 5
   question: Which of the following commands can a data engineer use to grant full
     permissions to the HR team on the table employees?
   A: GRANT FULL PRIVILEGES ON TABLE employees TO hr_team
@@ -560,7 +560,7 @@
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 44
-  section_index: 2
+  section_index: 5
   question: 'A data engineer uses the following SQL query: ''ODIEY ON TAZLL emo loyees
     [OQ br team''. Which of the following describes the ability given by the MODIFY
     privilege?'
