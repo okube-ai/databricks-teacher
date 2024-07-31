@@ -17,11 +17,11 @@
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to view the metrics and Spark UI of an existing cluster ?
-  A: "\u201CCan Attach To\u201D privilege on the cluster"
-  B: "\u201CCan Restart\u201D privilege on the cluster"
-  C: "\u201CCan Manage\u201D privilege on the cluster"
-  D: "Cluster creation allowed + \u201CCan Attach To\u201D privileges on the cluster"
-  E: "Cluster creation allowed + \u201CCan Restart\u201D privileges on the cluster"
+  A: ""Can Attach To" privilege on the cluster"
+  B: ""Can Restart" privilege on the cluster"
+  C: ""Can Manage" privilege on the cluster"
+  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
+  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
 - exam_type: engineer-professional
   exam_number: 1
   question_number: 3
@@ -52,11 +52,11 @@
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to start and terminate an existing cluster ?
-  A: "\u201CCan Attach To\u201D privilege on the cluster"
-  B: "\u201CCan Restart\u201D privilege on the cluster"
-  C: "\u201CCan Manage\u201D privilege on the cluster"
-  D: "Cluster creation allowed + \u201CCan Attach To\u201D privileges on the cluster"
-  E: "Cluster creation allowed + \u201CCan Restart\u201D privileges on the cluster"
+  A: ""Can Attach To" privilege on the cluster"
+  B: ""Can Restart" privilege on the cluster"
+  C: ""Can Manage" privilege on the cluster"
+  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
+  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
 - exam_type: engineer-professional
   exam_number: 1
   question_number: 6
@@ -78,10 +78,10 @@
   section_index: 2
   question: Which of the following describes the minimal permissions a data engineer
     needs to edit the configurations of an existing cluster?
-  A: "\u201CCan Restart\u201D privilege on the cluster"
-  B: "\u201CCan Manage\u201D privilege on the cluster"
-  C: "Cluster creation allowed + \u201CCan Restart\u201D privileges on the cluster"
-  D: "Cluster creation allowed + \u201CCan Manage\u201D privileges on the cluster"
+  A: ""Can Restart" privilege on the cluster"
+  B: ""Can Manage" privilege on the cluster"
+  C: "Cluster creation allowed + "Can Restart" privileges on the cluster"
+  D: "Cluster creation allowed + "Can Manage" privileges on the cluster"
   E: Only administrators can edit the configurations on existing clusters
 - exam_type: engineer-professional
   exam_number: 1
@@ -105,7 +105,7 @@
   exam_number: 1
   question_number: 9
   section_index: null
-  question: "Given a Delta table \u2018products\u2019 with the following schema: name\
+  question: "Given a Delta table \u2018products' with the following schema: name\
     \ STRING, category STRING, expiration_date DATE, price FLOAT When executing the\
     \ below query: SELECT * FROM products WHERE price > 30.5 Which of the following\
     \ will be leveraged by the query optimizer to identify the data files to load?"
@@ -133,10 +133,10 @@
   exam_number: 1
   question_number: 11
   section_index: 1
-  question: "The data engineering team has a table \u2018orders_backup\u2019 that\
-    \ was created using Delta Lake\u2019s SHALLOW CLONE functionality from the table\
-    \ \u2018orders\u2019. Recently, the team started getting an error when querying\
-    \ the \u2018orders_backup\u2019 table indicating that some data files are no longer\
+  question: "The data engineering team has a table \u2018orders_backup' that\
+    \ was created using Delta Lake's SHALLOW CLONE functionality from the table\
+    \ \u2018orders'. Recently, the team started getting an error when querying\
+    \ the \u2018orders_backup' table indicating that some data files are no longer\
     \ present. Which of the following correctly explains this error?"
   A: The VACUUM command was run on the orders table
   B: The VACUUM command was run on the orders_backup table
@@ -147,7 +147,7 @@
   exam_number: 1
   question_number: 12
   section_index: 1
-  question: "A data engineer has a Delta Lake table named \u2018orders_archive\u2019\
+  question: "A data engineer has a Delta Lake table named \u2018orders_archive'\
     \ created using the following command: CREATE TABLE orders_archive DEEP CLONE\
     \ orders. They want to sync up the new changes in the orders table to the clone.\
     \ Which of the following commands can be run to achieve this task?"
@@ -218,7 +218,7 @@
   question_number: 18
   section_index: 1
   question: "A data engineer wants to calculate predictions using a MLFlow model logged\
-    \ in a given \u201Cmodel_url\u201D. They want to register the model as a Spark\
+    \ in a given "model_url". They want to register the model as a Spark\
     \ UDF in order to apply it to a test dataset. Which code block allows the data\
     \ engineer to register the MLFlow model as a Spark UDF ?"
   A: predict_udf = mliflow.pyfunc.spark_udf(spark, 'model_url')
@@ -256,7 +256,7 @@
   C: Optimized Writes and Auto Compaction automatically generate smaller data files
     to reduce the duration of future MERGE operations.
   D: Auto compaction supports Auto Z-Ordering which is re expensive t
-  E: "The team needs to look at the table\u2019s _auto_optimize directory, where all\
+  E: "The team needs to look at the table's _auto_optimize directory, where all\
     \ new compacted files are written."
 - exam_type: engineer-professional
   exam_number: 1
@@ -412,7 +412,7 @@
   exam_number: 1
   question_number: 31
   section_index: 1
-  question: "Given the following query on the Delta table \u2018customers\u2019 on\
+  question: "Given the following query on the Delta table \u2018customers' on\
     \ which Change Data Feed is enabled: spark.readStream.option(...).option(...).table('customers').filter(col...).writeStream.option(...).trigger(...).start().\
     \ Which statement describes the results of this query each time it is executed?"
   A: Newly updated records will be merged into the target table, modifying previous
@@ -429,7 +429,7 @@
   section_index: 1
   question: "Given the following query on the Delta table customers on which Change\
     \ Data Feed is enabled: spark. read -option( ree -option( = stable ( cuitac -filter(col(\
-    \ _ ewrite -node(\u201Cove -table( su: Which statement describes the results of\
+    \ _ ewrite -node("ove -table( su: Which statement describes the results of\
     \ this query each time itis executed ?"
   A: Newly updated records will be merged into the target table, modifying previous
     entries with the same primary keys.
@@ -450,7 +450,7 @@
     to the junior data engineer's suggestion is correct?
   A: CDF can not be enabled on existing tables. It can only be enabled on newly created
     tables.
-  B: "Table\u2019s data changes captured by CDF can only be read in streaming mode"
+  B: "Table's data changes captured by CDF can only be read in streaming mode"
   C: CDF is useful when only a small fraction of records are updated in each batch
   D: CDF is useful when the table is a Slowly Changing Dimension (SCD) of Type 2
   E: All the above are correct responses to the data engineer's suggestion
@@ -536,9 +536,9 @@
   exam_number: 1
   question_number: 40
   section_index: 2
-  question: "The data engineering team has a large Delta table named \u2018users\u2019\
+  question: "The data engineering team has a large Delta table named \u2018users'\
     \ A recent query on the table returned some entries with negative values in the\
-    \ \u2018age\u2019 column. To avoid this issue and enforce data quality, a junior\
+    \ \u2018age' column. To avoid this issue and enforce data quality, a junior\
     \ data engineer decided to add a CHECK constraint to the table with the following\
     \ command: ALTER TABLE visers ADD COMSTRALINT valid age CHLCK tage\xBB 02; However,\
     \ the command fails when executed. Which statement explains the cause of this\
@@ -599,8 +599,8 @@
     via Databricks Job UI, but it keeps failing. Which of the following explains the
     cause of this failure?
   A: "The 'Owner' privilege is assigned at job creation to the creator and cannot\
-    \ be changed. The job must be re-created using the 'finance' group\u2019s credentials."
-  B: "Databricks Jobs UI doesn\u2019t support changing the owners of jobs. Databricks\
+    \ be changed. The job must be re-created using the 'finance' group's credentials."
+  B: "Databricks Jobs UI doesn't support changing the owners of jobs. Databricks\
     \ REST API needs to be used instead."
   C: Having the 'CAN MANAGE' permission is not enough to grant 'Owner' privileges
     to a group. The data engineer must be the current owner of the job.
@@ -631,7 +631,7 @@
   exam_number: 1
   question_number: 46
   section_index: 1
-  question: "The data engineering team has the following query for processing customers\u2019\
+  question: "The data engineering team has the following query for processing customers'\
     \ requests to be forgotten: DELETE FROM customers WHERE customer_id IN (SELECT\
     \ customer_id FROM delete_requests) Which statement describes the results of executing\
     \ this query ?"
@@ -651,7 +651,7 @@
   exam_number: 1
   question_number: 48
   section_index: 2
-  question: "The data engineering team has a secret scope named \u2018DataQps-Prod\u2019\
+  question: "The data engineering team has a secret scope named \u2018DataQps-Prod'\
     \ that contains all secrets needed by DataOps engineers in a production workspace.\
     \ Which of the following is the minimum permission required for the DataOps engineers\
     \ to use the secrets in this scope?"
@@ -675,7 +675,7 @@
   question_number: 50
   section_index: null
   question: "In Spark UI, which of the following is Not part of the metrics displayed\
-    \ in a stage\u2019s details page ?"
+    \ in a stage's details page ?"
   A: Duration
   B: Spill (Memory)
   C: Spill (Disk)
@@ -703,7 +703,7 @@
   question_number: 52
   section_index: null
   question: "A data engineer is using Databricks REST API to send a GET request to\
-    \ the endpoint 'api/2.1/jobs/runs/get' to retrieve the run\u2019s metadata of\
+    \ the endpoint 'api/2.1/jobs/runs/get' to retrieve the run's metadata of\
     \ a multi-task job using its run_id. Which statement correctly describes the response\
     \ structure of this API call?"
   A: Each task of this job run will have a unique task_id
@@ -715,8 +715,8 @@
   exam_number: 1
   question_number: 53
   section_index: null
-  question: "A data engineer has noticed the comment \u2018# Databricks notebook source\u2019\
-    \ on the first line of each Databricks Python file\u2019s source code pushed to\
+  question: "A data engineer has noticed the comment \u2018# Databricks notebook source'\
+    \ on the first line of each Databricks Python file's source code pushed to\
     \ Github. Which of the following explain the purpose of this comment ?"
   A: This comment makes it easier for humans to understand the source of the generated
     code from Databricks
@@ -742,7 +742,7 @@
   question_number: 55
   section_index: null
   question: "A data engineer wants to install a Python wheel scoped to the current\
-    \ notebook\u2019s session, so only the current notebook and any jobs associated\
+    \ notebook's session, so only the current notebook and any jobs associated\
     \ with this notebook have access to that library. Which of the following commands\
     \ can the data engineer use to complete this task?"
   A: '%fs install my_package.whl'
@@ -788,15 +788,15 @@
   section_index: 2
   question: Which of the following statements correctly describes End-to-End Testing
     ?
-  A: "It\u2019s an approach to simulate a user experience to ensure that the application\
+  A: "It's an approach to simulate a user experience to ensure that the application\
     \ can run properly under real-world scenarios"
-  B: "it\u2019s an approach to test the interaction between subsystems of an application\
+  B: "it's an approach to test the interaction between subsystems of an application\
     \ to ensure that modules work properly as a group."
-  C: "it\u2019s an approach to test individual units of code to determine whether\
+  C: "it's an approach to test individual units of code to determine whether\
     \ they still work as expected if new changes are made to them in the future"
-  D: "it\u2019s an approach to verify if each feature of the application works as\
+  D: "it's an approach to verify if each feature of the application works as\
     \ per the business requirements"
-  E: "it\u2019s an approach to measure the reliability, speed, scalability, and responsiveness\
+  E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
     \ of an application"
 - exam_type: engineer-professional
   exam_number: 1

@@ -4,22 +4,22 @@
   section_index: 1
   question: Which of the following describes the minimal permissions a data engineer
     needs to attach a notebook to an existing cluster?
-  A: "\u201CCan Attach To\u201D privilege on the cluster"
-  B: "\u201CCan Restart\u201D privilege on the cluster"
-  C: "\u201CCan Manage\u201D privilege on the cluster"
-  D: "Cluster creation allowed + \u201CCan Attach To\u201D privileges on the cluster"
-  E: "Cluster creation allowed + \u201CCan Restart\u201D privileges on the cluster"
+  A: ""Can Attach To" privilege on the cluster"
+  B: ""Can Restart" privilege on the cluster"
+  C: ""Can Manage" privilege on the cluster"
+  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
+  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 1
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to start an existing cluster, and attach a notebook to it?
-  A: "\u201CCan Attach To\u201D privilege on the cluster"
-  B: "\u201CCan Restart\u201D privilege on the cluster"
-  C: "\u201CCan Manage\u201D privilege on the cluster"
-  D: "Cluster creation allowed + \u201CCan Attach To\u201D privileges on the cluster"
-  E: "Cluster creation allowed + \u201CCan Restart\u201D privileges on the cluster"
+  A: ""Can Attach To" privilege on the cluster"
+  B: ""Can Restart" privilege on the cluster"
+  C: ""Can Manage" privilege on the cluster"
+  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
+  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 2
@@ -62,10 +62,10 @@
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to modify permissions of an existing cluster ?
-  A: "\u201CCan Restart\u201D privilege on the cluster"
-  B: "\u201CCan Manage\u201D privilege on the cluster"
-  C: "Cluster creation allowed + \u201CCan Restart\u201D privileges on the cluster"
-  D: "Cluster creation allowed + \u201CCan Manage\u201D privileges on the cluster"
+  A: ""Can Restart" privilege on the cluster"
+  B: ""Can Manage" privilege on the cluster"
+  C: "Cluster creation allowed + "Can Restart" privileges on the cluster"
+  D: "Cluster creation allowed + "Can Manage" privileges on the cluster"
   E: Only administrators can modify permissions on existing clusters
 - exam_type: engineer-professional
   exam_number: 2
@@ -145,15 +145,15 @@
   question: Which statement describes the resulting course_students table ?
   A: it's a virtual table that has no physical data. The SELECT statement will be
     executed each time the course_students table is queried.
-  B: "it\u2019s a cluster-scoped virtual table. The SELECT statement will be executed\
+  B: "it's a cluster-scoped virtual table. The SELECT statement will be executed\
     \ only the first time the course_students table is queried. The query output will\
     \ be stored in the memory of the currently active cluster."
-  C: "It\u2019s a Delta Lake table. The SELECT statement will be executed at the table\
+  C: "It's a Delta Lake table. The SELECT statement will be executed at the table\
     \ creation, and its output will be stored in Delta format on the underlying storage."
-  D: "it\u2019s a cluster-scoped table. The SELECT statement will be executed at the\
+  D: "it's a cluster-scoped table. The SELECT statement will be executed at the\
     \ table creation, but its output will be stored in the memory of the currently\
     \ active cluster."
-  E: "it\u2019s a session-scoped table. The SELECT statement will be executed at the\
+  E: "it's a session-scoped table. The SELECT statement will be executed at the\
     \ table creation, but its output will be stored in the cache of the current active\
     \ Spark session."
 - exam_type: engineer-professional
@@ -161,11 +161,11 @@
   question_number: 14
   section_index: 1
   question: "A data engineer has a streaming job that updates a Delta table named\
-    \ \u2018user_activities\u2019 by the results of a join between a streaming Delta\
-    \ table \u2018activity_logs\u2019 and a static Delta table \u2018users\u2019.\
-    \ They noticed that adding new users into the \u2018users\u2019 table does not\
-    \ automatically trigger updates to the \u2018user_activities\u2019 table, even\
-    \ when there were activities for those users in the \u2018activity_logs\u2019\
+    \ \u2018user_activities' by the results of a join between a streaming Delta\
+    \ table \u2018activity_logs' and a static Delta table \u2018users'.\
+    \ They noticed that adding new users into the \u2018users' table does not\
+    \ automatically trigger updates to the \u2018user_activities' table, even\
+    \ when there were activities for those users in the \u2018activity_logs'\
     \ table. Which of the following likely explains this issue ?"
   A: The users table must be refreshed with REFRESH TABLE command for each microbatch
     of this join
@@ -180,7 +180,7 @@
   exam_number: 2
   question_number: 15
   section_index: 1
-  question: "Given the following query on the Delta table \u2018customers\u2019 on\
+  question: "Given the following query on the Delta table \u2018customers' on\
     \ which Change Data Feed is enabled:\n\nspark.read\n.option(ree\n.option(=\nstable(cuitac\n\
     .ftilter(col(\"newrite\n-Tode(\n-table(su:\n\nWhich statement describes the result\
     \ of this query each time it is executed?"
@@ -233,7 +233,7 @@
   exam_number: 2
   question_number: 18
   section_index: 1
-  question: "The data engineering team has a Delta table named \u2018users\u2019.\
+  question: "The data engineering team has a Delta table named \u2018users'.\
     \ A recent CHECK constraint has been added to the table using the following command:\
     \ ALTER TABLE users ADD CONSTRAINT valid_age CHECK (age> @); The team attempted\
     \ to insert a batch of new records to the table, but there were some records with\
@@ -275,12 +275,12 @@
   section_index: null
   question: Which of the following definitions correctly describes a Slowly Changing
     Dimension of Type 0 ?
-  A: "It\u2019s a table where noc ges are allowed."
-  B: "It\u2019s a table where history will be kept in the additional column"
-  C: "it\u2019s a table where the new arriving data overwrites the existing one."
-  D: "it\u2019s a table that stores and manages both current and historical data over\
+  A: "It's a table where noc ges are allowed."
+  B: "It's a table where history will be kept in the additional column"
+  C: "it's a table where the new arriving data overwrites the existing one."
+  D: "it's a table that stores and manages both current and historical data over\
     \ time."
-  E: "It\u2019s a table that maintains current records, while older records are stored\
+  E: "It's a table that maintains current records, while older records are stored\
     \ in another table."
 - exam_type: engineer-professional
   exam_number: 2
@@ -297,18 +297,18 @@
   question_number: 23
   section_index: 1
   question: "The data engineering team maintains a Delta Lake table of SCD Type 1.\
-    \ A junior data engineer noticed a folder named \u2018_change_data\u2019 in the\
+    \ A junior data engineer noticed a folder named \u2018_change_data' in the\
     \ table directory, and wants to understand what this folder is used for. Which\
     \ of the following describes the purpose of this folder?"
-  A: "The \u2018_change_data\u2019 folder is a metadata directory to track the update\
+  A: "The \u2018_change_data' folder is a metadata directory to track the update\
     \ to the table definition"
-  B: "The \u2018_change_data\u2019 folder is the default directory to track the evolution\
+  B: "The \u2018_change_data' folder is the default directory to track the evolution\
     \ in schema definition"
-  C: "All SCD Type 1 tables have the \u2018_change_data\u2019 folder to track the\
-    \ updates applied on the table\u2019s data"
-  D: "Optimized Writes feature is enabled on the table. The \u2018_change_data\u2019\
+  C: "All SCD Type 1 tables have the \u2018_change_data' folder to track the\
+    \ updates applied on the table's data"
+  D: "Optimized Writes feature is enabled on the table. The \u2018_change_data'\
     \ folder is the location where the optimized data is stored"
-  E: "CDF feature is enabled on the table. The \u2018_change_data\u2019 folder is\
+  E: "CDF feature is enabled on the table. The \u2018_change_data' folder is\
     \ the location where CDF data is stored"
 - exam_type: engineer-professional
   exam_number: 2
@@ -323,7 +323,7 @@
   B: window("order_timestamp", "15 minutes")
   C: withWindow("order_timestamp", "15 minutes")
   D: withWatermark("order_timestamp", "15 minutes")
-  E: "interval(\"order_timestamp\u201D\", minutes\")"
+  E: "interval(\"order_timestamp"\", minutes\")"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 25
@@ -342,19 +342,19 @@
   exam_number: 2
   question_number: 26
   section_index: null
-  question: "A junior data engineer has created the table \u2018orders_backup\u2019\
-    \ as a copy of the table \u201Corders\u201D. Recently, the team started getting\
+  question: "A junior data engineer has created the table \u2018orders_backup'\
+    \ as a copy of the table "orders". Recently, the team started getting\
     \ an error when querying the orders_backup indicating that some data files are\
     \ no longer present. The transaction logs for the orders tables show a recent\
     \ run of VACUUM command. Which of the following explains how the data engineer\
     \ created the orders_backup table ?"
   A: The orders_backup table was created using CTAS statement from orders table
   B: The orders_backup table was created using CRAS statement from orders table
-  C: "The orders_backup table was created using Delta Lake\u2019s SHALLOW CLONE functionality\
+  C: "The orders_backup table was created using Delta Lake's SHALLOW CLONE functionality\
     \ from the orders table"
-  D: "The orders_backup table was created using Delta Lake\u2019s DEEP CLONE functionality\
+  D: "The orders_backup table was created using Delta Lake's DEEP CLONE functionality\
     \ from the orders table"
-  E: "The orders_backup table was created by fully copying the orders table\u2019\
+  E: "The orders_backup table was created by fully copying the orders table'\
     s directory"
 - exam_type: engineer-professional
   exam_number: 2
@@ -412,7 +412,7 @@
   question: "A data engineer is using the following spark configurations in a pipeline\
     \ to enable Optimized Writes and Auto Compaction: spark. cont.3=\xB0 spark.cont.\
     \ They also want to enable Z-order indexing with Auto Compaction to leverage data\
-    \ skipping on all the pipeline\u2019s tables. Which of the following solutions\
+    \ skipping on all the pipeline's tables. Which of the following solutions\
     \ allows the data engineer to complete this task ?"
   A: Use spark.conf.set("spark.databricks.delta.autoZorder.enabled", True)
   B: Use spark.conf.set("spark.databricks.delta.autoCompact.zorder.enabled", True)
@@ -447,8 +447,8 @@
   exam_number: 2
   question_number: 33
   section_index: null
-  question: "The data engineering team has a large Delta Lake table named \u2018user_posts\u2019\
-    \ which is partitioned over the \u2018year\u2019 column. The table is used as\
+  question: "The data engineering team has a large Delta Lake table named \u2018user_posts'\
+    \ which is partitioned over the \u2018year' column. The table is used as\
     \ an input streaming source in a streaming job. They want to remove previous 2\
     \ years data from the table without breaking the append-only requirement of streaming\
     \ sources. Which option correctly fills in the blank to enable stream processing\
@@ -463,7 +463,7 @@
   question_number: 34
   section_index: null
   question: "A data engineer created a new table along with a comment using the following\
-    \ query:\n\nCREATE TABLE payments\nCOMMENT \u201CTras vicke .\nAS SELECT + FROM\
+    \ query:\n\nCREATE TABLE payments\nCOMMENT "Tras vicke .\nAS SELECT + FROM\
     \ bank_transactions\n\nWhich of the following commands allows the data engineer\
     \ to review the comment of the table ?"
   A: SHOW TABLES payments
@@ -521,9 +521,9 @@
   question: "A data engineer has been asked to develop a nightly batch job for workforce\
     \ productivity analytics. The job will process events of employees productivity\
     \ of the previous day, and store the performance of each employee in the Delta\
-    \ table \u201Cemployees_performance\u201C. The table has the following schema:\
+    \ table "employees_performance". The table has the following schema:\
     \ 'date DATE, employee_id STRING, rating DOUBLE'. The data engineering team wants\
-    \ data to be stored in the table with the ability to compare employees\u2019 performance\
+    \ data to be stored in the table with the ability to compare employees' performance\
     \ across time. Which of the following code blocks accomplishes this task?"
   A: performance_df.write.format('delta').saveAsTable('employees_performance')
   B: performance_df.write.mode('append').saveAsTable('employees_performance')
@@ -534,10 +534,10 @@
   exam_number: 2
   question_number: 39
   section_index: 1
-  question: "The data engineering team has a large Delta table named \u2018user_messages\u2019\
+  question: "The data engineering team has a large Delta table named \u2018user_messages'\
     \ with the following schema: msg_id INT, user_id INT, msg_time TIMESTAMP, msg_title\
     \ STRING, msg_body STRING The msg_body field represents user messages in free-form\
-    \ text. The table has a performance issue when it\u2019s queried with filters\
+    \ text. The table has a performance issue when it's queried with filters\
     \ on this field. Which of the following could explain the reason for this performance\
     \ issue ?"
   A: The table does not leverage file skipping because it's not partitioned on the
@@ -556,9 +556,9 @@
   section_index: 2
   question: "The data engineering team has a pipeline that ingest Kafka source data\
     \ into a Multiplex bronze table. This Delta table is partitioned based on the\
-    \ topic and month columns. A new data engineer notices that the \u2018user_activity\u2019\
+    \ topic and month columns. A new data engineer notices that the \u2018user_activity'\
     \ topic contains Personal Identifiable Information (PII) that needs to be deleted\
-    \ every two months based on the company\u2019s Service-Level Agreement (SLA).\
+    \ every two months based on the company's Service-Level Agreement (SLA).\
     \ Which statement describes how table partitioning can help to meet this requirement?"
   A: Table partitioning allows immediate files deletion without running VACUUM command
   B: Table partitioning allows delete queries to leverage partition boundaries.
@@ -598,7 +598,7 @@
     group will see null values for the records of inactive students
   E: "Only members of the instructors group will see the records of all students no\
     \ matter if they are active or not. While users that are not members of the specified\
-    \ group will see \u201CREDACTED\u201D values for the records of inactive students"
+    \ group will see "REDACTED" values for the records of inactive students"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 43
@@ -614,7 +614,7 @@
   exam_number: 2
   question_number: 44
   section_index: null
-  question: "The data engineering team has a secret scope named \u201Cprod-scope\u201D\
+  question: "The data engineering team has a secret scope named "prod-scope"\
     \ that contains sensitive secrets in a production workspace. A data engineer in\
     \ the team is writing a security and compliance documentation, and wants to explain\
     \ who could use the secrets in this secret scope. Which of the following roles\
@@ -628,7 +628,7 @@
   exam_number: 2
   question_number: 45
   section_index: null
-  question: "In Spark UI, which of the following SQL metrics is displayed on the query\u2019\
+  question: "In Spark UI, which of the following SQL metrics is displayed on the query'\
     s details page?"
   A: Query duration
   B: Query execution time
@@ -683,19 +683,19 @@
   exam_number: 2
   question_number: 48
   section_index: 4
-  question: "A data engineer wanted to create the job \u2018process-sales\u2019 using\
+  question: "A data engineer wanted to create the job \u2018process-sales' using\
     \ Databricks REST API. However, they sent by mistake 2 POST requests to the endpoint\
-    \ \u2018api/2.1/jobs/create\u2019. Which statement describes the result of these\
+    \ \u2018api/2.1/jobs/create'. Which statement describes the result of these\
     \ requests?"
   A: "Only the first job will be created in the workspace. The second request will\
-    \ fail with an error indicating that a job named \u201Cprocess-sales\u201D is\
+    \ fail with an error indicating that a job named "process-sales" is\
     \ already created."
   B: The second job will overwrite the previous one created using the first request.
   C: "2 jobs will be created in the workspace, but the second one will be renamed\
-    \ to \u201Cprocess-sales (1)\u201D"
-  D: "2 jobs named \u201Cprocess-sales\u201D will be created in the workspace with\
+    \ to "process-sales (1)""
+  D: "2 jobs named "process-sales" will be created in the workspace with\
     \ the same job_id"
-  E: "2 jobs named \u201Cprocess-sales\u201D will be created in the workspace, but\
+  E: "2 jobs named "process-sales" will be created in the workspace, but\
     \ with different job_id"
 - exam_type: engineer-professional
   exam_number: 2
@@ -704,11 +704,11 @@
   question: A data engineer wants to use Databricks REST API to retrieve the metadata
     of a job run using its run_id. Which of the following REST API calls achieves
     this requirement ?
-  A: "Send POST request to the endpoint \u2018api/2.1/jobs/runs/get\u2019"
-  B: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get\u2019"
-  C: "Send POST request to the endpoint \u2018api/2.1/jobs/runs/get-output\u2019"
-  D: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-output\u2019"
-  E: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-metadata\u2019"
+  A: "Send POST request to the endpoint \u2018api/2.1/jobs/runs/get'"
+  B: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get'"
+  C: "Send POST request to the endpoint \u2018api/2.1/jobs/runs/get-output'"
+  D: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-output'"
+  E: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-metadata'"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 50
@@ -718,20 +718,20 @@
   A: '%sh pwd'
   B: print(sys.path)
   C: os.path.abspath()
-  D: "os.environ['PYTHONPATH\u2019]"
-  E: "ricks Repos, the working directory of any notebook is \u2018/databricks/driver\u2019"
+  D: "os.environ['PYTHONPATH']"
+  E: "ricks Repos, the working directory of any notebook is \u2018/databricks/driver'"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 51
   section_index: null
   question: Which of the following establishes a Python file as a notebook in Databricks
     ?
-  A: "The magic command %databricks on the first line of the file\u2019s source code"
-  B: "The comment \u2018# Databricks notebook source\u2019 on the first line of the\
-    \ file\u2019s source code"
-  C: "The import of the dbutils.notebook module in the file\u2019s source code"
+  A: "The magic command %databricks on the first line of the file's source code"
+  B: "The comment \u2018# Databricks notebook source' on the first line of the\
+    \ file's source code"
+  C: "The import of the dbutils.notebook module in the file's source code"
   D: "The creation of a spark session using SparkSession.builder.getOrCreate() in\
-    \ the file\u2019s source code"
+    \ the file's source code"
   E: None of the above statements is correct. Notebooks are binary files with .pydb
     file extension.
 - exam_type: engineer-professional
@@ -752,15 +752,15 @@
   question_number: 53
   section_index: null
   question: Which of the following statements correctly describes Unit Testing ?
-  A: "It\u2019s an approach to simulate a user experience to ensure that the application\
+  A: "It's an approach to simulate a user experience to ensure that the application\
     \ can run properly under real-world scenarios"
-  B: "it\u2019s an approach to test the interaction between subsystems of an application\
+  B: "it's an approach to test the interaction between subsystems of an application\
     \ to ensure that modules work properly as a group."
-  C: "it\u2019s an approach to test individual units of code to determine whether\
+  C: "it's an approach to test individual units of code to determine whether\
     \ they still work as expected if new changes are made to them in the future"
-  D: "it\u2019s an approach to verify if each feature of the application works as\
+  D: "it's an approach to verify if each feature of the application works as\
     \ per the business requirements"
-  E: "it\u2019s an approach to measure the reliability, speed, scalability, and responsiveness\
+  E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
     \ of an application"
 - exam_type: engineer-professional
   exam_number: 2
@@ -768,27 +768,27 @@
   section_index: 2
   question: Which of the following statements correctly describes Integration Testing
     ?
-  A: "It\u2019s an approach to simulate a user experience to ensure that the application\
+  A: "It's an approach to simulate a user experience to ensure that the application\
     \ can run properly under real-world scenarios"
-  B: "it\u2019s an approach to test the interaction between subsystems of an application\
+  B: "it's an approach to test the interaction between subsystems of an application\
     \ to ensure that modules work properly as a group."
-  C: "it\u2019s an approach to test individual units of code to determine whether\
+  C: "it's an approach to test individual units of code to determine whether\
     \ they still work as expected if new changes are made to them in the future"
-  D: "it\u2019s an approach to verify if each feature of the application works as\
+  D: "it's an approach to verify if each feature of the application works as\
     \ per the business requirements"
-  E: "it\u2019s an approach to measure the reliability, speed, scalability, and responsiveness\
+  E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
     \ of an application"
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 55
   section_index: 1
   question: Which of the following describes Cron syntax in Databricks Jobs ?
-  A: "It\u2019s an expression to represent the maximum concurrent runs of a job"
-  B: "it\u2019s an expression to represent the retry policy of a job"
-  C: "it\u2019s an expression to describe the email notification events (start, success,\
+  A: "It's an expression to represent the maximum concurrent runs of a job"
+  B: "it's an expression to represent the retry policy of a job"
+  C: "it's an expression to describe the email notification events (start, success,\
     \ failure)"
-  D: "It\u2019s an expression to represent the run timeout of a job"
-  E: "It\u2019s an expression to represent complex job schedule that can be defined\
+  D: "It's an expression to represent the run timeout of a job"
+  E: "It's an expression to represent complex job schedule that can be defined\
     \ programmatically"
 - exam_type: engineer-professional
   exam_number: 2

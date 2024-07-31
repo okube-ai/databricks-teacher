@@ -2,12 +2,12 @@
   exam_number: 4
   question_number: 0
   section_index: 1
-  question: "A data engineer found a CSV file that contained the records of the company\u2019\
+  question: "A data engineer found a CSV file that contained the records of the company'\
     s old customers with some of the columns having PII data, as well. The data engineer\
     \ wants to convert this file to a Delta table and runs the following statement:\
-    \ CONVERT TO DELTA csv. path_to_csv\u2019 The above command fails to execute.\
+    \ CONVERT TO DELTA csv. path_to_csv' The above command fails to execute.\
     \ What is the reason behind this failure?"
-  A: "csv. path_to_csv\u2019 should be replaced with path_to_csv"
+  A: "csv. path_to_csv' should be replaced with path_to_csv"
   B: VERT TO DELTA is an invalid command.
   C: CONVERT TO DELTA can only be used with partitioned data.
   D: CONVERT TO DELTA can only be used with parquet data.
@@ -204,9 +204,9 @@
     keeping the historical data intact in the downstream table?
   A: .drop('deleted_column_name') should be added to the query before writing the
     data to the downstream table.
-  B: ".option('mergeSchema', \u2018true') should be added to the query and .option('checkpointLocation'\u2019\
+  B: ".option('mergeSchema', \u2018true') should be added to the query and .option('checkpointLocation''\
     , '/tmp/upDown') should be removed."
-  C: ".drop('deleted column name') should be added and the .option('checkpointLocation'\u2019\
+  C: ".drop('deleted column name') should be added and the .option('checkpointLocation''\
     , '/tmp/upDown') should be removed."
   D: The checkpoint location should be changed.
   E: .outputMode('append') should be added to the streaming query.
@@ -611,7 +611,7 @@
   question_number: 43
   section_index: null
   question: "A new member has recently been added to a team of developers. The new\
-    \ member wants to run an existing notebook using \u201Crun magic command in their\
+    \ member wants to run an existing notebook using "run magic command in their\
     \ newly created notebook. What is the minimum notebook-level permission that can\
     \ be granted to the new member allowing them to run the existing notebook?"
   A: No permissions are required
@@ -707,11 +707,11 @@
   question_number: 50
   section_index: 2
   question: How can the other team members access this dashboard?
-  A: "The cluster\u2019s performance information can only be accessed by Databricks\
+  A: "The cluster's performance information can only be accessed by Databricks\
     \ Admin."
   B: This dashboard can be seen inside the notebook by running the cluster .detail()
     command.
-  C: "This dashboard is a part of the Spark UIl\u2019s Executor\u2019s Tab."
+  C: "This dashboard is a part of the Spark UIl's Executor's Tab."
   D: Event logs in the Cluster information page display this type of dashboard.
   E: The dashboard can be seen in Ganglia UI.
 - exam_type: engineer-professional

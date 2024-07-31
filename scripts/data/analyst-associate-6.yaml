@@ -47,8 +47,8 @@
   section_index: 2
   question: How can you change access rights to a table in Databricks using Catalog
     Explorer?
-  A: "By editing the table schema in the 'Schema\u2019' section of Data Explorer."
-  B: "Through the \u2018Access Rights\u2019 menu in the table's context menu in Data\
+  A: "By editing the table schema in the 'Schema'' section of Data Explorer."
+  B: "Through the \u2018Access Rights' menu in the table's context menu in Data\
     \ Explorer."
   C: Access rights can only be changed via the Databricks CLI, not in Data Explorer.
   D: By selecting the table, navigating to the 'Permissions' tab, and modifying permissions.
@@ -125,7 +125,7 @@
     achieves this in a Databricks environment?
   A: "SELECT Timestamp, SUM(VehicleCount) OVER (PARTITION BY window_time(Timestamp,\
     \ \u201810 minutes')) FROM TrafficData;"
-  B: "SELECT window time(Timestamp, \u201810 minutes\u2019), COUNT(VehicleCount) FROM\
+  B: "SELECT window time(Timestamp, \u201810 minutes'), COUNT(VehicleCount) FROM\
     \ TrafficData GROUP BY Timestamp;"
   C: SELECT Timestamp, SUM(VehicleCount) OVER (ORDER BY Timestamp RANGE BETWEEN INTERVAL
     16 MINUTES PRECEDING AND CURRENT ROW) FROM TrafficData;
@@ -570,7 +570,7 @@
   question: "In the context of a Databricks Lakehouse architecture, you are working\
     \ with silver-level data that has been aggregated from various bronze tables.\
     \ You notice inconsistencies in customer names due to variations in casing and\
-    \ spacing (e.g., John Doe\u2019, \u2018john doe\u2019, John Doe\u2019). What would\
+    \ spacing (e.g., John Doe', \u2018john doe', John Doe'). What would\
     \ be an appropriate SQL query to standardize these customer names in the silver\
     \ table CustomerData?"
   A: SELECT DISTINCT TRIM(UPPER(customer_name)) FROM CustomerData;
@@ -607,13 +607,13 @@
     function to achieve this?
   A: "SELECT StationID, AVG(Temperature) OVER (PARTITION BY StationID, window(ReadingTimestamp,\
     \ \u20181 hour', \u201830 minutes')) FROM WeatherReadings;"
-  B: "SELECT StationID, window(ReadingTimestamp, \u20181 hour\u2019), AVG(Temperature)\
+  B: "SELECT StationID, window(ReadingTimestamp, \u20181 hour'), AVG(Temperature)\
     \ FROM WeatherReadings GROUP BY StationID, window(ReadingTimestamp, \u20181 hour');"
-  C: "SELECT StationID, window(ReadingTimestamp, \u20181 hour\u2019, \u201830 minutes\u2019\
+  C: "SELECT StationID, window(ReadingTimestamp, \u20181 hour', \u201830 minutes'\
     ), AVG(Temperature) FROM WeatherReadings GROUP BY StationID, window(ReadingTimestamp,\
-    \ \u20181 hour', \u201830 minutes\u2019);"
+    \ \u20181 hour', \u201830 minutes');"
   D: "SELECT StationID, AVG(Temperature) OVER (PARTITION BY StationID ORDER BY ReadingTimestamp\
-    \ ROWS BETWEEN INTERVAL '30 minutes\u2019 PRECEDING AND INTERVAL \u201830 minutes\u2019\
+    \ ROWS BETWEEN INTERVAL '30 minutes' PRECEDING AND INTERVAL \u201830 minutes'\
     \ FOLLOWING) FROM WeatherReadings;"
   E: SELECT StationID, AVG(Temperature) OVER (PARTITION BY StationID ORDER BY ReadingTimestamp
     RANGE BETWEEN INTERVAL 1 HOUR PRECEDING AND CURRENT ROW) FROM WeatherReadings;
@@ -657,7 +657,7 @@
     \ underlying that specific visualization. Dashboard Parameters, on the other hand,\
     \ can influence multiple visualizations within a dashboard and are configured\
     \ at the dashboard level. Static Values are used to replace parameters, making\
-    \ them \u2018disappear\u2019 and setting a fixed value in their place."
+    \ them \u2018disappear' and setting a fixed value in their place."
   C: Both Widget Parameters and Dashboard Parameters have the same functionality and
     impact, allowing for dynamic changes across all visualizations in a dashboard.
     Static Values provide temporary placeholders for these parameters.

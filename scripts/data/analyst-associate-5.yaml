@@ -159,15 +159,15 @@
     (dbfs:/data/sales.csv) into a Delta table named SalesData. The CSV file has a
     header row and fields separated by commas. Which Databricks SQL COPY INTO command
     correctly imports this data?
-  A: "COPY INTO SalesData FROM \u2018dbfs:/data/sales.csv\u2019 USING FORMAT AS CSV\
+  A: "COPY INTO SalesData FROM \u2018dbfs:/data/sales.csv' USING FORMAT AS CSV\
     \ HEADER = TRUE;"
-  B: "Copy INTO SalesData FROM \u2018dbfs:/data/sales.csv\u2019 FILEFORMAT = \u2018\
+  B: "Copy INTO SalesData FROM \u2018dbfs:/data/sales.csv' FILEFORMAT = \u2018\
     CSV';"
-  C: "COPY INTO SalesData FROM \u2018dbfs:/data/sales.csv\u2019 USING (FILEFORMAT\
+  C: "COPY INTO SalesData FROM \u2018dbfs:/data/sales.csv' USING (FILEFORMAT\
     \ = CSV, HEADER = \u2018true');"
   D: "COPY INTO SalesData FROM CSV \u2018dbfs:/data/sales.csv' WITH HEADER;"
-  E: "COPY INTO SalesData FROM \u2018dbhfs:/data/sales.csv\u2019 FORMAT = CSV FORMAT_OPTIONS\
-    \ (\u2018header\u2019 = \u2018true');"
+  E: "COPY INTO SalesData FROM \u2018dbhfs:/data/sales.csv' FORMAT = CSV FORMAT_OPTIONS\
+    \ (\u2018header' = \u2018true');"
 - exam_type: analyst-associate
   exam_number: 5
   question_number: 12
@@ -231,7 +231,7 @@
   exam_number: 5
   question_number: 16
   section_index: 3
-  question: "Consider the following table named \u2018Employee\u2019:\n\nEmployeeID\n\
+  question: "Consider the following table named \u2018Employee':\n\nEmployeeID\n\
     4\n\nGiven the output:\n\nName\nJane Smith\nBob Brown\n\nName Department\nJohn\
     \ Doe Marketing\nJane Smith Sales\n\nAlice Jones HR\n\nBob Brown\n\nDepartment\n\
     Sales\nIT\n\nWhich of the queries below could have been used to generate the output?"
@@ -257,7 +257,7 @@
   question: "A data analyst is working with a database in Databricks and needs to\
     \ update a table named SalesData. The analyst has a new batch of data that includes\
     \ some records already present in SalesData and some new records. They must decide\
-    \ between using \u201CLRGL INTO, INSERT INTO, and COPY LTO commands. Considering\
+    \ between using "LRGL INTO, INSERT INTO, and COPY LTO commands. Considering\
     \ the functions and typical use cases of these commands, which of the following\
     \ statements is true?"
   A: INSERT INTO can be used for both updating existing records and inserting new
@@ -322,17 +322,17 @@
   question_number: 22
   section_index: 4
   question: "When sharing Databricks SQL dashboards, there are two primary settings:\
-    \ \u2018Run as viewer\u2019 and \u2018Run as owner\u2019. What are the pros and\
+    \ \u2018Run as viewer' and \u2018Run as owner'. What are the pros and\
     \ cons of each setting in the context of sharing dashboards?"
   A: Both settings allow for easy sharing of dashboards (pro), but can lead to complexities
     in managing user permissions and data access (con).
   B: "\u2018Run as viewer' enhances data security by adhering to individual viewer's\
     \ permissions (pro), but may limit data visibility (con)."
-  C: "\u2018Run as owner\u2019 ensures consistent data visibility across users (pro),\
+  C: "\u2018Run as owner' ensures consistent data visibility across users (pro),\
     \ but might pose security risks if the owner has broader data access (con)."
-  D: "\u2018Run as owner\u2019 offers greater customization of dashboard settings\
+  D: "\u2018Run as owner' offers greater customization of dashboard settings\
     \ (pro), but requires viewers to have advanced knowledge of SQL (con). 'Run as\
-    \ viewer\u2019 simplifies the user experience (pro), but may lead to inconsistent\
+    \ viewer' simplifies the user experience (pro), but may lead to inconsistent\
     \ data reporting (con)."
   E: "\u2018Run as viewer' and 'Run as owner' both provide the same level of data\
     \ visibility (pro), but may have limitations in customizing query execution (con)."
@@ -411,8 +411,8 @@
     \ SINGLE_CLOB) AS mydata;"
   B: INSERT INTO my_table SELECT ~ FROM s3a://mybucket/mydata.csv;
   C: CREATE TABLE my_table USING CSV LOCATION 's3://mybucket/mydata.csv';
-  D: "LOAD DATA INPATH \u2018s3://mybucket/mydata.csv'\u2019 INTO TABLE my_table;"
-  E: "COPY INTO my_table FROM 's3://mybucket/mydata.csv\u2019 FILEFORMAT = CSV;"
+  D: "LOAD DATA INPATH \u2018s3://mybucket/mydata.csv'' INTO TABLE my_table;"
+  E: "COPY INTO my_table FROM 's3://mybucket/mydata.csv' FILEFORMAT = CSV;"
 - exam_type: analyst-associate
   exam_number: 5
   question_number: 29
@@ -458,26 +458,26 @@
   exam_number: 5
   question_number: 32
   section_index: 3
-  question: "In a Databricks SQL context, consider a dataset with columns \u2018Department\u2019\
-    , \u2018Employee\u2019, and \u2018Sales\u2019. You are required to analyze the\
+  question: "In a Databricks SQL context, consider a dataset with columns \u2018Department'\
+    , \u2018Employee', and \u2018Sales'. You are required to analyze the\
     \ data using the ROLLUP and CLEL functions. Given this scenario, select the correct\
-    \ statement regarding the type of aggregations RULLUY\u2019 and \xA2 would generate\
-    \ when applied to the \u2018Department\u2019 and \u2018Employee\u2019 columns."
+    \ statement regarding the type of aggregations RULLUY' and \xA2 would generate\
+    \ when applied to the \u2018Department' and \u2018Employee' columns."
   A: "CUBE creates aggregations for all possible combinations of the columns in the\
-    \ GROUP BY clause. It would generate subtotals for each 'Department\u2019, each\
-    \ 'Employee', each combination of 'Department' and \u2018Employee\u2019, and a\
+    \ GROUP BY clause. It would generate subtotals for each 'Department', each\
+    \ 'Employee', each combination of 'Department' and \u2018Employee', and a\
     \ grand total."
   B: "ROLLUP provides aggregations only for each combination of 'Department' and 'Employee',\
     \ while CUBE gives a detailed breakdown including each 'Department', each \u2018\
-    Employee\u2019, and a grand total."
-  C: "Neither ROLLUP nor CUBE will generate subtotals for individual \u2018Departments\u2019\
-    \ or \u2018Employees\u2019; they only provide a grand total."
+    Employee', and a grand total."
+  C: "Neither ROLLUP nor CUBE will generate subtotals for individual \u2018Departments'\
+    \ or \u2018Employees'; they only provide a grand total."
   D: "Both ROLLUP and CUBE produce identical aggregations, including subtotals for\
-    \ each \u2018Department\u2019, each 'Employee\u2019, each combination of 'Department'\
-    \ and \u2018Employee\u2019, and a grand total."
+    \ each \u2018Department', each 'Employee', each combination of 'Department'\
+    \ and \u2018Employee', and a grand total."
   E: "ROLLUP generates hierarchical aggregations starting from the leftmost column\
-    \ in the GROUP BY clause. It would produce subtotals for each \u2018Department\u2019\
-    , subtotals for each combination of \u2018Department and \u2018Employee\u2019\
+    \ in the GROUP BY clause. It would produce subtotals for each \u2018Department'\
+    , subtotals for each combination of \u2018Department and \u2018Employee'\
     , and a grand total."
 - exam_type: analyst-associate
   exam_number: 5

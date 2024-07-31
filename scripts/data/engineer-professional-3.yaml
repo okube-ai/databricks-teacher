@@ -71,15 +71,15 @@
     instead of PROD. The member runs the following command in a new notebook to update
     the environment variable: import os os.environ[''ENV''] = ''DEV''. Which of the
     following statements describes the effect of the command?'
-  A: "The environment variable\u2019s value will be changed in the newly created notebook\
+  A: "The environment variable's value will be changed in the newly created notebook\
     \ and the fetch_details notebook will also start using DEV."
   B: The command will fail with an error message as the environment variable cannot
     be changed.
   C: The command will be executed successfully but the environment variable will not
     be changed.
-  D: "The environment variable\u2019s value will be changed but the value in all other\
+  D: "The environment variable's value will be changed but the value in all other\
     \ notebooks will remain PROD."
-  E: "The environment variable\u2019s value will be updated in the cluster properties\
+  E: "The environment variable's value will be updated in the cluster properties\
     \ and all the notebooks attached to the cluster will start using the updated value."
 - exam_type: engineer-professional
   exam_number: 3
@@ -285,7 +285,7 @@
   C: The stream fails when new columns are encountered while the details of new columns
     are stored in the _rescued_data column.
   D: "If a new column is detected, the stream continues its execution but the schema\
-    \ is not evolved whereas the new columns\u2019 information is added to the _rescued_data\
+    \ is not evolved whereas the new columns' information is added to the _rescued_data\
     \ column."
   E: On detection of a new column, the schema is evolved and the column is added to
     the _rescued_data column but the stream does not fail.
@@ -309,7 +309,7 @@
   exam_number: 3
   question_number: 22
   section_index: 1
-  question: "Which of the following is true about the join\u2019s functionality?"
+  question: "Which of the following is true about the join's functionality?"
   A: The updates made to the data present in the conversion_rate table will result
     in an instant error in the streaming query.
   B: The updates made to the data present in the conversion_rate table will result
@@ -356,8 +356,8 @@
   exam_number: 3
   question_number: 26
   section_index: null
-  question: "Which of the following locations will be used to store the DLT\u2019\
-    s events log if the Delta Live Table\u2019s storage location has been set up as\
+  question: "Which of the following locations will be used to store the DLT'\
+    s events log if the Delta Live Table's storage location has been set up as\
     \ /teams/prod ?"
   A: /teams/prod/system/events
   B: /teams/prod/logs/events
@@ -594,7 +594,7 @@
   section_index: 2
   question: "A mobile company needs to delete the data(daily) of all the users who\
     \ requested to cancel their SIM card in the last 24 hours to be compliant with\
-    \ their country\u2019s privacy act. The company internally uses Delta tables(with\
+    \ their country's privacy act. The company internally uses Delta tables(with\
     \ default settings) to store the data of its users. How can the data engineer\
     \ make sure that the data is permanently deleted and cannot be recovered under\
     \ any circumstances?"

@@ -196,8 +196,8 @@
   question_number: 15
   section_index: 1
   question: "A data engineer executes the following query to optimize the join operation\
-    \ between df1 and df2: joined_df = dfl.join(broadcast(df2), \u201Cid\u201D, \u201C\
-    inner\u201D). Which of the following correctly explains the working of the join?"
+    \ between df1 and df2: joined_df = dfl.join(broadcast(df2), "id", "\
+    inner"). Which of the following correctly explains the working of the join?"
   A: A copy of df2 will be broadcasted to all the worker nodes.
   B: The join query will fail as inner should be replaced with broadcast.
   C: Only the first 10 MBs of data from the DataFrame df2 will be used for the join.

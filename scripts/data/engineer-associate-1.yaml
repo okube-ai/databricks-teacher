@@ -73,9 +73,9 @@
   question: Which of the following best describes Databricks Lakehouse?
   A: Single, flexible, high-performance system that supports data, analytics, and
     machine learning workloads.
-  B: "Reliable data management system with transactional guarantees for organization\u2019\
+  B: "Reliable data management system with transactional guarantees for organization'\
     s structured data."
-  C: "Platform that helps reduce the costs of storing organization\u2019s open-format\
+  C: "Platform that helps reduce the costs of storing organization's open-format\
     \ data files in the cloud."
   D: Platform for developing increasingly complex machine learning workloads using
     a simple, SQL-based solution.
@@ -158,7 +158,7 @@
   question_number: 13
   section_index: 2
   question: "A data engineer has developed a code block to completely reprocess data\
-    \ based on the following if-condition in Python: if process_mode \u201Cit uial\
+    \ based on the following if-condition in Python: if process_mode "it uial\
     \ cat is_table_exist: This if-condition is returning an invalid syntax error.\
     \ Which of the following changes should be made to the code block to fix this\
     \ error?"
@@ -184,15 +184,15 @@
   section_index: 3
   question: Which of the following commands can a data engineer use to create a new
     table along with a comment?
-  A: "CREATE TABLE\nCOMMENT \u201CTria 2 VLAbh Sonhativg 2_transactions"
+  A: "CREATE TABLE\nCOMMENT "Tria 2 VLAbh Sonhativg 2_transactions"
   B: 'CREATE TABLE payments
 
     COMMENT ("Trias lane Eativmg i'
-  C: "CREATE TABLE payments\nAS SELECT + FROM nk_transactions\nCOMMENT \u201CTrae\
+  C: "CREATE TABLE payments\nAS SELECT + FROM nk_transactions\nCOMMENT "Trae\
     \ PVlaek \xA7cnhat."
-  D: "CREATE TABLE payments\nAS SELECT + FROM bank_transactions\nCOMMENT (\u201CTras\
+  D: "CREATE TABLE payments\nAS SELECT + FROM bank_transactions\nCOMMENT ("Tras\
     \ ve Dan vba Bitivn"
-  E: "COMMENT (\u201CTras v2 Than Batiy\nCREATE TABLE payments\nAS SELECT + FROM bank_transactions"
+  E: "COMMENT ("Tras v2 Than Batiy\nCREATE TABLE payments\nAS SELECT + FROM bank_transactions"
 - exam_type: engineer-associate
   exam_number: 1
   question_number: 16
