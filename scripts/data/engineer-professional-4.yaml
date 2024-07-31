@@ -1,0 +1,822 @@
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 0
+  section_index: 1
+  question: "A data engineer found a CSV file that contained the records of the company\u2019\
+    s old customers with some of the columns having PII data, as well. The data engineer\
+    \ wants to convert this file to a Delta table and runs the following statement:\
+    \ CONVERT TO DELTA csv. path_to_csv\u2019 The above command fails to execute.\
+    \ What is the reason behind this failure?"
+  A: "csv. path_to_csv\u2019 should be replaced with path_to_csv"
+  B: VERT TO DELTA is an invalid command.
+  C: CONVERT TO DELTA can only be used with partitioned data.
+  D: CONVERT TO DELTA can only be used with parquet data.
+  E: Databricks restricts the conversion of CSV files with PII data to a Delta table.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 1
+  section_index: 1
+  question: A workflow consists of three tasks - 2 batch tasks and 1 structured streaming
+    task. Which of the following workflows is best suited to complete the job while
+    providing fault tolerance?
+  A: Workflow 1
+  B: Workflow 2
+  C: Workflow 3
+  D: Workflow 4
+  E: Workflow 5
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 2
+  section_index: null
+  question: A Databricks engineer uses the following Databricks CLI command to start
+    an already existing cluster but did not get any response. databricks clusters
+    start --cluster-id 1198-132537-dht25rtr
+  A: if the command is successful, no output is displayed.
+  B: The cluster should be used in place of clusters
+  C: Starting a cluster is the only unsupported operation using Databricks CLI.
+  D: Cluster name should be used instead of cluster-id to start the cluster.
+  E: Cluster name should also be added to the command to start the cluster.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 3
+  section_index: null
+  question: A data engineer wants to create a new job that intends to run a Python
+    file located at dbfs:/fetch_matches.py. The python file accepts year and month
+    as command-line arguments. These arguments are further used in the python file
+    for extracting information about all the soccer matches played in that month and
+    year. Assuming matches is an existing cluster having 1198-132537-dht25rtr as its
+    ID, which of the following JSON workloads should be posted to the 2.0/jobs/create
+    endpoint of Databricks REST API to create the job with the year as 2019 and month
+    as 11?
+  A: '{"name": "Fetch Soccer Matches", "new_cluster": {"spark_version": "7.3.x", "node_type_id":
+    "Standard_DS3_v2", "num_workers": 2}, "spark_python_task": {"python_file": "dbfs:/fetch_matches.py",
+    "parameters": ["--year", "2019", "--month", "11"]}}'
+  B: '{"name": "Fetch Soccer Matches", "existing_cluster_id": "1198-132537-dht25rtr",
+    "spark_python_task": {"python_file": "dbfs:/fetch_matches.py", "parameters": ["--year",
+    "2019", "--month", "11"]}}'
+  C: '{"name": "Fetch Soccer Matches", "new_cluster": {"spark_version": "7.3.x", "node_type_id":
+    "Standard_DS3_v2", "num_workers": 2}, "spark_python_task": {"python_file": "dbfs:/fetch_matches.py",
+    "parameters": {"year": "2019", "month": "11"}}}'
+  D: '{"name": "Fetch Soccer Matches", "existing_cluster_id": "1198-132537-dht25rtr",
+    "spark_python_task": {"python_file": "dbfs:/fetch_matches.py", "parameters": {"year":
+    "2019", "month": "11"}}}'
+  E: '{"name": "Fetch Soccer Matches", "new_cluster": {"spark_version": "7.3.x", "node_type_id":
+    "Standard_DS3_v2", "num_workers": 2}, "spark_python_task": {"python_file": "dbfs:/fetch_matches.py",
+    "parameters": ["2019", "11"]}}'
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 4
+  section_index: null
+  question: Which of the following languages is not supported on High concurrency
+    clusters(now known as Shared Clusters)?
+  A: SQL and Scala
+  B: Python and R
+  C: Scala and R
+  D: Scala and Python
+  E: SQL and Python
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 5
+  section_index: 1
+  question: A data engineering team is working on a complex pipeline with trillions
+    of rows in each table. They decide to persist in some of the frequently used DataFrames
+    to fasten the processing of the queries. One of the data engineers ran the persist()
+    command over the DataFrame and immediately checked the Spark UI's Storage Tab
+    but was unable to find the information about the persisted DataFrame. What could
+    be the possible reason?
+  A: DataFrames persisted through persist() are not visible in Storage Tab, only the
+    ones persisted through cache() are visible in the Storage Tab of Spark UI.
+  B: The information about the persisted DataFrame can be found only in Ganglia metrics.
+  C: The DataFrame information should have been visible in the Storage Tab of Spark
+    UI immediately after running the persist() command. If the DataFrame information
+    is not present, it means that the command was not executed successfully.
+  D: Since persist() is lazily evaluated, performing an action on the cached DataFrame
+    is necessary to view the results.
+  E: persist() caches the DataFrame in memory which cannot be viewed in Spark UI.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 6
+  section_index: null
+  question: Ascheduled production job consists of two tasks. The first task reads
+    the data from the Kafka source while the second task loads the data to a mounted
+    location after performing transformations. The data engineer tries to unmount
+    the mount point by using unmount () command, in anew notebook, while the first
+    task is still running. What will be the effect of using the above command?
+  A: The command will be executed immediately but the job will be completed without
+    any error.
+  B: The command will be executed immediately and the job will be canceled automatically
+    as some of the tasks from the job are accessing the mount location.
+  C: The command will wait until the job is completed.
+  D: The command will be executed immediately and the first task will be completed
+    while the second task will fail.
+  E: The command will fail with an error message.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 7
+  section_index: 1
+  question: "A data engineer is assigned the task of creating a table using a venues.csv\
+    \ file stored at dbfs:/FileStore/data/. The data engineer executes the following\
+    \ SQL statement and the table is created successfully. CREATE TABLE venues (name\
+    \ STRING, area INT) USING CSV LOCATION \u2018ile-=: aeusaaus Now, the data engineer\
+    \ tries to add a record to the table using INSERT INTO command. Which of the following\
+    \ would be the output of the INSERT INTO command?"
+  A: The record will be inserted in the venues table and a new CSV file will be added
+    in dbfs:/FileStore/data/ directory.
+  B: The record will not be inserted in the table and an error message will be displayed.
+  C: The record will be inserted in the table as well as the venues.csv file.
+  D: The record will not be inserted in the table but an OK message will be displayed.
+  E: The record will be inserted in the venues.csv file but not in the venues table.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 8
+  section_index: 1
+  question: A Data Engineer has been assigned a task to take a pull of the master
+    branch and create a new branch to work on the required changes. The data engineer
+    has made all the changes and now wants to create a pull request in Databricks
+    Repos. Which of the following Repos permissions should be granted to the data
+    engineer to accomplish the tasks?
+  A: No permissions required
+  B: Can Read permission
+  C: Pull requests cannot be created using Databricks Repos
+  D: Can Edit permission
+  E: Can Manage permission
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 9
+  section_index: null
+  question: Which of the following is a valid payload to create a new job using Databricks
+    REST API?
+  A: '{''name'': ''new_job''}'
+  B: '{''existing_cluster_id'': ''8522-150723-mA1016'', ''notebook_task'':{''notebook_path'':
+    ''path/to/notebook''}}'
+  C: '{''name'': ''new_job'', ''notebook_task'':{''notebook_path'': ''path/to/notebook''}}'
+  D: All three will return an error
+  E: All three will be successful
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 10
+  section_index: null
+  question: Which of the following permission levels cannot be set while granting
+    cluster permission to a group of users in Databricks?
+  A: Can Attach To
+  B: Can Restart
+  C: Can Manage
+  D: Can Start
+  E: No permissions
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 11
+  section_index: 1
+  question: Assuming all commands run successfully, which of the following statements
+    explains the output?
+  A: The output will be '1024b' as the config property defined in the notebook prevails
+    over the config property set during the cluster creation.
+  B: The output will be '100b' because the config property was changed in another
+    notebook.
+  C: The output will be '100b' as the config property defined during the cluster creation
+    cannot be altered at the context level in the notebook.
+  D: There will be no output because there is no print statement.
+  E: The output will be None because the default value of the config property is None.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 12
+  section_index: 1
+  question: Which of the following SQL statements can be used to create a Delta table
+    with change data feed enabled?
+  A: CREATE TABLE versions (software string, version string) TBLPROPERTIES (delta.enableChangeDataCapture,
+    True)
+  B: Change Data Fee auto-enabled for all the Delta tables.
+  C: CREATE TABLE versions (software string, version string) TBLPROPERTIES (delta.enableChangeDataFeed
+    = true)
+  D: CREATE TABLE versions (software string, version string) PROPERTIES (delta.enableChangeDataCapture,
+    True)
+  E: CREATE TABLE versions (software string, version string) TABLE_PROPERTIES (delta.
+    changeDataFeedEnabled = true)
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 13
+  section_index: 1
+  question: A data engineer runs the following query to load the data in the downstream
+    table. After a few days, the upstream table was dropped and re-created as one
+    of the columns needed to be removed to be compliant with the data protection rules.
+    As new data arrived in the upstream table, the query was re-run but it failed.
+    Which of the following changes should be done to the query to run it successfully
+    keeping the historical data intact in the downstream table?
+  A: .drop('deleted_column_name') should be added to the query before writing the
+    data to the downstream table.
+  B: ".option('mergeSchema', \u2018true') should be added to the query and .option('checkpointLocation'\u2019\
+    , '/tmp/upDown') should be removed."
+  C: ".drop('deleted column name') should be added and the .option('checkpointLocation'\u2019\
+    , '/tmp/upDown') should be removed."
+  D: The checkpoint location should be changed.
+  E: .outputMode('append') should be added to the streaming query.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 14
+  section_index: 1
+  question: Statistics need to be collected for the first 50 columns of a Delta table
+    having 73 columns in total. Which of the following property must be altered in
+    order to force statistics collection on the first 50 columns for future appends?
+  A: delta.dataSkippingNumIndexedCols
+  B: spark.sql.delta.dataSkippingNumIndexedCols
+  C: delta.dataSkippingCols
+  D: spark.sql.dataSkippingNumIndexedCols
+  E: The default value is 50; need to change any property.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 15
+  section_index: 2
+  question: Which scenario explains the insertion of records by the data engineers
+    into the copies of the original table?
+  A: The insertions made by the first data engineer will be reflected in the original
+    table whereas the insertions made by the second data engineer will not affect
+    the original table.
+  B: Both the data engineers can add data to the copies of the original table received
+    by them but the data will not be reflected back to the original table.
+  C: The first data engineer can make the insertions to the table whereas the second
+    data engineer cannot.
+  D: Both the data engineers get a read-only copy of the original table and thus,
+    cannot add data to the copies of the original table received by them.
+  E: The insertions made by both the data engineers will be reflected in the original
+    table.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 16
+  section_index: 1
+  question: 'The following code intends to use Auto Loader for ingesting JSON files
+    from a cloud location: spark.readStream.format( = "YN .schema(schema) \ soption(
+    sOption(" situs .load(source) Which of the following is true if a file with an
+    added column arrives at the source location?'
+  A: The schema will evolve and the stream will continue to run.
+  B: The stream will fail and the schema will not be evolved.
+  C: The stream will continue and the new column will be ignored.
+  D: The schema will be evolved but the stream will fail.
+  E: The stream will fail and the new column is added to _rescued_data column.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 17
+  section_index: null
+  question: Which of the following locations will be used for the events log if the
+    storage setting has not been set for the Delta Live Table pipeline?
+  A: /pipelines/log
+  B: /pipelines/system/events
+  C: '{pipeline-id}/logs'
+  D: /pipelines/{pipeline-id}/system/events
+  E: /system/logs
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 18
+  section_index: 1
+  question: A data engineer is exploring distinct() and dropDuplicates() methods in
+    spark to de-duplicate a DataFrame. Which of the following statements is correct
+    for the transformations used for de-duplication?
+  A: The distinct() method accepts column names as arguments to remove duplicates
+    based on certain column(s).
+  B: In Databricks, only dropDuplicates() method is supported as the distinct() method
+    is now deprecated.
+  C: dropDuplicates() and drop_duplicates() can be used interchangeably.
+  D: Both distinct() and dropDuplicates() can be used to drop duplicates based on
+    certain column(s).
+  E: dropDuplicates() method can only be used on an RDD whereas distinct() method
+    can be used only on a DataFrame.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 19
+  section_index: 2
+  question: 'The following query runs throughout the soccer matches to load data into
+    the performance table: spark. readStream. tormat ( sty N stable( ii Sy N swritestream
+    \ soption(''-format('' stable( 1 c'') While the query is running, one of the users
+    accidentally drops the performance table. Which statement describes the effect
+    of dropping the table?'
+  A: The query will be stopped immediately.
+  B: When the new data is loaded into the scorecard table, the performance table will
+    be created again but the previous data will be lost from the performance table.
+  C: When the new data is loaded into the scorecard table, the performance table will
+    be created again and the previous data will also be restored automatically using
+    the Delta logs.
+  D: The query will be stopped only when the new data is added to the scorecard table.
+  E: Dropping a table that is currently used in a streaming query is not possible.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 20
+  section_index: 1
+  question: 'Which of the following correctly depicts the output when the below set
+    of commands is executed:'
+  A: Error in CREATE TABLE command
+  B: Error in INSERT INTO command
+  C: Error in UPDATE command
+  D: Error in DELETE FROM command
+  E: Error in SELECT command
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 21
+  section_index: 1
+  question: Which of the following defines the difference between Z-ordering and bin-packing?
+  A: Z-ordering optimization tries to create similar-size files based on the number
+    of rows whereas bin-packing optimization tries to create similar-size files based
+    on their size on disk.
+  B: Bin-packing optimization tries to create similar-size files based on the number
+    of rows whereas Z-ordering optimization tries to create similar-size files based
+    on their size on disk.
+  C: Both bin-packing and Z-ordering optimization techniques try to create similar-size
+    files based on their size on disk.
+  D: Both bin-packing and Z-ordering optimization techniques try to create similar-size
+    files based on the number of rows.
+  E: Bin-packing optimization tries to create similar-size files based on the number
+    of rows whereas Z-ordering optimization tries to create similar-size files based
+    on the number of columns.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 22
+  section_index: 1
+  question: A data engineer recently learned about the schema evolution modes in Databricks
+    Auto Loader. Which of the following modes should be selected by them to ensure
+    that the stream does not fail while ignoring the new columns?
+  A: dropNewColumns
+  B: addNewColumns
+  C: ignoreNewColumns
+  D: none
+  E: failOnNewColumns
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 23
+  section_index: 1
+  question: Which of the following correctly depicts the usage of withwatermark method
+    in a streaming job?
+  A: withWatermark is used for adding watermarks to the streaming tables for fault
+    tolerance.
+  B: Late arrival of data can be handled using withwatermark method.
+  C: withWatermark enables the user to perform faster joins in a streaming application.
+  D: Both late creation and the arrival of data can be handled using withwWatermark
+    method.
+  E: To enable transformations on late and early-arriving data, withwatermark can
+    be used.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 24
+  section_index: 1
+  question: A data engineer performs the following always-on streaming query to update
+    the downstream table mobiles
+  A: '0'
+  B: '1'
+  C: '2'
+  D: '3'
+  E: '4'
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 25
+  section_index: null
+  question: A data engineer is trying to access the transaction log for ratings table
+    which contains weekly ratings for TV shows across the country. Which of the following
+    folders will contain the logs for this table?
+  A: _delta_log
+  B: _ratings_log
+  C: _transaction_log
+  D: _log
+  E: _log_ratings
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 26
+  section_index: 1
+  question: A streaming query has been started while the target table already contains
+    some records. Which output mode would be selected for the query given that the
+    output mode is not specified by the data engineer?
+  A: As the output mode is mandatory, the query will fail.
+  B: The complete mode will be auto-selected.
+  C: The default output mode i.e update mode will be selected.
+  D: As the output mode is omitted, the append mode will be selected.
+  E: The output mode depends on the type of data being loaded.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 27
+  section_index: 1
+  question: What changes(if any) should be made to the above statements to ensure
+    that the DROP TABLE statement should not throw any error?
+  A: The order of the DROP and CREATE statements should be reversed.
+  B: DROP TABLE IF TABLE EXISTS should be used in place of DROP TABLE
+  C: DROP TABLE statement should be replaced with DROP IF TABLE EXISTS
+  D: No changes are required, the statements will be executed without any errors.
+  E: DROP TABLE IF EXISTS should be used instead of DROP TABLE
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 28
+  section_index: 2
+  question: A streaming application is using AutoLoader to ingest new files as they
+    come in an S3 location. To infer the schema, AutoLoader uses the first 50 GB of
+    data or the first 1000 files, whichever is lesser. Which of the following configurations
+    should be changed to set the default value to 500 files for all future queries
+    using AutoLoader?
+  A: spark .databricks.cloudFiles.schemaInference.sampleSize.numFiles
+  B: spark.sql.cloudFiles.schemaInference.sampleFileSize.numBytes
+  C: spark.sql.cloudFiles.schemaInference.sampleSize.numFiles
+  D: spark .databricks.cloudFiles.schemaInference.sampleFileSize.numBytes
+  E: spark .databricks.sql.cloudFiles.schemaInference.sampleSize.numFiles
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 29
+  section_index: 2
+  question: A data engineer is working on a project that includes a DLT(Delta Live
+    Table). Which of the following is not supported when a DLT(Delta Live Table) is
+    used with Python?
+  A: pivot() operation
+  B: import statements
+  C: Creation of views
+  D: read() function
+  E: Python decorators
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 30
+  section_index: 2
+  question: Which of the following is the highest level of abstraction in the Databricks
+    Lakehouse relational model?
+  A: Catalog
+  B: Database
+  C: Table
+  D: View
+  E: Schema
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 31
+  section_index: 1
+  question: Astocks managing firm stores the stocks prices data in a delta table.
+    The data engineer from the firm needs to create a relational entity that can provide
+    data to the end users for only those stocks that fall under the technical category.
+    The relational entity should have physical storage and the end users should be
+    able to refresh the data, as and when required. Which of the following relational
+    entities can be used by the data engineer?
+  A: A temporary view that should be re-created daily.
+  B: A materialized view should be used as it can be refreshed by the end users, as
+    and when required.
+  C: A delta table should be used as it has physical storage.
+  D: A DataFrame should be used as filter transformations can be applied to it.
+  E: Access to the original table should be given to all the users.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 32
+  section_index: 2
+  question: After a few days of testing, the junior data engineer uses the DROP command
+    to drop the new_employees database. Which of the following statements is true
+    about the data in both databases?
+  A: The new_employees database cannot be created using the same location.
+  B: Databases that share the same location cannot be dropped using the DROP command.
+  C: Once the DROP command is successful, the data belonging to the new_employees
+    database will be deleted whereas data in the employees database remains intact.
+  D: All the data belonging to both databases will be dropped.
+  E: No data will be dropped from any database but the DROP command will be successful.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 33
+  section_index: null
+  question: Which of the following commands can be used to list the partitions on
+    a Delta table named courses ?
+  A: SHOW PARTITIONS ON courses;
+  B: SELECT partitions() from courses;
+  C: SELECT get_partitions from courses;
+  D: SHOW PARTITIONS courses;
+  E: SELECT partit ity_catalog.courses;
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 34
+  section_index: null
+  question: A data engineer needs to create a function named print_details that prints
+    the name of the current catalog and database separated by a space. Which of the
+    following statements can be used to create the function?
+  A: 'CREATE FUNCTION print details() RETURNS concat(current_catalog(),''
+
+    '',current_database());'
+  B: 'CREATE FUNCTION print details(STRING) RETURNS concat(current_catalog(),''
+
+    '',current_database());'
+  C: 'CREATE FUNCTION print details RETURNS STRING RETURN concat(current_catalog(),''
+
+    '',current_database());'
+  D: 'CREATE FUNCTION print details(STRING) RETURN concat(current_catalog(),''
+
+    '',current_database());'
+  E: CREATE FUNCTION print details() RETURNS STRING RETURN concat(current_catalog(),'
+    ',current_database());
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 35
+  section_index: null
+  question: Two data engineers tries to print the defects_df DataFrame using show()
+    and display() methods respectively. Which of the following statements describes
+    the difference between the type of output format displayed for both the data engineers?
+  A: The show() method displays the DataFrame in a tabular format but the display()
+    method prints only the column names without any data.
+  B: The display() method can be used to visualize the DataFrame in the form of charts,
+    graphs etc.
+  C: The show() method can only be used in Databricks.
+  D: Running the display() method converts a DataFrame to an RDD.
+  E: Both A and B are true.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 36
+  section_index: 2
+  question: A data engineer executes the following command to add a NOT NULL constraint
+    on one of the columns of a Delta table that already had null values. ALTER TABLE
+    universities ALTER COLUMN location SET NOT NULL; Which of the following would
+    be the outcome if after executing the above command, the data engineer tries to
+    add another null value in the Location column of the Delta table?
+  A: The ALTER TABLE command will fail but new NULLS cannot be added to the location
+    column.
+  B: Since the ALTER TABLE command will return an error, new NULLS can be added to
+    the location column.
+  C: The ALTER TABLE command will be successfully executed but new NULLS can still
+    be added to the location column.
+  D: The ALTER TABLE command will be successful and no new NULLS will be accepted
+    in the location column.
+  E: ALTER TABLE command will be successful and all the previous and new NULL values
+    will be dropped.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 37
+  section_index: 1
+  question: Which of the following correctly explains the outcome if the below set
+    of statements are executed in a Databricks notebook, assuming viewer is a pre-defined
+    delta table with columns like name and age ?
+  A: All the commands will be executed and the age column will be shown as output.
+  B: Only the third command will fail and the name column will be shown as the output.
+  C: All the commands will be executed and the name column will be shown as the output.
+  D: The second and the third commands will fail and the age column will be shown
+    as the output.
+  E: All the commands will be executed but nothing will be shown as the output.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 38
+  section_index: null
+  question: An organization stores the salary of its employees in the emp_sal delta
+    table. The requirement is to store the last salary as well as the current salary
+    of all the employees in the table without increasing the number of rows of the
+    table. Which of the following type of table can be selected to incorporate the
+    requirement?
+  A: Typeosco
+  B: Type1sco
+  C: Type2ScbD
+  D: Type3ScbD
+  E: Type4scp
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 39
+  section_index: 1
+  question: As part of a proof of concept, a data engineer is working with the Olympics
+    dataset. The data is first filtered by limiting the records to only those participants
+    who won the gold medals at least once in the games. The size of the delta table
+    has now decreased to 50 MB. To enable faster reads from the table, the data engineer
+    has partitioned the table on the year column making each partition approximately
+    2 MB in size. Which of the following will enable even faster reads from the table?
+  A: The partitioning column should be changed to athlete_name column to decrease
+    the size of each partition significantly.
+  B: As the size of the table is just 50 MB, the partitioning should be removed.
+  C: The data should be stored in CSV to enable faster reads.
+  D: The table should be queried by the admin to increase the speed of the queries.
+  E: The table should be partitioned on 2 columns i.e. year and athlete_name
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 40
+  section_index: 1
+  question: In which of the following hops of the medallion or multi-hop architecture,
+    aggregation is the most common transformation?
+  A: Raw-Bronze
+  B: Bronze-Silver
+  C: Silver-Gold
+  D: Gold-Bronze
+  E: Raw-Silver
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 41
+  section_index: 2
+  question: A Delta table needs to be joined with a lookup table to add a column.
+    Which of the following techniques can be used by the data engineer to fasten the
+    process of column addition, knowing that the size of the lookup table is very
+    small as compared to the other table?
+  A: The union method should be used instead of n to add the column.
+  B: A UDF should be created to add the column.
+  C: A full outer join should be used to speed up the process as the outer join is
+    always optimized.
+  D: The code should be converted to Python to increase the speed of the join.
+  E: The lookup table should be broadcasted using the broadcast method.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 42
+  section_index: null
+  question: Which of the following libraries can be used to encrypt PIl data in PySpark?
+  A: PyProtect
+  B: Fernet
+  C: pyLint
+  D: PyNet
+  E: FerProtect
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 43
+  section_index: null
+  question: "A new member has recently been added to a team of developers. The new\
+    \ member wants to run an existing notebook using \u201Crun magic command in their\
+    \ newly created notebook. What is the minimum notebook-level permission that can\
+    \ be granted to the new member allowing them to run the existing notebook?"
+  A: No permissions are required
+  B: Can Read permission
+  C: Can Run permission
+  D: Can Edit permission
+  E: Can Manage permission
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 44
+  section_index: 2
+  question: To comply with CCPA and GDPR, the company needs to delete the PII data.
+    Each of the Delta tables used for the data storage contains both PII and non-PII
+    data. Which of the following techniques can be used by the company to get rid
+    of the PII data without losing the ability to perform statistical analysis on
+    the historical data?
+  A: Perform DELETE operation followed by VACUUM operation on all the Delta tables.
+  B: Drop the PII columns from the Delta tables and add their data in a shared location
+    for the compliance team.
+  C: Use ACLs to set permissions on different columns.
+  D: Anonymize data in PII columns.
+  E: Do not delete the PII data from the tables, as it can result in the non-performance
+    of SQL queries over the Delta tables.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 45
+  section_index: null
+  question: Which of the following permission levels can be set on Secrets in Databricks?
+  A: READ, WRITE and MANAGE
+  B: WRITE and MANAGE
+  C: READ, WRITE and EXECUTE
+  D: READ, CREATE, WRITE and MANAGE
+  E: CREATE, WRITE and MANAGE
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 46
+  section_index: 1
+  question: The following code intends to create a view that has 2 columns - price(int)
+    and quantity(int), where the price column should be visible to all the users who
+    are members of the auditor group but not the compliance group. Which of the following
+    options will complete the code?
+  A: CASE WHEN isMember('auditor') AND NOT isMember('compliance') THEN price ELSE
+    @ihr AS price
+  B: CASE WHEN is_member('auditor') AND not_member('compliance') THEN price ELSE @ihr
+    AS price
+  C: CASE WHEN isMember('auditor') AND NOT isMember('compliance') THEN price ELSE
+    @ihr AS price
+  D: CASE WHEN is_member('auditor') AND NOT is_member('compliance') THEN price ELSE
+    @ihr AS price
+  E: CASE WHEN member('auditor') AND not_member('compliance') THEN price ELSE @ihr
+    AS price
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 47
+  section_index: 2
+  question: A data engineering team wants to give the run permission on a job to a
+    junior data engineer who can run the particular job using the Jobs UI but also
+    want to prevent accidental deletion of the job by the junior data engineer. Which
+    of the following permissions can be granted to the junior data engineer to enable
+    them to run the job?
+  A: No permissions are required, anyone can run the job using Jobs UI.
+  B: The junior data engineer should have Can Manage permission to run the job.
+  C: Can View permission can be granted to the user to enable them to run the job.
+  D: The junior data engineer should be given the Can Manage Run permission.
+  E: The ownership of the job should be transferred to the junior data engineer.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 48
+  section_index: 1
+  question: Which of the following statements about the Physical and Logical plans
+    is true?
+  A: Physical plans can be viewed by using explain method whereas Logical plans can
+    only be viewed in Spark UI.
+  B: Logical plans and Physical plans can be viewed only in the Spark UI.
+  C: Physical plans and Logical plans are only visible if the History server is enabled
+    for Spark UI.
+  D: DataFilters, PushedFilters and the PartitionFilters are part of the Physical
+    plan.
+  E: After the submission of the spark application, the Physical plans are laid out
+    followed by the generation of Logical Plans.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 49
+  section_index: 2
+  question: What can be the possible reason behind this error message?
+  A: t_outer join is not supported in Spark
+  B: You cannot use multiple select operations in a single line of code
+  C: All the columns from both the DataFrames cannot be selected
+  D: medal column exists in both the DataFrames
+  E: medal column does not exist in any of the DataFrames being joined
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 50
+  section_index: 2
+  question: How can the other team members access this dashboard?
+  A: "The cluster\u2019s performance information can only be accessed by Databricks\
+    \ Admin."
+  B: This dashboard can be seen inside the notebook by running the cluster .detail()
+    command.
+  C: "This dashboard is a part of the Spark UIl\u2019s Executor\u2019s Tab."
+  D: Event logs in the Cluster information page display this type of dashboard.
+  E: The dashboard can be seen in Ganglia UI.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 51
+  section_index: 1
+  question: 'A data engineer tries to create a Delta table using CREATE command but
+    got the following error: The associated location ''dbfs:/user/hive/warehouse/table1''
+    is not a Delta table. Which of the following should be done before executing the
+    CREATE statement again?'
+  A: Delete the data location specified in the error i.e. dbfs:/user/hive/warehouse/table1
+  B: Create a new Delta table with a different name
+  C: Change the file format of the existing table to Delta format
+  D: Grant appropriate permissions to the data engineer
+  E: Restart the cluster before retrying the CREATE command
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 52
+  section_index: 1
+  question: What should be the value in this field, according to you, if the alert
+    has to be triggered every minute if the average speed in the past 1 minute exceeds
+    100?
+  A: Always
+  B: Just Once
+  C: Each time alert is evaluated
+  D: At most every 10 minutes
+  E: At most every 100 minutes
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 53
+  section_index: 2
+  question: A data engineer wants to see the visualization of the DAG created for
+    a streaming job. Which of the following Tabs should the data engineer check in
+    Spark UI to view the DAG with all the operations applied for the current batch
+    of data?
+  A: Jobs
+  B: Stages
+  C: Structured Streaming
+  D: JDBC/ODBC Server
+  E: Storage
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 54
+  section_index: null
+  question: A team member has written a series of unit test cases using assert method
+    to test the python function named return_sample_dataframe. Which of the following
+    libraries must be installed by them to run the unit test cases?
+  A: pythontesting
+  B: pyunittest
+  C: pytest
+  D: doctest
+  E: testdatabricks
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 55
+  section_index: 1
+  question: Which of the following is the correct order of testing a software project?
+  A: Testing 67
+  B: Testing 13
+  C: Testing 17
+  D: Testing 92
+  E: Testing 45
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 56
+  section_index: null
+  question: A workspace administrator is trying to upload a library to a cluster.
+    Which of the following types of files can be added to the cluster as a library,
+    after the cluster has been created and is running?
+  A: Once the cluster is created and running, only Python wheel files can be added
+    to it.
+  B: The files can be added only from PyPI.
+  C: After the creation of the cluster, no library can be added to it.
+  D: A JAR, Python egg and Python wheel files can be added to a cluster as libraries.
+  E: A Python egg and Python wheel files can be added to the cluster.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 57
+  section_index: 1
+  question: A Databricks job consists of a single notebook task that performs an ETL
+    on two different datasets. The notebook contains Python code that extracts CSV
+    files from an AWS S3 location and loads the transformed data in an Azure blob
+    storage. The data from azure blob storage is then extracted, transformed and loaded
+    into a Google Cloud bucket. The job is scheduled to run daily but the task failed
+    after writing the data to Azure blob storage. The data engineer wants to repair
+    the job using the Repair Run utility for the failed tasks. Which statement explains
+    the effect of using Repair Run on the job?
+  A: As Databricks maintains the checkpoint, the task will start from the cell which
+    failed during the execution.
+  B: The Repair Run will delete the data from Azure blob storage and execute the task
+    again.
+  C: Due to the version control of Databricks notebook, the task will restart from
+    the cell that first failed.
+  D: The Repair Run cannot be used for jobs having a single task.
+  E: The task will be restarted and all the cells in the notebook will be executed
+    in the order of their existence.
+- exam_type: engineer-professional
+  exam_number: 4
+  question_number: 58
+  section_index: null
+  question: A data engineer wants to see the version history of their notebook which
+    they did not add to Git. How many days of the version history of the notebook
+    will be visible to them, assuming that the history is not cleared?
+  A: 60 days
+  B: 45 days
+  C: No version history is visible if the notebook is not attached to Git
+  D: The version history can be accessed from the time the notebook was created
+  E: 30 days
