@@ -34,12 +34,16 @@ databricks_job:
 udfs:
   - module_name: custom_functions
     function_name: binary_to_text
+  - module_name: custom_functions
+    function_name: summarize_guide
+  - module_name: custom_functions
+    function_name: get_section_content
+  - module_name: custom_functions
+    function_name: join_questions
 #  - module_name: custom_functions
-#    function_name: binary_to_chunk
+#    function_name: get_question_section
 #  - module_name: custom_functions
-#    function_name: embed
-#  - module_name: custom_functions
-#    function_name: row_id
+#    function_name: get_question_section_index
 
 # --------------------------------------------------------------------------- #
 # Nodes                                                                       #
@@ -74,7 +78,7 @@ nodes:
     source:
       node_name: brz_udemy_exam_questions
       as_stream: true
-#      filter: exam_type != 'analyst-associate' OR  CAST(exam_number AS int) > 4
+#      filter: exam_type != 'analyst-associate' OR  CAST(exam_index AS int) > 4
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
@@ -90,13 +94,15 @@ nodes:
             sql_expr: exam_type
           - name: exam_index
             type: int
-            sql_expr: exam_number
+            sql_expr: exam_index
           - name: question_index
             type: int
-            sql_expr: question_number
+            sql_expr: question_index
           - name: section_index
             type: int
             sql_expr: section_index
+          - name: section_id
+            expr: F.concat_ws("-", "exam_type", "section_index")
           - name: question
             sql_expr: question
           - name: A
@@ -227,6 +233,8 @@ nodes:
         - name: weight
           type: double
           sql_expr: weight
+        - name: id
+          expr: F.concat_ws("-", "exam_type", "index")
       - func_name: laktory.smart_join
         func_kwargs:
           other:
@@ -240,6 +248,11 @@ nodes:
       - with_columns:
         - name: content
           expr: get_section_content("exam_content", "name")
+
+      - func_name: join_questions
+        func_kwargs:
+          other:
+            node_name: slv_udemy_exam_questions
 
       - func_name: drop
         func_args:
