@@ -254,12 +254,12 @@
   exam_number: 5
   question_number: 18
   section_index: 3
-  question: "A data analyst is working with a database in Databricks and needs to\
-    \ update a table named SalesData. The analyst has a new batch of data that includes\
-    \ some records already present in SalesData and some new records. They must decide\
-    \ between using "LRGL INTO, INSERT INTO, and COPY LTO commands. Considering\
-    \ the functions and typical use cases of these commands, which of the following\
-    \ statements is true?"
+  question: A data analyst is working with a database in Databricks and needs to
+    update a table named SalesData. The analyst has a new batch of data that includes
+    some records already present in SalesData and some new records. They must decide
+    between using LRGL INTO, INSERT INTO, and COPY LTO commands. Considering
+    the functions and typical use cases of these commands, which of the following
+    statements is true?
   A: INSERT INTO can be used for both updating existing records and inserting new
     records, while MERGE INTO is only for inserting new records, and COPY INTO is
     not used in Databricks.

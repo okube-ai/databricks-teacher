@@ -610,10 +610,10 @@
   exam_number: 4
   question_number: 43
   section_index: null
-  question: "A new member has recently been added to a team of developers. The new\
+  question: A new member has recently been added to a team of developers. The new\
     \ member wants to run an existing notebook using "run magic command in their\
     \ newly created notebook. What is the minimum notebook-level permission that can\
-    \ be granted to the new member allowing them to run the existing notebook?"
+    \ be granted to the new member allowing them to run the existing notebook?
   A: No permissions are required
   B: Can Read permission
   C: Can Run permission

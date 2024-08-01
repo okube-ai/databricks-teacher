@@ -17,11 +17,11 @@
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to view the metrics and Spark UI of an existing cluster ?
-  A: ""Can Attach To" privilege on the cluster"
-  B: ""Can Restart" privilege on the cluster"
-  C: ""Can Manage" privilege on the cluster"
-  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
-  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
+  A: Can Attach To privilege on the cluster
+  B: Can Restart privilege on the cluster
+  C: Can Manage privilege on the cluster
+  D: Cluster creation allowed + "Can Attach To" privileges on the cluster
+  E: Cluster creation allowed + "Can Restart" privileges on the cluster
 - exam_type: engineer-professional
   exam_number: 1
   question_number: 3
@@ -52,11 +52,11 @@
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to start and terminate an existing cluster ?
-  A: ""Can Attach To" privilege on the cluster"
-  B: ""Can Restart" privilege on the cluster"
-  C: ""Can Manage" privilege on the cluster"
-  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
-  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
+  A: Can Attach To privilege on the cluster"
+  B: Can Restart privilege on the cluster"
+  C: Can Manage privilege on the cluster"
+  D: Cluster creation allowed + "Can Attach To" privileges on the cluster"
+  E: Cluster creation allowed + "Can Restart" privileges on the cluster"
 - exam_type: engineer-professional
   exam_number: 1
   question_number: 6
@@ -78,10 +78,10 @@
   section_index: 2
   question: Which of the following describes the minimal permissions a data engineer
     needs to edit the configurations of an existing cluster?
-  A: ""Can Restart" privilege on the cluster"
-  B: ""Can Manage" privilege on the cluster"
-  C: "Cluster creation allowed + "Can Restart" privileges on the cluster"
-  D: "Cluster creation allowed + "Can Manage" privileges on the cluster"
+  A: Can Restart privilege on the cluster
+  B: Can Manage privilege on the cluster
+  C: Cluster creation allowed + "Can Restart" privileges on the cluster
+  D: Cluster creation allowed + "Can Manage" privileges on the cluster
   E: Only administrators can edit the configurations on existing clusters
 - exam_type: engineer-professional
   exam_number: 1
@@ -217,10 +217,10 @@
   exam_number: 1
   question_number: 18
   section_index: 1
-  question: "A data engineer wants to calculate predictions using a MLFlow model logged\
-    \ in a given "model_url". They want to register the model as a Spark\
-    \ UDF in order to apply it to a test dataset. Which code block allows the data\
-    \ engineer to register the MLFlow model as a Spark UDF ?"
+  question: A data engineer wants to calculate predictions using a MLFlow model logged
+    in a given model_url. They want to register the model as a Spark
+    UDF in order to apply it to a test dataset. Which code block allows the data
+    engineer to register the MLFlow model as a Spark UDF ?
   A: predict_udf = mliflow.pyfunc.spark_udf(spark, 'model_url')
   B: predict_udf = mlflow.spark_udf(spark, 'model_url')
   C: predict_udf = mlflow.udf(spark, 'model_url')
@@ -427,10 +427,16 @@
   exam_number: 1
   question_number: 32
   section_index: 1
-  question: "Given the following query on the Delta table customers on which Change\
-    \ Data Feed is enabled: spark. read -option( ree -option( = stable ( cuitac -filter(col(\
-    \ _ ewrite -node("ove -table( su: Which statement describes the results of\
-    \ this query each time itis executed ?"
+  question: Given the following query on the Delta table customers on which Change Data Feed is enabled
+      spark.read
+           .option ("readChangeFeed", "true")
+           .option("startingVersion", 0)
+           .table ("customers")
+           .filter(col("_change_type"), isin( ["update_postimage"] ))
+      .write
+          .mode ("overwrite")
+          .table("customers_updates")
+      Which statement describes the results of this query each time itis executed ?
   A: Newly updated records will be merged into the target table, modifying previous
     entries with the same primary keys.
   B: Newly updated records will be appended to the target table.

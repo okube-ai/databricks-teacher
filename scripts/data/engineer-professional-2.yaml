@@ -4,22 +4,22 @@
   section_index: 1
   question: Which of the following describes the minimal permissions a data engineer
     needs to attach a notebook to an existing cluster?
-  A: ""Can Attach To" privilege on the cluster"
-  B: ""Can Restart" privilege on the cluster"
-  C: ""Can Manage" privilege on the cluster"
-  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
-  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
+  A: Can Attach To privilege on the cluster
+  B: Can Restart privilege on the cluster
+  C: Can Manage privilege on the cluster
+  D: Cluster creation allowed + Can Attach To privileges on the cluster
+  E: Cluster creation allowed + Can Restart privileges on the cluster
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 1
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to start an existing cluster, and attach a notebook to it?
-  A: ""Can Attach To" privilege on the cluster"
-  B: ""Can Restart" privilege on the cluster"
-  C: ""Can Manage" privilege on the cluster"
-  D: "Cluster creation allowed + "Can Attach To" privileges on the cluster"
-  E: "Cluster creation allowed + "Can Restart" privileges on the cluster"
+  A: Can Attach To privilege on the cluster
+  B: Can Restart privilege on the cluster
+  C: Can Manage privilege on the cluster
+  D: Cluster creation allowed + Can Attach To privileges on the cluster
+  E: Cluster creation allowed + Can Restart privileges on the cluster
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 2
@@ -62,10 +62,10 @@
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to modify permissions of an existing cluster ?
-  A: ""Can Restart" privilege on the cluster"
-  B: ""Can Manage" privilege on the cluster"
-  C: "Cluster creation allowed + "Can Restart" privileges on the cluster"
-  D: "Cluster creation allowed + "Can Manage" privileges on the cluster"
+  A: Can Restart privilege on the cluster
+  B: Can Manage privilege on the cluster
+  C: Cluster creation allowed + Can Restart privileges on the cluster
+  D: Cluster creation allowed + Can Manage privileges on the cluster
   E: Only administrators can modify permissions on existing clusters
 - exam_type: engineer-professional
   exam_number: 2
@@ -323,7 +323,7 @@
   B: window("order_timestamp", "15 minutes")
   C: withWindow("order_timestamp", "15 minutes")
   D: withWatermark("order_timestamp", "15 minutes")
-  E: "interval(\"order_timestamp"\", minutes\")"
+  E: interval("order_timestamp", "minutes")
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 25
@@ -342,12 +342,12 @@
   exam_number: 2
   question_number: 26
   section_index: null
-  question: "A junior data engineer has created the table \u2018orders_backup'\
+  question: A junior data engineer has created the table orders_backup'\
     \ as a copy of the table "orders". Recently, the team started getting\
     \ an error when querying the orders_backup indicating that some data files are\
     \ no longer present. The transaction logs for the orders tables show a recent\
     \ run of VACUUM command. Which of the following explains how the data engineer\
-    \ created the orders_backup table ?"
+    \ created the orders_backup table ?
   A: The orders_backup table was created using CTAS statement from orders table
   B: The orders_backup table was created using CRAS statement from orders table
   C: "The orders_backup table was created using Delta Lake's SHALLOW CLONE functionality\
@@ -462,10 +462,10 @@
   exam_number: 2
   question_number: 34
   section_index: null
-  question: "A data engineer created a new table along with a comment using the following\
-    \ query:\n\nCREATE TABLE payments\nCOMMENT "Tras vicke .\nAS SELECT + FROM\
+  question: A data engineer created a new table along with a comment using the following\
+    \ query:\n\nCREATE TABLE payments\nCOMMENT "Trial" .\nAS SELECT + FROM\
     \ bank_transactions\n\nWhich of the following commands allows the data engineer\
-    \ to review the comment of the table ?"
+    \ to review the comment of the table ?
   A: SHOW TABLES payments
   B: SHOW TBLPROPERTIES payments
   C: SHOW COMMENTS payments
@@ -518,13 +518,13 @@
   exam_number: 2
   question_number: 38
   section_index: 1
-  question: "A data engineer has been asked to develop a nightly batch job for workforce\
+  question: A data engineer has been asked to develop a nightly batch job for workforce\
     \ productivity analytics. The job will process events of employees productivity\
     \ of the previous day, and store the performance of each employee in the Delta\
     \ table "employees_performance". The table has the following schema:\
     \ 'date DATE, employee_id STRING, rating DOUBLE'. The data engineering team wants\
     \ data to be stored in the table with the ability to compare employees' performance\
-    \ across time. Which of the following code blocks accomplishes this task?"
+    \ across time. Which of the following code blocks accomplishes this task?
   A: performance_df.write.format('delta').saveAsTable('employees_performance')
   B: performance_df.write.mode('append').saveAsTable('employees_performance')
   C: performance_df.write.mode('overwrite').saveAsTable('employees_performance')
@@ -596,9 +596,9 @@
   D: Only members of the instructors group will see the records of all students no
     matter if they are active or not. While users that are not members of the specified
     group will see null values for the records of inactive students
-  E: "Only members of the instructors group will see the records of all students no\
+  E: Only members of the instructors group will see the records of all students no\
     \ matter if they are active or not. While users that are not members of the specified\
-    \ group will see "REDACTED" values for the records of inactive students"
+    \ group will see "REDACTED" values for the records of inactive students
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 43
@@ -614,11 +614,11 @@
   exam_number: 2
   question_number: 44
   section_index: null
-  question: "The data engineering team has a secret scope named "prod-scope"\
+  question: The data engineering team has a secret scope named "prod-scope"\
     \ that contains sensitive secrets in a production workspace. A data engineer in\
     \ the team is writing a security and compliance documentation, and wants to explain\
     \ who could use the secrets in this secret scope. Which of the following roles\
-    \ is able to use the secrets in the specified secret scope?"
+    \ is able to use the secrets in the specified secret scope?
   A: Workspace Administrators
   B: Secret creators
   C: Users with MANAGE permission on the secret scope
@@ -687,16 +687,16 @@
     \ Databricks REST API. However, they sent by mistake 2 POST requests to the endpoint\
     \ \u2018api/2.1/jobs/create'. Which statement describes the result of these\
     \ requests?"
-  A: "Only the first job will be created in the workspace. The second request will\
+  A: Only the first job will be created in the workspace. The second request will\
     \ fail with an error indicating that a job named "process-sales" is\
-    \ already created."
+    \ already created.
   B: The second job will overwrite the previous one created using the first request.
-  C: "2 jobs will be created in the workspace, but the second one will be renamed\
-    \ to "process-sales (1)""
-  D: "2 jobs named "process-sales" will be created in the workspace with\
-    \ the same job_id"
-  E: "2 jobs named "process-sales" will be created in the workspace, but\
-    \ with different job_id"
+  C: 2 jobs will be created in the workspace, but the second one will be renamed\
+    \ to "process-sales (1)"
+  D: 2 jobs named "process-sales" will be created in the workspace with\
+    \ the same job_id
+  E: 2 jobs named "process-sales" will be created in the workspace, but\
+    \ with different job_id
 - exam_type: engineer-professional
   exam_number: 2
   question_number: 49
