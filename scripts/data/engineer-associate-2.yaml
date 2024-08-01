@@ -1,0 +1,597 @@
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 1
+  section_index: 3
+  question: One of the foundational technologies provided by the Databricks Lakehouse
+    Platform is an open-source, file-based storage format that brings reliability
+    to data lakes. Which of the following technologies is being described in the above
+    statement?
+  A: Delta Lives Tables (DLT)
+  B: Delta Lake
+  C: Apache Spark
+  D: Unity Catalog
+  E: null
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 2
+  section_index: 3
+  question: Which of the following commands can a data engineer use to purge stale
+    data files of a Delta table?
+  A: DELETE
+  B: GARBAGE COLLECTION
+  C: CLEAN
+  D: vacuum
+  E: OPTIMIZE
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 3
+  section_index: 1
+  question: In Databricks Repos, which of the following operations a data engineer
+    can use to save local changes of a repo to its remote repository ?
+  A: Create Pull Request
+  B: Commit & Pull
+  C: Commit & Push
+  D: Merge & Push
+  E: Merge & Pull
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 4
+  section_index: 3
+  question: In Delta Lake tables, which of the following is the primary format for
+    the transaction log files?
+  A: Delta
+  B: Parquet
+  C: JSON
+  D: Hive-specific format
+  E: XML
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 5
+  section_index: 1
+  question: Which of the following functionalities can be performed in Databricks
+    Repos ?
+  A: Create pull requests
+  B: Create new remote Git repositories
+  C: Delete branches
+  D: Create CI/CD pipelines
+  E: Pull from a remote Git repository
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 6
+  section_index: 1
+  question: Which of the following locations completely hosts the customer data ?
+  A: Customer's cloud account
+  B: Control plane
+  C: Databricks account
+  D: Databricks-managed cluster
+  E: Repos
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 7
+  section_index: 1
+  question: If the default notebook language is Python, which of the following options
+    a data engineer can use to run SQL commands in this Python Notebook?
+  A: They need first to import the SQL library in a cell
+  B: This is not possible! They need to change the default language of the notebook
+    to SQL
+  C: Databricks detects cells language automatically, so they can write SQL syntax
+    in any cell
+  D: "They can add \u2018:language magic command at the start of a cell to force language\
+    \ detection."
+  E: "They can add \u2018:sql at the start of a cell."
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 8
+  section_index: 1
+  question: A junior data engineer uses the built-in Databricks Notebooks versioning
+    for source control. A senior data engineer recommended using Databricks Repos
+    instead. Which of the following could explain why Databricks Repos is recommended
+    instead of Databricks Notebooks versioning?
+  A: Databricks Repos supports creating and managing branches for development work.
+  B: Databricks Repos automatically tracks the changes and keeps the history.
+  C: Databricks Repos allows users to resolve merge conflicts
+  D: Databricks Repos allows users to restore previous versions of a notebook
+  E: All of these advantages explain why Databricks Repos is recommended instead of
+    Notebooks versioning
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 9
+  section_index: 1
+  question: Which of the following services provides a data warehousing experience
+    to its users?
+  A: Databricks Machine Learning
+  B: Unity Catalog
+  C: Delta Lives Tables (DLT)
+  D: Databricks SQL
+  E: null
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 10
+  section_index: 3
+  question: Which of the following could explain why only some of the unused data
+    files have been deleted after running the VACUUM command ?
+  A: The deleted data files were larger than the default size threshold. While the
+    remaining files are smaller than the default size threshold and can not be deleted.
+  B: The deleted data files were smaller than the default size threshold. While the
+    remaining files are larger than the default size threshold and can not be deleted.
+  C: The deleted data files were older than the default retention threshold. While
+    the remaining files are newer than the default retention threshold and can not
+    be deleted.
+  D: The deleted data files were newer than the default retention threshold. While
+    the remaining files are older than the default retention threshold and can not
+    be deleted.
+  E: More information is needed to determine the correct answer
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 11
+  section_index: 3
+  question: "The data engineering team has a Delta table called products that contains\
+    \ products' details including the net price. Which of the following code\
+    \ blocks will apply a 50% discount on all the products where the price is greater\
+    \ than 1000 and save the new price to the table?"
+  A: UPDATE products SET price = price * 0.5 WHERE price >= 1000;
+  B: SELECT price * 0.5 AS new_price FROM products WHERE price > 1000;
+  C: MERGE INTO products WHERE price < 1000 WHEN MATCHED UPDATE price = price * 0.5;
+  D: UPDATE products SET price = price * 0.5 WHERE price > 1000;
+  E: MERGE INTO products WHERE price > 1000 WHEN MATCHED UPDATE price = price * 0.5;
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 12
+  section_index: 3
+  question: A data engineer has a database named db_hr, and they want to know where
+    this database was created in the underlying storage. Which of the following commands
+    can the data engineer use to complete this task?
+  A: DESCRIBE db_hr
+  B: DESCRIBE EXTENDED db_hr
+  C: DESCRIBE DATABASE db_hr
+  D: SELECT location FROM db_hr.db
+  E: There is no need for a command since all databases are created under the default
+    hive metastore directory
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 13
+  section_index: 2
+  question: A data engineer wants to create a relational object by pulling data from
+    two tables. The relational object will only be used in the current session. In
+    order to save on storage costs, the date engineer wants to avoid copying and storing
+    physical data. Which of the following relational objects should the data engineer
+    create?
+  A: External table
+  B: Temporary view
+  C: Managed table
+  D: Global Temporary view
+  E: View
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 14
+  section_index: 2
+  question: Which of the following commands a data engineer can use to register the
+    table orders from an existing SQLite database ?
+  A: CREATE TABLE orders USING sqlite OPTIONS (url 'Gl dotable')
+  B: CREATE TABLE orders USING org. apache. spark. sql. jdbc OPTIONS (url 'ol dotable')
+  C: CREATE TABLE orders USING cloudfiles OPTIONS (url 'ile dotable')
+  D: CREATE TABLE orders USING EXTERNAL OPTIONS (url 'ol dotable')
+  E: CREATE TABLE orders USING DATABASE OPTIONS (url 'ol dotable')
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 15
+  section_index: 3
+  question: "When dropping a Delta table, which of the following explains why both\
+    \ the table's metadata and the data files will be deleted ?"
+  A: The table is shallow cloned
+  B: The table is external
+  C: The user running the command has the necessary permissions to delete the data
+    files
+  D: The table is managed
+  E: The data files are older than the default retention period
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 17
+  section_index: 2
+  question: Which of the following code blocks can a data engineer use to create a
+    Python function to multiply two integers and return the result?
+  A: 'multiply_indexs(num1, num2):
+
+    ae (numl = num2)'
+  B: 'fun: rultiply_indexs(num1, num2}:
+
+    rotors numl = num2'
+  C: 'multiply_indexs(num1, num2):
+
+    rotors numl = num2'
+  D: 'multiply_indexs(num1, num2):
+
+    rotors numl = num2'
+  E: '- multiply_indexs(num1, num2):
+
+    ctor num) = num2'
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 18
+  section_index: 2
+  question: "Given the following 2 tables:\n\nstudents\n\nEe\n\nenrollments\n\nFill\
+    \ in the blank to make the following query returns the below result:\n\nSELECT\
+    \ students.name, students.age, enrollments. course_id\nFROM students\n\nenrollments\n\
+    ON students.student_id = enrollments.student_id\n\nQuery result:\n\n\xA9 CROSS\
+    \ JOIN"
+  A: INNER JOIN
+  B: LEFT JOIN
+  C: RIGHT JOIN
+  D: OUTER JOIN
+  E: CROSS JOIN
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 19
+  section_index: 2
+  question: Which of the following SQL keywords can be used to rotate rows of a table
+    by turning row values into multiple columns ?
+  A: ROTATE
+  B: TRANSFORM
+  C: PIVOT
+  D: GROUP BY
+  E: ZORDER BY
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 20
+  section_index: 2
+  question: Fill in the below blank to get the number of courses incremented by 1
+    for each student in array column students.
+  A: TRANSFORM (students, total_courses + 1)
+  B: TRANSFORM (students, i -> i.total_courses + 1)
+  C: FILTER (students, total_courses + 1)
+  D: FILTER (students, i -> i.total_courses + 1)
+  E: CASE WHEN students.total_courses IS NOT NULL THEN students.total_courses + 1
+    ELSE NULL END
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 21
+  section_index: 2
+  question: Fill in the below blank to successfully create a table using data from
+    CSV files located at /path/input
+  A: header = TRUE
+  B: header = FALSE
+  C: FROM CSV
+  D: USING CSV
+  E: USING DELTA
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 22
+  section_index: 2
+  question: "Which of the following statements best describes the usage of CREATE SCHEMA command ?"
+  A: It's used to create a table schema (column mes and datatype)
+  B: It's used to create a Hive catalog
+  C: It's used to infer and store schema in "cloudFiles.schema"
+  D: It's used to create a database
+  E: It's used to merge the schema when ng data into a target table
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 23
+  section_index: 2
+  question: Which of the following statements is Not true about CTAS statements ?
+  A: CTAS statements automatically infer schema information from query results
+  B: CTAS statements support manual schema declaration
+  C: CTAS statements stand for CREATE TABLE __ AS SELECT statement
+  D: With CTAS statements, data will be inserted during the table creation
+  E: All these statements are Not true about CTAS statements
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 24
+  section_index: 3
+  question: Which of the following SQL commands will append this new row to the existing
+    Delta table users?
+  A: APPEND INTO users VALUES ("0015", "Adam", 23)
+  B: INSERT VALUES ("0015", "Adam", 23) INTO users
+  C: APPEND VALUES ("0015", "Adam", 23) INTO users
+  D: INSERT INTO users VALUES ("0015", "Adam", 23)
+  E: UPDATE users VALUES ("0015", "Adam", 23)
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 25
+  section_index: 3
+  question: 'Given the following Structured Streaming query:
+
+
+    (spark.table(":
+
+    withColumn( tac: .latter_ri> , coll Ll y+coll tae
+
+    writestream
+
+    .option( 3 . oo", checkpointPath)
+
+    -outputMode( -
+
+
+    Fill in the blank to make the query executes multiple micro-batches to process
+    all available data, then stops the trigger.'
+  A: trigger("micro-batches")
+  B: trigger(once=True)
+  C: trigger(processingTime="0 seconds")
+  D: trigger(micro-batches=True)
+  E: trigger(availableNow=True)
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 26
+  section_index: 3
+  question: Which of the following techniques allows Auto Loader to track the ingestion
+    progress and store metadata of the discovered files?
+  A: mergeSchema
+  B: COPY INTO
+  C: Watermarking
+  D: Checkpointing
+  E: Z-Ordering
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 27
+  section_index: 3
+  question: 'A data engineer has defined the following data quality constraint in
+    a Delta Live Tables pipeline: fia 1S NOl NULL: Fill in the above blank so records
+    violating this constraint cause the pipeline to fail.'
+  A: ON VIOLATION FAIL
+  B: ON VIOLATION FAIL UPDATE
+  C: ON VIOLATION DROP ROW
+  D: ON VIOLATION FAIL PIPELINE
+  E: There is no need to add ON VIOLATION clause. By default, records violating the
+    constraint cause the pipeline to fail.
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 28
+  section_index: 1
+  question: In multi-hop architecture, which of the following statements best describes
+    the Silver layer tables?
+  A: They maintain data that powers analytics, machine learning, and production applications
+  B: They maintain raw data ingested from various sources
+  C: The table structure in this layer resembles that of the source system table structure
+    with any additional metadata columns like the load time, and input file name.
+  D: They provide business-level aggregated version of data
+  E: "They provide a more refined view of raw data, where it's filtered, cleaned,\
+    \ and enriched."
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 29
+  section_index: 4
+  question: The data engineer team has a DLT pipeline that updates all the tables
+    at defined intervals until manually stopped. The compute resources of the pipeline
+    continue running to allow for quick testing. Which of the following best describes
+    the execution modes of this DLT pipeline ?
+  A: The DLT pipeline executes in Continuous Pipeline mode under Production mode.
+  B: The DLT pipeline executes in Continuous Pipeline mode under Development mode.
+  C: The DLT pipeline executes in Triggered Pipeline mode under Production mode.
+  D: The DLT pipeline executes in Triggered Pipeline mode under Development mode.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 30
+  section_index: 1
+  question: Given the following Structured Streaming query, which of the following
+    best describe the purpose of this query in a multi-hop architecture?
+  A: The query is performing raw data ingestion into a Bronze table
+  B: The query is performing a hop from a Bronze table to a Silver table
+  C: The query is performing a hop from Silver layer to a Gold table
+  D: The query is performing data transfer from a Gold table into a production application
+  E: This query is performing data quality controls prior to Silver layer
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 31
+  section_index: 3
+  question: Given the following Structured Streaming query, what is the trigger interval
+    for this query?
+  A: Every half second
+  B: Every half minute
+  C: Every half hour
+  D: The query will run in batch mode to process all available data at once, then
+    the trigger stops.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 32
+  section_index: 3
+  question: 'A data engineer has the following query in a Delta Live Tables pipeline
+
+
+    CREATE STREAMING LIVE TABLE sales_silver
+
+
+    AS
+
+    SELECT store_id, total + tax AS total_after_tax
+
+    FROM LIVE.sales_bronze
+
+
+    The pipeline is failing to start due to an error in this query.
+
+
+    Which of the following changes should be made to this query to successfully start
+    the DLT pipeline ?'
+  A: 'CREATE LIVE TABLE sales_silver
+
+
+    AS
+
+    SELECT store_id, total + tax AS total_after_tax
+
+    FROM STREAMING(LIVE.sales_bronze)'
+  B: 'CREATE STREAMING TABLE sales_silver
+
+
+    AS
+
+    SELECT store_id, total + tax AS total_after_tax
+
+    FROM STREAM(LIVE.sales_bronze)'
+  C: 'CREATE STREAMING LIVE TABLE sales_silver
+
+
+    AS
+
+    SELECT store_id, total + tax AS total_after_tax
+
+    FROM STREAMING(sales_bronze)'
+  D: 'CREATE STREAMING LIVE TABLE sales_silver
+
+
+    AS
+
+    SELECT store_id, total + tax AS total_after_tax
+
+    FROM STREAMING(LIVE.sales_bronze)'
+  E: 'CREATE STREAMING LIVE TABLE sales_silver
+
+
+    AS
+
+    SELECT store_id, total + tax AS total_after_tax
+
+    FROM STREAM(LIVE.sales_bronze)'
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 33
+  section_index: 1
+  question: In multi-hop architecture, which of the following statements best describes
+    the Gold layer tables?
+  A: They provide a more refined view of the data
+  B: They maintain raw data ingested from various sources
+  C: The table structure in this layer resembles that of the source system table structure
+    with any additional metadata columns like the load time, and input file name.
+  D: They provide business-level aggregations that power analytics, machine learning,
+    and production applications
+  E: They represent a filtered, cleaned, and enriched version of data
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 34
+  section_index: 4
+  question: The data engineer team has a DLT pipeline that updates all the tables
+    once and then stops. The compute resources of the pipeline terminate when the
+    pipeline is stopped. Which of the following best describes the execution modes
+    of this DLT pipeline ?
+  A: The DLT pipeline executes in Continuous Pipeline mode under Production mode.
+  B: The DLT pipeline executes in Continuous Pipeline mode under Development mode.
+  C: The DLT pipeline executes in Triggered Pipeline mode under Production mode.
+  D: The DLT pipeline executes in Triggered Pipeline mode under Development mode.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 35
+  section_index: 3
+  question: A data engineer needs to determine whether to use Auto Loader or COPY
+    INTO command in order to load input data files incrementally. In which of the
+    following scenarios should the data engineer use Auto Loader over COPY INTO command
+    ?
+  A: if they are going to ingest files in the order of millions or more over time
+  B: If they are going to ingest few number of files in the order of thousands
+  C: If they are going to load a subset of re-uploaded files
+  D: If the data schema is not going to evolve frequently
+  E: There is no difference between using Auto Loader and Copy Into command
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 36
+  section_index: 1
+  question: From which of the following locations can a data engineer set a schedule
+    to automatically refresh a Databricks SQL query ?
+  A: From the jobs UI
+  B: From the SQL warehouses page in Databricks SQL
+  C: From the Alerts page in Databricks SQL
+  D: From the query's page in Databricks SQL
+  E: There is no way to automatically refresh a query in Databricks SQL. Schedules
+    can be set only for dashboards to refresh their underlying queries.
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 37
+  section_index: 3
+  question: Databricks provides a declarative ETL framework for building reliable
+    and maintainable data processing pipelines, while maintaining table dependencies
+    and data quality. Which of the following technologies is being described above?
+  A: Delta Live Tables
+  B: Delta Lake
+  C: Databricks Jobs
+  D: Unity Catalog Linage
+  E: Databricks SQL
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 38
+  section_index: 1
+  question: Which of the following services can a data engineer use for orchestration
+    purposes in Databricks platform ?
+  A: Delta Live Tables
+  B: Cluster Pools
+  C: Databricks Jobs
+  D: Data Explorer
+  E: Unity Catalog Linage
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 39
+  section_index: 4
+  question: A data engineer has a Job with multiple tasks that takes more than 2 hours
+    to complete. In the last run, the final task unexpectedly failed. Which of the
+    following actions can the data engineer perform to complete this Job Run while
+    minimizing the execution time?
+  A: They can rerun this Job Run to execute all the tasks
+  B: They can repair this Job Run so only the failed tasks will be re-executed
+  C: They need to delete the failed Run, and start a new Run for the Job
+  D: They can keep the failed Run, and simply start a new Run for the Job
+  E: They can run the Job in Production mode which automatically retries execution
+    in case of errors
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 40
+  section_index: 4
+  question: A data engineering team has a multi-tasks Job in production. The team
+    members need to be notified in the case of job failure. Which of the following
+    approaches can be used to send emails to the team members in the case of job failure
+    ?
+  A: They can use Job API to programmatically send emails according to each task status
+  B: They can configure email notifications settings in the job page
+  C: There is no way to notify users in the case of job failure
+  D: Only Job owner can be configured to be notified in the case of job failure
+  E: They can configure email notifications settings per notebook in the task page
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 41
+  section_index: 4
+  question: For production jobs, which of the following cluster types is recommended
+    to use?
+  A: All-purpose clusters
+  B: Production clusters
+  C: Job clusters
+  D: On-premises clusters
+  E: Serverless clusters
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 42
+  section_index: 4
+  question: In Databricks Jobs, which of the following approaches can a data engineer
+    use to configure a linear dependency between Task A and Task B ?
+  A: They can select the Task A in the Depends On field of the Task B configuration
+  B: They can assign Task A an Order number of 1, and assign Task B an Order number
+    of 2
+  C: They can visually drag and drop an arrow from Task A to Task B in the Job canvas
+  D: They can configure the dependency at the notebook level using the dbutils.jobs
+    utility
+  E: Databricks Jobs do not support linear dependency between tasks. This can only
+    be achieved in Delta Live Tables pipelines
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 43
+  section_index: 5
+  question: Which part of the Databricks Platform can a data engineer use to revoke
+    permissions from users on tables?
+  A: Data Explorer
+  B: Cluster event log
+  C: Workspace Admin Console
+  D: DBFS
+  E: There is no way to revoke permissions in Databricks platform. The data engineer
+    needs to clone the table with the updated permissions
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 45
+  section_index: 5
+  question: In which of the following locations can a data engineer change the owner
+    of a table?
+  A: "In DBFS, from the properties tab of the table's data files"
+  B: In Data Explorer, under the Permissions tab of the table's page
+  C: In Data Explorer, from the Owner field in the table's page
+  D: In Data Explorer, under the Permissions tab of the database's page, since owners
+    are set at database-level
+  E: In Data Explorer, from the Owner field in the database's page, since owners are
+    set at database-level

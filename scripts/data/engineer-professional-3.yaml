@@ -1,0 +1,809 @@
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 1
+  section_index: 1
+  question: A data analyst is running a shell script in all the notebooks attached
+    to the cluster. The shell script contains a long set of commands which is taking
+    a lot of time to complete. As a data engineer, which of the following statements
+    will you suggest to the data analyst?
+  A: Use the script to execute the shell script faster
+  B: Run the script as the Workspace admin
+  C: Use *md to run the script faster
+  D: Increase the number of worker nodes to speed up the script
+  E: Run the notebook using Databricks API
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 2
+  section_index: null
+  question: Which of the following is a valid response to a JSON workload passed to
+    2.0/jobs/create endpoint of Databricks REST API?
+  A: 'job_id: 13746'
+  B: 'response_code: 200'
+  C: 'error_message: Invalid JSON'
+  D: 'success: true'
+  E: 'payload: {job_id: 13746}'
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 3
+  section_index: null
+  question: A data engineer wants to unmount a mount point mounted at /mnt/mountPoint1.
+    Which of the following commands can be used by the data engineer?
+  A: dbutils.unmount("/mnt/mountPoint1")
+  B: mount("/mnt/mountPoint1")
+  C: dbutils.fs.unmount("/mnt/mountPoint1")
+  D: dbutils.widgets("/mnt/mountPoint1")
+  E: dbutils.remove_moun /mnt/mountPoint
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 4
+  section_index: 2
+  question: A Databricks admin has created a Cluster and provided Can Restart permission
+    to a group of users named data_analysts. Which of the following cluster-related
+    actions cannot be performed by the members of the data_analysts group?
+  A: Terminate the cluster
+  B: View Spark UI
+  C: Restart the cluster
+  D: View the cluster metrics
+  E: Edit the cluster
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 5
+  section_index: null
+  question: Which of the data constraint forced the job to fail?
+  A: The individual cell output is limited to 6 MB which caused the job to fail.
+  B: The output size of all the cells in a notebook should not exceed 20 MB. Since
+    the total size of all the cells combined is more than 20 MB, the job failed.
+  C: The output size of the first cell cannot exceed 5 MB in size, forcing the job
+    to fail.
+  D: The job failed due to multiple reasons as the size of any individual cell output
+    in a notebook cannot increase by 6 MB and the total size of all the outputs cannot
+    be more than 18 MB.
+  E: The reason for the job failure cannot be determined solely by the size of the
+    output as there is no limitation on the output size of the cells in a notebook.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 6
+  section_index: 2
+  question: 'While creating a cluster for the engineering team, the Databricks admin
+    added the ENV=PROD in Environment variables. The engineering team is using this
+    environment variable for fetching data from the $3 bucket in the fetch_details
+    notebook. A new member joins the team and needs to fetch data from the DEV environment
+    instead of PROD. The member runs the following command in a new notebook to update
+    the environment variable: import os os.environ[''ENV''] = ''DEV''. Which of the
+    following statements describes the effect of the command?'
+  A: "The environment variable's value will be changed in the newly created notebook\
+    \ and the fetch_details notebook will also start using DEV."
+  B: The command will fail with an error message as the environment variable cannot
+    be changed.
+  C: The command will be executed successfully but the environment variable will not
+    be changed.
+  D: "The environment variable's value will be changed but the value in all other\
+    \ notebooks will remain PROD."
+  E: "The environment variable's value will be updated in the cluster properties\
+    \ and all the notebooks attached to the cluster will start using the updated value."
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 7
+  section_index: 2
+  question: Which of the following statements is true about the data present in the
+    tables? Assume that the UNDROP command, recently launched by Databricks, cannot
+    be used.
+  A: The data in both tables can be retrieved by using the Time Travel feature of
+    Delta tables.
+  B: The tables cannot be dropped without deleting all the records.
+  C: The data in the flights table can be recovered using Time Travel but the data
+    in the airports table cannot be recovered.
+  D: The data in airports table can be accessed at the DBFS location and the data
+    in the flights table can be recovered using the Time Travel feature.
+  E: The data in flights table cannot be recovered but the data in the airports table
+    can be accessed at the DBFS location.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 8
+  section_index: null
+  question: Which of the following statements depicts the correct usage of 2.0/jobs/update
+    and 2.0/jobs/reset endpoints of the Databricks REST API?
+  A: 2.0/jobs/reset is used to overwrite an existing job with its default settings
+    whereas 2.0/jobs/update is used to add, change or remove specific settings of
+    an existing job.
+  B: 2.0/jobs/reset is used to overwrite all the settings of an existing job with
+    the settings passed in the JSON payload whereas 2.0/jobs/update is used to update
+    the ID of an existing job.
+  C: 2.0/jobs/reset is used to remove all the jobs with a specific name from the Workspace
+    whereas 2.0/jobs/update is used to add, change or remove specific settings of
+    an existing job.
+  D: 2.0/jobs/reset is used to overwrite all the settings of an existing job with
+    the settings passed in the JSON payload whereas 2.0/jobs/update is used to add,
+    change or remove specific settings of an existing job.
+  E: 2.0/jobs/reset is used to delete the details of all the previous job runs of
+    an existing job whereas 2.0/jobs/update is used to update the ID of an existing
+    job.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 9
+  section_index: null
+  question: Which of the following statements about interoperability between supported
+    languages in Databricks notebooks is true?
+  A: Variables declared in the Python language cells can only be accessed in cells
+    with default language as Python or Scala.
+  B: Variables declared in Python can be used in cells with default language as Python,
+    Scala or R.
+  C: Variables declared in one language can be used in all other languages as Databricks
+    supports full interoperability.
+  D: Variables declared in one language cannot be accessed in the cells using any
+    other language.
+  E: SQL variables are the only ones that can be used in cells having other
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 10
+  section_index: 1
+  question: An engineering team has a lot of members ranging from data analysts to
+    data scientists. Some of the team members use an S3 bucket to access the data
+    but some of the new users are not familiar with AWS S3. The team decides to mount
+    the S3 bucket to DBFS. Which of the following methods should be used by the team
+    if they need to give read-only access to the mounted S3 bucket?
+  A: Mount the S3 bucket using AWS keys - access_key and secret_key
+  B: Add readOnly = True in dbutils.fs.mount()
+  C: Mounting of S3 bucket with read-only access is not possible in Databricks
+  D: Select the readOQnly option while mounting the S3 bucket
+  E: Mount the S3 bucket using the AWS instance profile
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 11
+  section_index: null
+  question: Which of the following is correct about the Package cells in a Databricks
+    notebook?
+  A: A package cell is compiled when executed.
+  B: A package cell contains more than one class/object.
+  C: A package cell contains data from more than one cell.
+  D: A package cell returns an executable file when executed.
+  E: A package cell can only work with Python classes.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 12
+  section_index: 0
+  question: The compliance team is looking at some of the VACUUM commands used in
+    the past on the hotel_bookings Delta table. The team is curious to know which
+    of the following commands will have the same effect on the data files and which
+    of the commands will not affect the number of data files present. Assume that
+    the default settings have not been changed.
+  A: Commands 3 and 6 will have the same effect whereas Commands 2, 4 and 5 will have
+    no effect on data files.
+  B: Commands 1 and 6 will have the same effect whereas Commands 2 and 4 will have
+    no effect on data files.
+  C: Commands 1, 3 and 6 will have the same effect whereas Commands 2 and 5 will have
+    no effect on data files.
+  D: Commands 1 and 6 will have the same effect whereas Commands 2, 4 and 5 will have
+    no effect on data files.
+  E: Commands 3 and 6 will have the same effect whereas Commands 2 and 4 will have
+    no effect on data files.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 13
+  section_index: 1
+  question: Which of the following statements is true about the checkpoints in a streaming
+    query?
+  A: Checkpoint location should always be used while reading data using a streaming
+    query.
+  B: Each unique streaming query should have its own checkpoint.
+  C: Fault tolerance can be achieved by using checkpoints.
+  D: Both Band C
+  E: All of the above
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 14
+  section_index: 2
+  question: After attending a Spark conference, each one of the data engineers was
+    asked to write one capability of AQE(Adaptive Query Execution). Which of the below
+    statements made by the data engineers is not completely correct?
+  A: Data Engineer 1 - The sort-merge joins can be dynamically changed to hash joins.
+  B: Data Engineer 2 - Helps in saving computing costs by combining small tasks.
+  C: Data Engineer 3 - Handles skews dynamically in stream-static joins.
+  D: Data Engineer 4 - Sort merge joins can be converted to broadcast joins.
+  E: All of the above is true.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 15
+  section_index: 2
+  question: Which of the following statements is not true about AutoLoader in Databricks?
+  A: Auto Loader can load files from AWS S3, Google Cloud Storage as well as Databricks
+    File System.
+  B: Auto Loader supports Python, Scala and SQL in Delta Live tables.
+  C: Besides new incoming files, Auto Loader can also be used to process already existing
+    files in cloud storage like S3.
+  D: Auto Loader can be used to fetch image files from cloud storage.
+  E: All of the above are false.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 16
+  section_index: 2
+  question: A data engineering team needs to enable Change Data Capture(CDC) for all
+    the newly created Delta tables. Which of the following statements can be used?
+  A: SET spark.databricks.delta.properties.defaults.enableChangeDataCapture = true
+  B: SET spark.databricks.delta.properties.default.enableChangeDataFeed = true
+  C: SET spark.databricks.delta.properties.defaults.enableChangeDataFeed = true
+  D: All the Delta tables have CDC enabled, by default.
+  E: SET spark.databricks.delta.properties.default.enableChangeDataCapture = true
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 17
+  section_index: 1
+  question: Which of the following is true about the creators_new and creators_old
+    tables?
+  A: Table properties specified by TBLPROPERTIES will be accessible in creators_new
+    table but not in the creators_old table whereas neither of the clones of the creators
+    table can access the comment added to the creators table.
+  B: The comments added to the creators table can be accessed by both the clones of
+    the creators table but the table properties cannot be accessed.
+  C: The comments and the table properties cannot be accessed by the creators_old
+    and creators_new tables.
+  D: Table properties can be accessed by both the clones of the creators table but
+    the comments added to the creators table will not be available.
+  E: Comments added to the creators table will be accessible in creators_new table
+    but not in the creators_old table whereas neither of the clones of the creators
+    table can access the table properties.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 18
+  section_index: 1
+  question: 'A data engineer executes the following query: spark.readStream.format(22:V\stable(tiars''swritestream\-option(*:.format(-option('':stable(te
+    c''). What will be the result of the query and the performance table if a column
+    from the scorecard table is renamed while the query is running?'
+  A: The query will continue to run and the column will be renamed in the performance
+    table as well.
+  B: The query will continue to run but the column name in the performance table will
+    remain the same.
+  C: The query will be stopped but the column name in the performance table will be
+    updated.
+  D: The query will be paused for 1 minute to accommodate the changes in the performance
+    table. Once the changes are processed, the query will continue to execute.
+  E: The query will be stopped and the column name in the performance table will remain
+    the same.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 19
+  section_index: null
+  question: Which of the following statements explains the working of Z-ordering for
+    a Delta table?
+  A: Z-ordering optimizes the files to create similar-size files based on the number
+    of rows.
+  B: Z-ordering collects the min and max values of each column and adds them to another
+    table.
+  C: Z-ordering optimizes the files to create similar-size files based on their size
+    on disk.
+  D: Z-ordering works only on the text data columns.
+  E: Z-ordering clears the column with text-only data before performing the ordering.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 20
+  section_index: 1
+  question: Which of the following statements is correct about the rescue schema evolution
+    mode in Auto Loader?
+  A: As soon as a new column is found, the stream but the schema is evolv
+  B: The schema is not evolved and the new columns are ignored while the stream continues
+    to execute.
+  C: The stream fails when new columns are encountered while the details of new columns
+    are stored in the _rescued_data column.
+  D: "If a new column is detected, the stream continues its execution but the schema\
+    \ is not evolved whereas the new columns' information is added to the _rescued_data\
+    \ column."
+  E: On detection of a new column, the schema is evolved and the column is added to
+    the _rescued_data column but the stream does not fail.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 21
+  section_index: 0
+  question: Which of the following correctly fills the numbered blanks to achieve
+    the expected result?
+  A: 1. .drop('_commit_timestamp') \n2. .select('~', col('_change_type').alias('typeOfChange'),
+    col('_commit_version').alias('version')) \n3. .mode('overwrite')
+  B: 1. .drop('commit_timestamp') \n2. .select('~', col('change_type').alias('typeOfChange'),
+    col('commit_version').alias('version')) \n3. .mode('overwrite')
+  C: 1. .drop('_commit_timestamp') \n2. .withColumnRenamed('change type', 'typeOfChange').withColumnRenamed('_change_version',
+    'version') \n3. .mode('truncate')
+  D: 1. .drop('_change_timestamp') \n2. .withColumnRenamed('change type', 'typeOfChange').withColumnRenamed('_commit_version',
+    'version') \n3. .mode('overwrite')
+  E: 1. .drop('_commit_timestamp') \n2. .withColumnRenamed('change type', 'typeOfChange').withColumnRenamed('_commit_version',
+    'version') \n3. .mode('overwrite')
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 22
+  section_index: 1
+  question: "Which of the following is true about the join's functionality?"
+  A: The updates made to the data present in the conversion_rate table will result
+    in an instant error in the streaming query.
+  B: The updates made to the data present in the conversion_rate table will result
+    in an error when the new batch of data arrives in the transactions table.
+  C: The data in the conversion_rate table should be updated once the new batch of
+    data has arrived and the join is in progress.
+  D: The data in the conversion_rate table should be updated once the batch of data
+    has been processed and the other batch of data is yet to arrive for processing.
+  E: The streaming join will fail as the default join type is outer join
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 23
+  section_index: null
+  question: Which of the following Languages is/are supported by the DLT(Delta Live
+    Tables) in Databricks?
+  A: Only SQL
+  B: Scala and Python
+  C: Python, Java and Scala
+  D: Python, SQL and Scala
+  E: Python and SQL
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 24
+  section_index: 1
+  question: Which of the following methods can be used to define a function which
+    can be executed on the output of every micro-batch in a Spark Streaming query?
+  A: foreachBatch()
+  B: foreachUDF()
+  C: pivot()
+  D: explain()
+  E: fun()
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 25
+  section_index: 1
+  question: Which of the following methods can be used to remove duplicate columns
+    after an inner join between two?
+  A: dropDuplicates()
+  B: dropColumns()
+  C: drop_duplicates()
+  D: dropDuplicateColumns()
+  E: None of the above
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 26
+  section_index: null
+  question: "Which of the following locations will be used to store the DLT'\
+    s events log if the Delta Live Table's storage location has been set up as\
+    \ /teams/prod ?"
+  A: /teams/prod/system/events
+  B: /teams/prod/logs/events
+  C: /teams/prod/logs
+  D: /teams/prod/pipelines/events
+  E: /teams/prod/system
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 27
+  section_index: null
+  question: 'A team is working on the execution of a streaming query that uses Auto
+    Loader to fetch CSV files from the cloud storage. Which of the following queries
+    can be used to fetch only the files with .csv extension from the following locations:'
+  A: spark.readStream.format(a).option("schema", schema).load()
+  B: spark.readStream.format(a).option("schema", schema).option("load")
+  C: spark.readStream.format().option("schema", schema).option("load")
+  D: spark.readStream.format().option("schema", schema).option("load")
+  E: spark.readStream.format().option("schema", schema).option("load")
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 28
+  section_index: 1
+  question: A team of data engineers is testing a stream-stream join in Spark. Which
+    of the following statements is true about these types of joins?
+  A: A stream-stream join is not supported in Spark.
+  B: A stream-stream join cannot be an outer join.
+  C: Adding a watermark is necessary for a stream-stream outer join.
+  D: A stream-stream join is supported in Spark only if one of the streams has Kafka
+    as its source.
+  E: A stream-stream join can only be performed in Scala.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 30
+  section_index: 1
+  question: A new data engineer created a cluster with 6 workers. How many executors
+    will be created as part of the cluster creation?
+  A: 5 executors
+  B: 3 executors
+  C: 6 executors
+  D: 7 executors
+  E: A new cluster with 6 worker nodes cannot be created as the workers can be 2,
+    4 or 8.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 31
+  section_index: 1
+  question: A column named id serves as the PRIMARY KEY for the orders table as well
+    as a FOREIGN KEY to the users table. Which of the following commands can be used
+    to drop the PRIMARY KEY constraint from the orders table while dropping the FOREIGN
+    KEY reference as well?
+  A: ALTER orders DROP PRIMARY KEY CASCADE;
+  B: ALTER TABLE orders DROP PRIMARY KEY CASCADE;
+  C: ALTER TABLE orders DROP PRIMARY_KEY;
+  D: ALTER orders DROP PRIMARY_KEY;
+  E: ALTER TABLE orders DROP PRIMARY_KEY CASCADE;
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 32
+  section_index: 1
+  question: Which of the following statements about data skipping is not true?
+  A: Data skipping features are not enabled by default and need to be enabled using
+    delta.dataSkipping table property.
+  B: Adding more columns to collect statistics will increase the overhead while writing
+    data to the data-skipping-enabled delta tables.
+  C: Data of a nested column are taken as individual columns while collecting statistics.
+  D: Data skipping helps in faster queries.
+  E: Data skipping on columns having long string values is a costly operation.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 33
+  section_index: 2
+  question: 'Which of the following tables will not be automatically broadcasted in
+    case of a join with a table 2 GB in size if the spark.sql.autoBroadcastJoinThreshold
+    config property is set to default:'
+  A: Table 4 - 11MB
+  B: Tables 1, 3 and 4
+  C: Tables 2 and 3
+  D: Tables 1, 2 and 3
+  E: Tables 2, 3 and 4
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 34
+  section_index: 1
+  question: An upstream system sends more than 1000 files every hour with each file
+    containing 5000-30000 records. The size of each file ranges from 580MB to 1.22
+    GB. The stream of data is ingested using a medallion architecture. The data engineer
+    needs to limit the amount of data processed in each micro-batch. Which of the
+    following options is valid for limiting the input rate while reading the stream
+    of data?
+  A: maxFilesPerTrigger , maxBytesPerTrigger and maxRowsPerTrigger
+  B: maxBytesPerTrigger and maxRecordsPerTrigger
+  C: maxBytesPerTrigger and maxFilesPerTrigger
+  D: maxFilesPerTrigger and maxRecordsPerTrigger
+  E: maxFilesPerTrigger , maxBytesPerTrigger , maxRowsPerTrigger and maxRecordsPerTrigger
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 35
+  section_index: 2
+  question: An insurance company Stores its data in such a way that the start_date
+    and end_date of all the current and expired policies can be fetched from a single
+    table. Whenever a new policy is generated the record is added to the delta table
+    with the active column set to True whereas the value remains False for the expired
+    policies. Which type of slowly Changing Dimension(SCD) is followed by this delta
+    table?
+  A: Type 0 SCD
+  B: Type 1 SCD
+  C: Type 2 SCD
+  D: Type 3 SCD
+  E: Type 4 SCD
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 36
+  section_index: 1
+  question: Which technique can be used by the data engineer to solve this problem
+    in an efficient manner?
+  A: Use different tables for each cricket match.
+  B: Once the match is completed, the data should be moved to a new table as a single
+    INSERT statement.
+  C: Change Data Feed should be used to increase the speed of read queries.
+  D: OPTIMIZE command should be used on the delta table.
+  E: The data should be converted to CSV for faster reads.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 37
+  section_index: null
+  question: Three different types of views available in Databricks i.e view, temporary
+    view and global temporary view are being used in a single notebook. Which of the
+    following views will be accessible if the notebook is detached and re-attached
+    to the same cluster?
+  A: All the 3 views be accessible.
+  B: Only the global temp view will be accessible.
+  C: None of the views be accessible.
+  D: All the views except the temporary view will be accessible.
+  E: Temporary and global temporary views will not be accessible.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 38
+  section_index: 1
+  question: 'A data engineer tries to execute the following set of statements to test
+    the data for radio and TV channels with valid frequencies:'
+  A: The tv_channels table will not be created as it is using the same location as
+    the channels table.
+  B: Drop the channels table will delete all the data from both tables.
+  C: The channels table cannot be dropped since the location contains the data for
+    both channels and tv_channels tables.
+  D: Using the SELECT statement over the tv_channels table will output the data from
+    both the tables i.e 2 records.
+  E: All the commands will be executed successfully and the output will show 1 record
+    from the tv_channels table.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 39
+  section_index: null
+  question: Which of the following layers of a multi-hop architecture is most likely
+    to include joins transformation?
+  A: Bronze
+  B: Silver
+  C: Gold
+  D: Platinum
+  E: None of the above
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 40
+  section_index: 1
+  question: 'A data engineer creates a user-defined function named sum which accepts
+    two arguments. The first argument is of type integer while the second being a
+    float. What will be the output if another data engineer tries to run the following
+    query to call the above function:'
+  A: The sum function will be executed successfully and 13 will be printed as the
+    output.
+  B: An error will be returned as the second argument should be a float.
+  C: The command will be successful and the output i.e 13.00 will be printed
+  D: As the sum function is a built-in function, an error will be returned on function
+    creation.
+  E: An error will be returned on the function call as the built-in sum function accepts
+    only one argument.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 41
+  section_index: 1
+  question: Which of the following statements can be used to create a partitioned
+    delta table named records based on the year and month columns?
+  A: CREATE TABLE records (id int, year int, month int) PARTITION BY (year, month);
+  B: CREATE records (id i int) PARTITIONED BY (year, month);
+  C: CREATE records (id i int, month int) PARTITIONED BY year, month;
+  D: CREATE records (id int, year int, month int) PARTITION BY year, month;
+  E: CREATE records (id i int) PARTITION BY (year and month);
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 42
+  section_index: 1
+  question: Which of the following statements correctly depicts the difference between
+    SCHEMA and DATABASE keywords in Databricks?
+  A: The DATABASE keyword is supported in Databricks whereas the SCHEMA keyword is
+    not.
+  B: DATABASE and SCHEMA can both be used to create a new database.
+  C: Aschema is a collection of databases.
+  D: Using the DATABASE keyword will enable delta log for the database whereas using
+    the SCHEMA keyword will not add delta logs for that database.
+  E: Both B and D
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 43
+  section_index: null
+  question: A new member has recently been added to a team of developers. The new
+    member has been assigned a task to review a notebook. What is the minimum notebook-level
+    permission that can be granted to the new member allowing them to view the existing
+    notebook?
+  A: No permissions are required
+  B: Can Read permission
+  C: Can Run permission
+  D: Can Edit permission
+  E: Can Manage permission
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 44
+  section_index: null
+  question: 'A secret value stored in the env scope with its key set as password needs
+    to be replaced with a new value. One of the data engineers suggests executing
+    the following command: databricks secrets put --scope env --key password Which
+    of the following correctly depicts the effect of executing this command?'
+  A: This command will result in an error as the previous secret should have been
+    deleted to run this command successfully.
+  B: This command will be executed successfully and the old secret value will be replaced
+    with the new one.
+  C: The command will be executed successfully but the old secret value will remain
+    intact.
+  D: The command will fail as the syntax for the command is incorrect.
+  E: The command will result in an error as the scope should be deleted before executing
+    this command.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 45
+  section_index: 2
+  question: "A mobile company needs to delete the data(daily) of all the users who\
+    \ requested to cancel their SIM card in the last 24 hours to be compliant with\
+    \ their country's privacy act. The company internally uses Delta tables(with\
+    \ default settings) to store the data of its users. How can the data engineer\
+    \ make sure that the data is permanently deleted and cannot be recovered under\
+    \ any circumstances?"
+  A: The requested data should be deleted from the Delta table using the DELETE command.
+  B: Use VACUUM command over the Delta table with the default retention period.
+  C: The requested data should be deleted from the Delta table using the DELETE command,
+    followed by the VACUUM command over the Delta table with the default retention
+    period.
+  D: "The requested data should be deleted from the Delta table using the DELETE command,\
+    \ followed by the VACUUM command over the Delta table with \xA9 hours as the retention\
+    \ period."
+  E: The requested data should be deleted from the Delta table using the DELETE command,
+    followed by the VACUUM command over the Delta table with 24 hours as the retention
+    period.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 46
+  section_index: null
+  question: 'A data engineer wants to restrict access to the name column used in the
+    following dynamic view definition: CREATE VIEW policy_view AS SELECT name, policy_id,
+    age FROM policy Which of the following SQL queries can be used to restrict access,
+    allowing only the compliance team to query the name column?'
+  A: 'CREATE VIEW policy_view( clic: SELECT name, policy_id, age FROM policy'
+  B: 'CREATE VIEW policy_view AS SELECT CASE WHEN 1s_menber ( : ) THEN name ELSE crt
+    AS name, policy_1d, age FROM policy'
+  C: CREATE VIEW policy_view AS SELECT CASE WHEN tember (* thes *) THEN name ELSE
+    crt AS name, policy_1d, age FROM policy
+  D: "CREATE VIEW policy_view AS SELECT CASE WHEN member = \u20182: 1\xB0 THEN name\
+    \ ELSE crt AS name, policy_1d, age FROM policy"
+  E: "CREATE VIEW policy_view AS SELECT name(IF \u2018scum. \xA9 in member), policy_id,\
+    \ age FROM policy"
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 47
+  section_index: 2
+  question: The newly imported CSV files contain Pll data which is needed to be restricted
+    until it becomes a part of a Delta table. The CSV files are currently stored in
+    a folder of the workspace which is accessible to everyone. How should PIl data
+    be protected?
+  A: The data folder should be deleted forever to protect the Pll data.
+  B: The users should be given Can Manage permission on the folder containing Pll
+    data.
+  C: The data should be replaced with the hash keys of the file names.
+  D: The column containing Pil data should be dropped after converting the CSV files
+    to DataFrames.
+  E: The folder permission should be changed to No Permissions for all the users.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 48
+  section_index: 3
+  question: A data engineer creates a job using the Databricks Jobs UI. Which of the
+    following permissions is granted to the user being the creator of the job?
+  A: Is Creator permission
+  B: Is Owner permission
+  C: Can Manage permission
+  D: Admin permission
+  E: No permission
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 49
+  section_index: 4
+  question: Which one of the following destinations is not supported for a Databricks
+    SQL alert?
+  A: Microsoft Teams
+  B: Webhook
+  C: PagerDuty
+  D: Slack
+  E: Email
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 50
+  section_index: 1
+  question: A data engineer is working on a notebook that involves a large number
+    of complex transformations. They want to Know more about the working of each transformation.
+    Which of the following can be used to print the Physical plan as well as various
+    Logical plans?
+  A: explain()
+  B: explain(logical=True, physical=True)
+  C: explain(True, True)
+  D: explain(True)
+  E: explain
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 51
+  section_index: 1
+  question: Which of the following can be used to debug errors in Databricks notebook
+    at the code level?
+  A: 1, 2
+  B: '1, 2, 3 '
+  C: 2, 3
+  D: '1'
+  E: 1, 3
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 52
+  section_index: 1
+  question: Which of the following explains the usage of a SparkListener?
+  A: SparkListener can be used at the end of the spark application to call an application
+    of another language.
+  B: SparkListener is used for all the spark jobs as a wrapper around the SparkSession.
+  C: SparkListener is used solely in Databricks to increase the speed of the spark
+    applications.
+  D: SparkListener can be used to view the metrics of a spark job.
+  E: SparkListener is an always-on Databricks-specific tool, used for debugging spark
+    code.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 53
+  section_index: 1
+  question: Which of the following pairs of Spark UI Tabs and the details they display
+    are not correctly matched?
+  A: Stages Tab - Pool properties
+  B: Storage Tab - Cached RDDs
+  C: Environment Tab - Spark properties
+  D: Jobs Tab - Thread Dump
+  E: Executors Tab - Heap Histogram
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 54
+  section_index: 1
+  question: An alert was created on the football match data. The status of the alert
+    is being shown as OK. What can be interpreted from the current state of the alert?
+  A: OK state means that the alert is created successfully, but was never triggered.
+  B: The OK state signifies that the alert is functioning correctly without any errors.
+  C: OK state means that the alert may or may not be triggered in the past but the
+    alert condition is not met in the most recent execution.
+  D: The status of the alert being OK tells the user that the alert was triggered
+    in the most recent execution.
+  E: OK state is just an indicator of the successful deletion of the alert from the
+    system.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 55
+  section_index: 1
+  question: The following Databricks notebook is exported as a .ipynb file without
+    clearing the command outputs. Another user imports this notebook into their workspace.
+    Which of the following statements is true about the accessibility of the command
+    outputs and the Spark UI logs through the imported notebook?
+  A: The command outputs and the logs in Spark UI will be visible in the imported
+    notebook if it is attached to the same cluster but will not be visible if it is
+    attached to a different cluster.
+  B: The command outputs and the logs in Spark UI will be visible in the imported
+    notebook irrespective of the cluster to which it is attached.
+  C: The command outputs and the logs in Spark UI will not be visible even if the
+    notebook is attached to the same cluster.
+  D: The command outputs will be visible but the logs in Spark UI will only be visible
+    in the notebook if it is attached to the same cluster.
+  E: The command outputs will be visible but the logs in Spark UI will not be visible
+    in the imported notebook even if it is attached to the same cluster.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 56
+  section_index: 1
+  question: Atask clean_data running as part of the Databricks job got failed, while
+    the task dependent on clean_data still needed to be run. Which of the following
+    scenarios correctly explains the outcome?
+  A: As the task clean_data failed, all the previous tasks will be rolled back.
+  B: After the failure of the clean_data task, the successful operations of only the
+    failed task will be rolled back.
+  C: No rollback will be performed, any completed operation like writes to the disk
+    or the Delta table before the failure of the clean_data task will remain as is.
+  D: All the tasks dependent on clean_data will fail.
+  E: The task(s) dependent on clean_data will continue to run as per the execution
+    plan.
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 57
+  section_index: 1
+  question: In the software engineering process in Databricks, who among the following
+    is most likely to write a unit test for testing a function?
+  A: Developer of the function
+  B: Databricks Administrator
+  C: Unit tests are auto-generated for all Python and Scala functions
+  D: SQL Analyst
+  E: Tester(who will be testing that function)
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 59
+  section_index: 1
+  question: 'A data engineer was attending a testing conference and heard the following
+    lines: ''The following testing evaluates the system''s capability to work smoothly
+    under the specific amount of workload which helps to test the reliability and
+    scalability of a software''. The data engineer is unsure about the type of testing
+    being discussed. Which of the following testing techniques is explained in the
+    above statement?'
+  A: Unit testing
+  B: Smoke testing
+  C: Functional testing
+  D: Integration testing
+  E: Performance testing
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 60
+  section_index: 0
+  question: Which of the following cells will be the first to return an error when
+    run in a sequence?
+  A: listl = ('']
+  B: listl.append(data)
+  C: pip install pandas
+  D: df = pd.DataFrame(listl)
+  E: pip uninstall pandas
+- exam_type: engineer-professional
+  exam_index: 3
+  question_index: 61
+  section_index: 1
+  question: A data engineer wants to pass the name of the task as a task parameter.
+    Which of the following parameter correctly fulfills the requirement?
+  A: '{{task_id}}'
+  B: '{{task_name}}'
+  C: '{{task_key}}'
+  D: '{{task}}'
+  E: '{{name}}'

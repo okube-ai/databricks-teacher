@@ -1,0 +1,680 @@
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 1
+  section_index: 4
+  question: A data analyst at an e-commerce company is using Databricks SQL to visualize
+    customer feedback scores (ranging from 1 to 5) against product categories. The
+    analyst wants to identify patterns and outliers in the feedback scores across
+    different categories. Which visualization type should the analyst select in Databricks
+    SQL to effectively communicate these insights?
+  A: Treemap, to represent feedback scores as proportions within each category.
+  B: Box chart, to display the distribution of feedback scores within each category,
+    highlighting the median, quartiles, and outliers.
+  C: Radar chart, to compare the feedback scores of different categories in a circular
+    format.
+  D: Bubble chart, for showing the volume of feedback in relation to scores across
+    categories.
+  E: Stacked bar chart, for showing the total feedback scores by category.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 2
+  section_index: 1
+  question: In Databricks SQL, when alerts are configured based on specific criteria,
+    how are notifications typically sent to inform users or administrators of the
+    triggered alerts?
+  A: Alerts trigger notifications via a variety of channels, such as email, Slack,
+    or webhook integrations, based on the defined configuration.
+  B: Notifications are automatically sent to the dashboard's viewers via email when
+    alerts are triggered.
+  C: Notifications are sent through SMS messages to designated phone numbers when
+    alerts are triggered.
+  D: 'Notifications are not supported for alert: atabricks SQL Anal'
+  E: Alerts generate a pop-up notification within the Databricks SQL Analytics interface,
+    visible to all users.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 3
+  section_index: 2
+  question: How does Delta Lake manage table metadata in Databricks?
+  A: By automatically synchronizing metadata with the primary data storage.
+  B: By maintaining a transaction log that records metadata changes.
+  C: Delta Lake does not manage table metadata.
+  D: By storing metadata in a separate, dedicated cloud storage.
+  E: Through manual updates by the database administrator.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 4
+  section_index: 2
+  question: How can you change access rights to a table in Databricks using Catalog
+    Explorer?
+  A: "By editing the table schema in the 'Schema'' section of Data Explorer."
+  B: "Through the \u2018Access Rights' menu in the table's context menu in Data\
+    \ Explorer."
+  C: Access rights can only be changed via the Databricks CLI, not in Data Explorer.
+  D: By selecting the table, navigating to the 'Permissions' tab, and modifying permissions.
+  E: By executing a SQL command in Data Explorer for access modification.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 5
+  section_index: 4
+  question: In Databricks, a data analyst needs to share a dashboard with colleagues
+    (with relevant access to the workspace), ensuring that the dashboard displays
+    up-to-date results whenever it is accessed. Which method should the analyst use
+    to share the dashboard for this purpose?
+  A: Take screenshots of the dashboard and share them via a messaging platform.
+  B: Print out the dashboard and distribute physical copies to colleagues.
+  C: Export the dashboard as a static PDF and email it to colleagues.
+  D: Save the dashboard as a static HTML file and share it via a file-sharing service.
+  E: Share a direct link to the dashboard that is hosted on the Databricks platform,
+    allowing colleagues to view the latest results in real-time.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 6
+  section_index: 2
+  question: How do you Set the location of a table in Databricks when creating or
+    altering it?
+  A: Location setting is not supported in Databricks.
+  B: By using the SET LOCATION command in the table creation query.
+  C: By moving the data files to the desired location manually.
+  D: By using the CREATE TABLE ... LOCATION or ALTER TABLE ... SET LOCATION command.
+  E: By specifying the location in the Databricks UI during table creation.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 7
+  section_index: 1
+  question: In the context of Databricks, when dealing with the import of small text
+    files, such as lookup tables or for quick data integrations, which approach is
+    recommended to optimize performance and ease of use?
+  A: Convert small text files to a binary format to increase upload speed and efficiency.
+  B: Utilize large-file upload methods for all types of data, regardless of file size.
+  C: Employ small-file upload techniques specifically designed for handling small
+    text files efficiently.
+  D: Always compress text files into larger archives before uploading, regardless
+    of the original file size.
+  E: Upload small text files to a temporary storage service before importing them
+    into Databricks.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 8
+  section_index: 1
+  question: What is the minimum permission a user needs to configure a refresh schedule
+    on a Databricks SQL
+  A: Modify Permissions.
+  B: Owner.
+  C: Can Edit.
+  D: Can View.
+  E: No permissions
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 9
+  section_index: 5
+  question: Which of the following best describes the purpose of descriptive statistics
+    in data analysis?
+  A: To categorize data into distinct groups based on algorithmic models.
+  B: To summarize and describe the main features of a dataset.
+  C: To establish causal relationships between different variables.
+  D: To test hypotheses about the relationship between variables.
+  E: To make predictions about future trends based on historical data.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 10
+  section_index: 3
+  question: Assuming you have a table TrafficData with columns Timestamp (timestamp)
+    and VehicleCount (integer), and you need to calculate the sum of VehicleCount
+    for every 10-minute window. Which SQL query using the window function correctly
+    achieves this in a Databricks environment?
+  A: "SELECT Timestamp, SUM(VehicleCount) OVER (PARTITION BY window_time(Timestamp,\
+    \ \u201810 minutes')) FROM TrafficData;"
+  B: "SELECT window time(Timestamp, \u201810 minutes'), COUNT(VehicleCount) FROM\
+    \ TrafficData GROUP BY Timestamp;"
+  C: SELECT Timestamp, SUM(VehicleCount) OVER (ORDER BY Timestamp RANGE BETWEEN INTERVAL
+    16 MINUTES PRECEDING AND CURRENT ROW) FROM TrafficData;
+  D: "SELECT window time(Timestamp, '10 minutes'), AVG(VehicleCount) FROM TrafficData\
+    \ GROUP BY window_time(Timestamp, \u201810 minutes\u2018);"
+  E: "SELECT window time(Timestamp, '10 minutes'), SUM(VehicleCount) FROM TrafficData\
+    \ GROUP BY window_time(Timestamp, \u201810 minutes\u2018);"
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 11
+  section_index: 5
+  question: In data analytics, identify a scenario where data enhancement would significantly
+    improve the outcome.
+  A: In a marketing campaign, to enrich customer data with additional demographic
+    and psychographic information for targeted advertising.
+  B: When aggregating large volumes of data for storage efficiency without analysis.
+  C: When migrating data from one storage system to another without changing its format
+    or content.
+  D: When performing routine data backup and recovery processes.
+  E: During the initial stages of data collection where data volume is more critical
+    than data quality.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 12
+  section_index: 4
+  question: In the context of Databricks dashboards, how do query parameters influence
+    the output of underlying SQL queries within a dashboard?
+  A: Query parameters serve as placeholders in SQL queries, allowing for dynamic data
+    filtering based on user input, thus altering the output of the query according
+    to the specified parameter values.
+  B: Query parameters act as static reference points in SQL queries, ensuring that
+    the output remains constant irrespective of user interactions.
+  C: They automatically update the SQL queries on a set schedule, such as daily or
+    weekly, to change the output data based on temporal parameters.
+  D: Query parameters are used to format the visual aspects of the output, such as
+    color and font, without changing the actual data returned by the query.
+  E: They modify the layout of the dashboard, rearranging the visualizations based
+    on user preferences, but do not change the data output of the queries.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 13
+  section_index: 3
+  question: In a large-scale Databricks environment, you have a dataset Transactions
+    with a column TransactionAmount. You need to apply a custom scaling function to
+    normalize transaction amounts for analysis. You decide to create a UDF (User-Defined
+    Function) in Python. Which of the following approaches correctly illustrates the
+    creation and application of a UDF for this purpose?
+  A: Manually apply the normalization function to each row of the Transactions dataset
+    using a Spark DataFrame loop.
+  B: Implement a machine learning model within Databricks to automatically normalize
+    TransactionAmount.
+  C: Use a built-in SQL function to normalize TransactionAmount directly within a
+    SQL query without defining a UDF.
+  D: Create a Python script outside Databricks to preprocess the data, then import
+    the normalized dataset into Databricks.
+  E: Define a Python function normalize(amount) and register it as a UDF, then use
+    SELECT normalize(TransactionAmount) FROM Transactions;
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 14
+  section_index: 2
+  question: In Databricks, how do you identify the owner of a table using Catalog
+    Explorer?
+  A: By inspecting the table's creation script in Catalog Explorer.
+  B: Through the 'Owner' column in the Catalog Explorer's table list.
+  C: The owner is displayed when clicking on a table in the Catalog Explorer.
+  D: By executing a SQL query in Catalog Explorer to retrieve the table owner.
+  E: Table ownership is not visible in Catalog Explorer.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 15
+  section_index: 3
+  question: You are working with a sales data table in Databricks SQL that contains
+    columns for Region, Product, and SalesAmount. You want to generate a report that
+    includes the total sales amount for each combination of Region and Product, as
+    well as the total for each Region and the overall total. Which SQL query would
+    you use to achieve this?
+  A: SELECT Region, Product, SUM(SalesAmount) FROM Region, Product WITH CUBE;
+  B: SELECT Region, Product, SUM(SalesAmount) FROM CUBE (Region, Product);
+  C: SELECT Region, Product, SUM(SalesAmount) FROM ROLLUP (Region, Product);
+  D: SELECT Region, Product, SUM(SalesAmount) FROM Region, Product WITH ROLLUP;
+  E: SELECT Region, Product, SUM(SalesAmount) FROM GROUPING SETS ((Region, Product),
+    (Region), ());
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 16
+  section_index: 2
+  question: In the Databricks Unity Catalog, which SOL command correctly creates a
+    new table named customer_data in a database sales under the catalog is catalog,
+    based on a SQL query from an existing table transactions in the same database
+    and catalog?
+  A: CREATE TABLE customer_data IN us_catalog.sales AS SELECT + FROM transactions;
+  B: TABLE CREATE us_catalog.sales.customer_data AS (SELECT ~ FROM transactions);
+  C: NEW TABLE us_catalog.sales.customer_data FROM SELECT * IN transactions;
+  D: "CREATE TABLE us catalog.sales.customer_data AS SELECT \xAB FROM us_catalog.sales.transactions;"
+  E: 'us_catalog.sales: CREATE TABLE customer_data AS SELECT ~ FROM transactions;'
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 17
+  section_index: 4
+  question: In the realm of data visualization and analysis, Databricks SQL dashboards
+    serve a specific purpose. What is the primary function of Databricks SQL dashboards
+    in the context of data query results?
+  A: To store raw data for long-term archival purposes.
+  B: To execute real-time data transformations without displaying results.
+  C: To display the output of a single, complex SQL query.
+  D: To showcase the results of multiple SQL queries simultaneously in a unified view.
+  E: To serve as an interactive platform for writing and testing new SQL queries.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 18
+  section_index: 1
+  question: In Databricks SQL, when dealing with the ingestion of data, how does the
+    platform handle directories containing multiple files?
+  A: Databricks SQL requires manual conversion of all files in a directory to a uniform
+    format before ingestion.
+  B: Databricks SQL automatically converts and ingests files of different types from
+    a directory into a standard format.
+  C: Databricks SQL can only ingest a single file at a time, regardless of file type.
+  D: Databricks SQL can ingest directories containing files of mixed types, such as
+    CSV and JSON, simultaneously.
+  E: Databricks SQL can ingest directories of files, provided all files in the directory
+    are of the same type, such as all CSV or all JSON.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 19
+  section_index: 3
+  question: Given a sales database with a table SalesData containing columns Region,
+    ProductType, and SalesAmount, you are tasked with creating a report that includes
+    the total sales amount for each combination of Region and ProductType, as well
+    as totals for each Region alone and the overall total. Which SQL query correctly
+    generates this report?
+  A: SELECT Region, ProductType, SUM(SalesAmount) FROM SalesData GROUP BY ROLLUP(Region,
+    ProductType) ;
+  B: SELECT Region, ProductType, SUM(SalesAmount) FROM SalesData GROUP BY Region,
+    ProductType WITH CUBE;
+  C: SELECT Region, ProductType, SUM(SalesAmount) FROM SalesData GROUP BY CUBE (Region,
+    ProductType);
+  D: SELECT Region, SUM(SalesAmount) FROM SalesData GROUP BY CUBE(Regi
+  E: SELECT Region, ProductType, COUNT(SalesAmount) FROM SalesData GROUP BY CUBE (Region,
+    ProductType);
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 20
+  section_index: 5
+  question: In a business analytics context, which scenario best illustrates the beneficial
+    use of data blending?
+  A: Archiving old data from different systems without analysis.
+  B: Updating system software while keeping the data unchanged.
+  C: Analyzing employee performance using data from a single internal application.
+  D: Merging customer feedback data with sales figures to gain insights into product
+    performance.
+  E: Strictly using financial data for annual budget forecasting.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 21
+  section_index: 1
+  question: The Medallion Architecture in Databricks is a conceptual framework for
+    data organization and pipeline management. How does it structure the data processing
+    pipeline?
+  A: It starts with unstructured data in Gold tables, then structures the data in
+    Silver tables, and finally stores the raw data in Bronze tables.
+  B: It involves a single stage of data processing where raw, refined, and curated
+    data are merged into a unified table known as the Platinum table.
+  C: None of the above
+  D: It begins with raw data in Bronze tables, moves to refined data in Silver tables,
+    and culminates in curated data in Gold tables.
+  E: It uses a reverse-pyramid structure starting with the most refined data in the
+    base layer, moving to semi-processed data, and ending with raw data at the top.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 23
+  section_index: 5
+  question: In the context of analytics, what is an example of effectively enhancing
+    data in a common application?
+  A: Restricting data access to a limited number of users to ensure data security.
+  B: Strictly categorizing data based on its source without additional processing.
+  C: Integrating weather data into a retail sales analysis to understand the impact
+    of weather on sales trends.
+  D: Keeping data in its original, raw format for archival purposes.
+  E: Performing routine software updates on data analysis tools without modifying
+    data.
+- exam_type: analyst-associate
+  exam_index: 3
+  question_index: 24
+  section_index: 3
+  question: 'Consider the following two tables:
+
+
+    Table 1: Employees
+
+
+    EmployeeID Name
+
+    John Smith
+
+    Jane Doe
+
+    Alice Johnson
+
+    Bob Ray
+
+
+    Table 2: Departments
+
+
+    EmployeeID Department
+
+    2 Marketing
+
+    Sales
+
+    IT
+
+    HR
+
+
+    Given the output from joining both tables:
+
+
+    Name Department
+
+    John Smith NULL
+
+    Jane Doe Marketing
+
+    Alice Johnson Sales
+
+    Bob Ray IT
+
+
+    Which of the queries below could have been used to generate the output?'
+  A: SELECT * FROM Employees RIGHT JOIN Departments ON Employees.EmployeeID = Departments.EmployeeID;
+  B: SELECT * FROM Employees LEFT JOIN Departments ON Employees. EmployeeID = Departments.
+    EmployeeID;
+  C: SELECT Employees.Name, Departments.Department FROM Employees LEFT JOIN Departments
+    ON Employees.EmployeeID = Departments.EmployeeID;
+  D: SELECT Employees.Name, Departments.Department FROM Employees FULL JOIN Departments
+    ON Employees.EmployeeID = Departments.EmployeeID;
+  E: SELECT Employees.Name, Departments.Department FROM Employees RIGHT JOIN Departments
+    ON Employees.EmployeeID = Departments.EmployeeID;
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 25
+  section_index: 5
+  question: In data engineering, how is 'performing last-mile ETL as project-specific
+    data enhancement' best described?
+  A: Migrating all data to a centralized data warehouse for unified access.
+  B: Conducting final data transformations and enrichments specific to the needs of
+    a particular project.
+  C: Utilizing advanced data analytics techniques to generate predictive insights.
+  D: Performing initial data extraction from various source systems into a staging
+    area.
+  E: Implementing general ETL processes applicable to all datasets across the organization.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 26
+  section_index: 3
+  question: In a Spark SQL dataset EmployeeData, you have a column monthlyPerformanceRatings
+    which is an array of integers representing monthly performance ratings of employees.
+    You are tasked with identifying employees whose performance has consistently improved
+    over the last three months. Which Spark SQL query utilizing a higher-order function
+    is best suited for this task?
+  A: SELECT employeeId FROM EmployeeData WHERE SLICE(monthlyPerformanceRatings, -3,
+    3) = ARRAY_SORT(SLICE(monthlyPerformanceRatings, -3, 3));
+  B: SELECT employeeId FROM EmployeeData WHERE EXISTS(monthlyPerformanceRatings, rating
+    -> rating > 3);
+  C: SELECT employeeId FROM EmployeeData WHERE ZIP WITH(monthlyPerformanceRatings,
+    monthlyPerformanceRatings, (current, next) -> next > current);
+  D: SELECT employeeId FROM EmployeeData WHERE REDUCE(monthlyPerformanceRatings, 0,
+    (acc, rating) -> acc + rating, acc -> acc) > 3;
+  E: SELECT employeeId FROM EmployeeData WHERE ARRAY_SORT(monthlyPerformanceRatings)
+    = monthlyPerformanceRatings;
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 27
+  section_index: 1
+  question: In managing Databricks SQL endpoints or warehouses, a key consideration
+    is the balance between computational power and cost. Which statement best encapsulates
+    this trade-off?
+  A: Larger clusters offer lower performance but are more cost-effective, ideal for
+    high-volume data processing.
+  B: Larger clusters enhance performance but increase costs, suitable for demanding
+    data tasks, whereas smaller clusters reduce costs but may limit performance.
+  C: Cluster size impacts only the storage capacity, not the cost or performance.
+  D: Smaller clusters are more expensive and offer high performance, suitable for
+    complex analytics.
+  E: Cluster size has no impact on cost or performance in Databricks SQL.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 28
+  section_index: 3
+  question: What type of JOIN was used to produce this result?
+  A: FULL JOIN
+  B: CROSS JOIN
+  C: RIGHT JOIN
+  D: LEFT JOIN
+  E: Not enough information provided
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 29
+  section_index: 2
+  question: In Databricks, what distinguishes a managed table from an unmanaged (external)
+    table in terms of data and metadata management?
+  A: Unmanaged tables enable ACID transactions, unlike managed tables.
+  B: Managed tables store both data and metadata in the cloud, while unmanaged tables
+    store only metadata.
+  C: Managed tables have their data and metadata managed by Databricks, while unmanaged
+    tables have only metadata managed.
+  D: Managed tables allow for external file storage, whereas unmanaged tables store
+    data within the Databricks environment.
+  E: Managed tables require manual data deletion after dropping the table, whereas
+    unmanaged tables automatically delete data.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 30
+  section_index: 1
+  question: When using the schema browser in the Query Editor of Databricks, what
+    type of information can you expect to find displayed? Choose the most appropriate
+    option.
+  A: Only the SQL queries that have been executed in the past sessions.
+  B: List of all users and groups who have access to the Databricks workspace.
+  C: Available databases, tables, and columns, along with their data types.
+  D: Real-time performance metrics and logs of the Databricks cluster.
+  E: Detailed documentation and syntax for all SQL functions and commands.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 31
+  section_index: 1
+  question: In the context of Databricks, what is the primary advantage of using a
+    Serverless Databricks SQL endpoint/warehouse?
+  A: it offers enhanced data security and privacy controls suitable for sensitive
+    data processing.
+  B: it enables quick-start capabilities, significantly reducing the time to initiate
+    SOL queries and data analysis tasks.
+  C: it specializes in real-time data streaming and complex event processing for loT
+    applications.
+  D: it provides a dedicated environment for developing complex data pipelines and
+    ETL processes.
+  E: it is primarily designed for large-scale machine learning workloads requiring
+    extensive computational resources.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 32
+  section_index: 2
+  question: What are the key differences in behavior between managed and unmanaged
+    tables in Databricks?
+  A: Managed tables can only store structured data, while unmanaged tables can store
+    both structured and unstructured data.
+  B: Managed tables automatically back up data, whereas unmanaged tables require manual
+    backups.
+  C: Managed tables store their data in a default location managed by Databricks,
+    while unmanaged tables allow specifying a storage location.
+  D: Unmanaged tables are optimized for streaming data, whereas managed tables are
+    not.
+  E: Managed tables support ACID transactions, while unmanaged tables do not.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 33
+  section_index: 1
+  question: In the landscape of Business Intelligence (BI) and data analytics, what
+    role does Databricks SQL play when integrated with other BI tools?
+  A: Databricks SQL acts as a data processing and query engine, complementing BI tools
+    for enhanced data analysis and reporting.
+  B: Databricks SQL primarily enhances data visualization capabilities.
+  C: Databricks SQL replaces traditional BI tools for data analysis and reporting.
+  D: Databricks SQL is used only for data storage, with BI tools handling all data
+    processing and analysis.
+  E: Databricks SQL and BI tools cannot be used together.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 34
+  section_index: 1
+  question: Which of the following features is a primary function of the Catalog Explorer
+    in Databricks?
+  A: Executing complex machine learning algorithms on large datasets.
+  B: Automatically transforming data into normalized forms for analysis.
+  C: Previewing and exploring data, along with configuring security and access controls.
+  D: Generating real-time analytics and visualizations without the need for coding.
+  E: Scheduling and automating data pipeline workflows.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 35
+  section_index: 4
+  question: A data analyst is tasked with presenting yearly revenue data to stakeholders
+    in a way that is both informative and visually appealing. The analyst decides
+    to use a line graph to show the revenue trends over the year. What is the best
+    approach the analyst should take in terms of formatting the graph?
+  A: Add multiple background images related to the company's business to make the
+    graph more engaging.
+  B: Apply a minimalistic design with a consistent color scheme and clear labeling
+    to enhance focus on the data.
+  C: Use 3D effects on the graph lines to give a more modern and advanced look.
+  D: Incorporate various font styles and sizes for each data point to make the graph
+    more dynamic.
+  E: Use a wide range of vibrant colors for different data points to make the graph
+    more colorful.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 36
+  section_index: 4
+  question: In a data analytics environment, how can dashboards be configured to automatically
+    refresh and display the most current data?
+  A: Dashboards can be set up to refresh automatically at specified intervals using
+    built-in scheduling features.
+  B: Dashboards must be manually refreshed by the user to display the latest data.
+  C: Automatic refreshes are achieved by scripting a periodic page reload in the web
+    browser displaying the dashboard.
+  D: Dashboards automatically refresh only when the underlying data source is replaced
+    with a new one.
+  E: Automatic dashboard refreshes require a complete system reboot at regular intervals.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 37
+  section_index: 1
+  question: What is the correct sequence of steps to execute a SQL query in Databricks?
+  A: Choose a SQL warehouse, construct and edit the query, execute the query, and
+    visualize results.
+  B: Manually input data, write a query in Databricks notebook, execute the query,
+    and export the results.
+  C: Open SQL Editor, select a SQL warehouse, construct and edit the query, execute
+    the query.
+  D: Write the query in an external tool, import it into Databricks, select a data
+    source, and execute the query.
+  E: Create a query using Terraform, execute the query in a Databricks job, and use
+    COPY INTO to load data.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 38
+  section_index: 3
+  question: What is a key benefit of using ANSI SQL as the standard query language
+    in the Lakehouse architecture?
+  A: it ensures compatibility and interoperability across different database systems.
+  B: it allows for real-time data streaming and complex event processing.
+  C: it provides enhanced graphical data visualization tools.
+  D: it enables automatic data encryption and security.
+  E: it supports native machine learning algorithms.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 39
+  section_index: 1
+  question: "In the context of a Databricks Lakehouse architecture, you are working\
+    \ with silver-level data that has been aggregated from various bronze tables.\
+    \ You notice inconsistencies in customer names due to variations in casing and\
+    \ spacing (e.g., John Doe', \u2018john doe', John Doe'). What would\
+    \ be an appropriate SQL query to standardize these customer names in the silver\
+    \ table CustomerData?"
+  A: SELECT DISTINCT TRIM(UPPER(customer_name)) FROM CustomerData;
+  B: ALTER TABLE CustomerData MODIFY COLUMN customer_name SET DATA TYPE VARCHAR(255)
+    NOT NULL;
+  C: SELECT customer_name FROM CustomerData GROUP BY customer_name;
+  D: CREATE VIEW CleanCustomerData AS SELECT DISTINCT TRIM(LOWER(customer_name)) FROM
+    CustomerData;
+  E: UPDATE CustomerData SET customer_name = TRIM(UPPER(customer_name));
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 40
+  section_index: 4
+  question: In Databricks SQL, how is a 'Query Based Dropdown List' used to enhance
+    the functionality of a dashboard with query parameters?
+  A: The dropdown list is purely aesthetic, with no impact on the actual queries or
+    data displayed.
+  B: it's used to manually input query meters, unrelated to the output of any other
+    query.
+  C: it creates a fixed list of predefined options that users can choose from to filter
+    dashboard data.
+  D: it dynamically generates a dropdown list based on the distinct output of a separate
+    query, allowing users to select values as query parameters.
+  E: it automatically updates query parameters based on external data sources, without
+    user interaction.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 41
+  section_index: 3
+  question: You are analyzing a dataset in Databricks SQL named WeatherReadings which
+    includes the columns StationID (integer), ReadingTimestamp (timestamp), and Temperature
+    (float). You need to calculate the average temperature for each station in 1-hour
+    windows, sliding every 30 minutes. Which SQL query correctly uses the windowing
+    function to achieve this?
+  A: "SELECT StationID, AVG(Temperature) OVER (PARTITION BY StationID, window(ReadingTimestamp,\
+    \ \u20181 hour', \u201830 minutes')) FROM WeatherReadings;"
+  B: "SELECT StationID, window(ReadingTimestamp, \u20181 hour'), AVG(Temperature)\
+    \ FROM WeatherReadings GROUP BY StationID, window(ReadingTimestamp, \u20181 hour');"
+  C: "SELECT StationID, window(ReadingTimestamp, \u20181 hour', \u201830 minutes'\
+    ), AVG(Temperature) FROM WeatherReadings GROUP BY StationID, window(ReadingTimestamp,\
+    \ \u20181 hour', \u201830 minutes');"
+  D: "SELECT StationID, AVG(Temperature) OVER (PARTITION BY StationID ORDER BY ReadingTimestamp\
+    \ ROWS BETWEEN INTERVAL '30 minutes' PRECEDING AND INTERVAL \u201830 minutes'\
+    \ FOLLOWING) FROM WeatherReadings;"
+  E: SELECT StationID, AVG(Temperature) OVER (PARTITION BY StationID ORDER BY ReadingTimestamp
+    RANGE BETWEEN INTERVAL 1 HOUR PRECEDING AND CURRENT ROW) FROM WeatherReadings;
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 42
+  section_index: 1
+  question: In a Databricks environment, you're analyzing query performance improvements.
+    After several runs of a complex query on a large dataset, you notice a significant
+    reduction in latency. What feature of Databricks is most likely contributing to
+    this decrease in query execution time?
+  A: Use of persistent tables instead of temporary views.
+  B: Increased hardware resources allocation.
+  C: Caching of intermediate data and results from previous query executions.
+  D: Improved data indexing mechanisms.
+  E: Automatic query rewriting for optimization.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 43
+  section_index: 4
+  question: In Databricks SQL, which types of visualizations can be developed to represent
+    data?
+  A: Line Chart, Bubble Chart, Word Cloud, Counter
+  B: Histogram, Radar Chart, Tree Map, Choropleth
+  C: Table, Chart, Sankey Diagram, Scatter Plot
+  D: Table, Details, Counter, Pivot
+  E: Bar Chart, Line Graph, Heatmap, Gauge
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 44
+  section_index: 4
+  question: In the context of Databricks, there are distinct types of parameters used
+    in dashboards and visualizations. Based on the descriptions provided, how do Widget
+    Parameters, Dashboard Parameters, and Static Values differ in their application
+    and impact?
+  A: Dashboard Parameters are specific to individual visualizations and cannot be
+    shared across multiple visualizations within a dashboard. Widget Parameters are
+    used at the dashboard level to influence all visualizations. Static Values change
+    dynamically in response to user interactions.
+  B: "Widget Parameters are tied to a single visualization and affect only the query\
+    \ underlying that specific visualization. Dashboard Parameters, on the other hand,\
+    \ can influence multiple visualizations within a dashboard and are configured\
+    \ at the dashboard level. Static Values are used to replace parameters, making\
+    \ them \u2018disappear' and setting a fixed value in their place."
+  C: Both Widget Parameters and Dashboard Parameters have the same functionality and
+    impact, allowing for dynamic changes across all visualizations in a dashboard.
+    Static Values provide temporary placeholders for these parameters.
+  D: Widget Parameters apply to the entire dashboard and can change the layout, whereas
+    Dashboard Parameters are fixed and do not allow for interactive changes. Static
+    Values are dynamic and change frequently based on user input.
+  E: Static Values are used to create interactive elements in dashboards, while Widget
+    and Dashboard Parameters are used for aesthetic modifications only, without impacting
+    the data or queries.
+- exam_type: analyst-associate
+  exam_index: 6
+  question_index: 45
+  section_index: 2
+  question: How do Delta Lake tables in Databricks maintain their historical data?
+  A: Delta Lake tables do not maintain historical data.
+  B: By creating a new table for each update.
+  C: By storing historical data in a separate cloud storage.
+  D: Through automatic backups at regular intervals.
+  E: By maintaining a versioned history of data changes for a configurable period
+    of time.

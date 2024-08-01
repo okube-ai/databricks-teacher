@@ -7,14 +7,15 @@ import time
 import os
 import json
 import openai
+import yaml
 
 
 # --------------------------------------------------------------------------- #
 # Setup                                                                       #
 # --------------------------------------------------------------------------- #
 
-exam_type = "analyst-associate"
-exam_number = "04"
+exam_type = "engineer-professional"
+exam_number = "05"
 dirpath = f"/Users/osoucy/Documents/okube/databricks-exam-questions/{exam_type}-exam-{exam_number}"
 
 client = openai.OpenAI(
@@ -42,6 +43,14 @@ def preprocess_image(image):
     # Invert image (optional, depends on the quality of the original image)
     image = ImageOps.invert(image)
     return image
+
+
+# --------------------------------------------------------------------------- #
+# Questions Overwrite                                                         #
+# --------------------------------------------------------------------------- #
+
+with open("questions_overwrite.yaml") as fp:
+    overwrites = yaml.safe_load(fp)
 
 
 # --------------------------------------------------------------------------- #
@@ -77,7 +86,7 @@ for i, filename in enumerate(filenames):
                 "content": """
              You are a text parser and you need to process text extracted from a image and return json string with
             this format:
-            {"question": "...", "choices": {"A": "...", "B": "...", "C":"...", "D":"..."}}
+            {"question": "...", "choices": {"A": "...", "B": "...", "C":"...", "D":"...", "E":"..."}}
             """,
             },
             {"role": "user", "content": text},
@@ -85,38 +94,30 @@ for i, filename in enumerate(filenames):
         temperature=0,
     )
 
-    d = json.loads(completion.choices[0].message.content)
+    try:
+        d = json.loads(completion.choices[0].message.content)
+    except json.decoder.JSONDecodeError:
+        continue
+
     d["question_number"] = filename.replace(
         "q",
         "",
     ).replace(".png", "")
+    d["question_number"] = int(d["question_number"])
     d["exam_type"] = exam_type
-    d["exam_number"] = exam_number
+    d["exam_number"] = int(exam_number)
+    d["section_index"] = None
 
-    if exam_type == "analyst-associate":
-
-        if exam_number == "02" and d["question_number"] == "053":
-            d["choices"]["D"] = "The amount of training data available"
-
-        if (exam_number == "03" and d["question_number"] == "023") or (
-            exam_number == "04" and d["question_number"] == "161"
+    # Overwrite
+    for o in overwrites:
+        if (
+            d["exam_type"] == o["exam_type"]
+            and d["exam_number"] == o["exam_number"]
+            and d["question_number"] == o["question_number"]
         ):
-            d["choices"]["D"] = d["choices"]["C"]
-            d["choices"]["C"] = d["choices"]["B"]
-            d["choices"]["B"] = d["choices"]["A"]
-            d["choices"][
-                "A"
-            ] = "Use Scikit-learn for rapid prototyping and evaluate using R-squared."
-
-        if (exam_number == "03" and d["question_number"] == "060") or (
-            exam_number == "04" and d["question_number"] == "139"
-        ):
-            d["choices"] = {
-                "A": "Databricks Visualizations with static widgets",
-                "B": "Matplotlib embedded in HTML pages",
-                "C": "Plotly Dash for creating interactive web applications",
-                "D": "Seaborn plots within a Jupyter notebook",
-            }
+            for k in ["choices", "section_index"]:
+                if k in o:
+                    d[k] = o[k]
 
     try:
         d["question"]
@@ -124,6 +125,7 @@ for i, filename in enumerate(filenames):
         d["choices"]["B"]
         d["choices"]["C"]
         d["choices"]["D"]
+        d["choices"]["E"]
     except KeyError as e:
         print(exam_type, exam_number, d["question_number"])
         print(text)

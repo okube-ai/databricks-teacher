@@ -1,0 +1,933 @@
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 0
+  section_index: 2
+  question: 'A data engineer has scheduled a job that uses the legacy code involving
+    a shell script. The job is scheduled to run every day at 2 PM. The shell script
+    tries to copy a file from /tmp directory on the local file system to the /FileStore
+    directory using the following command: ssh cp /tmp/raw_data.csv /FileStore/data.csv
+    After a few weeks, the data processing team informs the engineering team about
+    the non-availability of the /tmp directory from the past 1 week. The data engineer
+    later found that even after the source directory was unavailable, the job did
+    not fail. What could be the possible reason for this outcome?'
+  A: -e is missing from the cp command, it should be cp /tmp/raw_data.csv /FileStore/data.csv
+    -e
+  B: -error is missing from the cp command, it should be cp /tmp/raw_data.csv /FileStore/data.csv
+    -error
+  C: -e is missing from the *.sh magic command, it should be *.sh -e
+  D: "-error is missing from the \u2018sh magic command, it should be \u2018*:sh -error"
+  E: "-error is missing from the \u2018sh magic command and -e is missing from the\
+    \ cp command"
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 2
+  section_index: null
+  question: What could be the possible reason for this outcome?
+  A: -e is missing from the cp command, it should be cp /tmp/raw_data.csv /FileStore/data.csv
+    -e
+  B: -error is missing from the cp command, it should be cp /tmp/raw_data.csv /FileStore/data.csv
+    -error
+  C: -e is missing from the *.sh magic command, it should be *.sh -e
+  D: "-error is missing from the \u2018sh magic command, it should be \u2018*:sh -error"
+  E: "-error is missing from the \u2018sh magic command and -e is missing from the\
+    \ cp command"
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 3
+  section_index: 3
+  question: A Databricks workspace admin has enabled access control on the clusters.
+    A new team member has been added to the team and wants to run a notebook to ingest
+    the data from an S3 bucket. To run the notebook, the new team member tries to
+    start an already existing interactive cluster named cluster_to_ingest_s3_data
+    but doesn't have permission. Which of the following permissions can be granted
+    to the member to enable them to start the cluster?
+  A: Can Attach To permission
+  B: Can Restart permission
+  C: Can Manage permission
+  D: Either A or B
+  E: Either B or C
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 4
+  section_index: 1
+  question: Assuming that the first job is created successfully. Which of the following
+    statements explains the outcome when the second data engineer tries to create
+    the job?
+  A: The job will be created successfully with both the jobs named new_job
+  B: The job will be created successfully with the second job named new_job_1
+  C: The job will not be created as a job with the same name already exists.
+  D: The job will be created successfully by overwriting the previous job as two jobs
+    cannot share a name
+  E: The task in the second job will be appended to the existing job.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 5
+  section_index: 1
+  question: Which of the following defines the difference between cache() and persist()
+    in Spark?
+  A: cache() persists the DataFrame in memory whereas persist() saves it in memory
+    as well as the disk.
+  B: persist() accepts storage level as an argument while cache() does not.
+  C: The default storage level for cache() and persist() is MEMORY_ONLY
+  D: Unpersisting the DataFrames persisted through cache() is not possible while the
+    DataFrames persisted through persist() can be unpersisted using unpersist()
+  E: cache() should be used to persist a DataFrame for a small period of time. To
+    persist a DataFrame for a longer period, persist() should be used.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 6
+  section_index: 2
+  question: When mounting an external data source in Databricks, which of the following
+    options provides the best approach for managing secrets, such as access keys or
+    credentials, required to access the external storage?
+  A: Storing secrets directly in the Databricks notebook code.
+  B: Embedding secrets in environment variables within the Databricks cluster configuration.
+  C: Including secrets in plain text files within the mount options when defining
+    the mount point.
+  D: Storing secrets in Databricks Secrets.
+  E: Using a third-party password manager to securely store and retrieve the secrets.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 7
+  section_index: null
+  question: The data engineering team wants to check the list of files that will be
+    deleted after running the VACUUM command. Which of the following commands can
+    be used for that?
+  A: vacuum transactions 2.5 DRY RUN
+  B: VACUUM transactions 69 DRY_RUN
+  C: vacuum transactions 2.5 DRY_RUN
+  D: VACUUM transactions 69 DRY RUN
+  E: VACUUM transactions 2.5 DAYS DO_
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 8
+  section_index: 2
+  question: Which of the following statements is not true about clusters in Databricks?
+  A: An all-purpose cluster can be created using the UI, CLI or REST API.
+  B: A job will always use a new Job cluster.
+  C: A job cluster cannot be restarted.
+  D: All-purpose clusters should be used to develop code in interactive notebooks.
+  E: A job cluster is less costly than an all-purpose cluster when used to run the
+    same notebook.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 9
+  section_index: null
+  question: 'A Databricks user needs to cancel the run of a job but does not have
+    the access to the REST API or the UI. The only access provided to the user is
+    Databricks CLI. Which of the following commands can be used by the user to cancel
+    the run of a job with the following details: job-id - 2795 run-id - 96746 job-name
+    - fetch_details'
+  A: databricks run cancel --run-id 2795
+  B: databricks runs cancel --job-id 2795 --run-id 96746
+  C: "databricks run cancel \u2014-job-name fetch_details --run-id 96746"
+  D: databricks runs cancel --run-id 96746
+  E: databricks run cancel --job-id 2795 --run-id 96746
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 10
+  section_index: 1
+  question: Assuming cluster 1198-132537-dht25rtr exists, what will be the expected
+    outcome?
+  A: The job named test_api will be created and the job will be triggered daily when
+    the clock strikes 8:00 AM in Brisbane, Australia.
+  B: The job will not be created as the schedule for the job cannot be created using
+    2.0/jobs/create endpoint.
+  C: The job named test_api will be created and the job will be triggered on the 8th
+    day of each month.
+  D: The job will be created but will not be triggered as the C expression is not
+    valid.
+  E: The job named test_api will be created but can only be triggered by clicking
+    Run Now in Jobs UI.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 11
+  section_index: 2
+  question: How can a Workspace Admin ensure that an all-purpose cluster retains its
+    configurations even if it remains terminated for over 30 days?
+  A: Set automatic termination to 30 days
+  B: Use Databricks UI to create the cluster
+  C: Use Data ks REST API to create the cluster
+  D: Pin the cluster
+  E: Use Databricks CLI to create the cluster
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 12
+  section_index: 1
+  question: Now, the data engineer tries to add a record to the table using INSERT
+    INTO command. Which of the following would be the output of the INSERT INTO command?
+  A: The record will be inserted in the venues table and a new CSV file will be added
+    in dbfs:/FileStore/data/ directory.
+  B: The record will not be inserted in the table and an error message will be displayed.
+  C: The record will be inserted in the table as well as the venues.csv file.
+  D: The record will not be inserted in the table but an OK message will be displayed.
+  E: The record will be inserted in the venues.csv file but not in the venues table.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 13
+  section_index: 1
+  question: A data engineer created a new cluster named s3mount and attached a notebook
+    to it. which mounts an S3 bucket to DBFS. The other data engineers are using an
+    existing cluster named prod-support to run their notebooks. One of the data engineers
+    tries to access the data from the mount point using their notebook. Which of the
+    following statements is true about data accessibility?
+  A: The data engineer will be able to access the data without any errors.
+  B: The mount point will only be accessible through the notebooks attached to the
+    s3mount cluster.
+  C: The only way to access the data on the s3mount cluster is to restart the cluster.
+  D: To access the data on the prod-support cluster, dbutils.refreshMounts() needs
+    to run.
+  E: The mount point will be accessible on the prod-support cluster after the data
+    engineer runs dbutils.fs.refreshMounts()
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 14
+  section_index: 2
+  question: A data engineer recently learned about the schema evolution modes in Databricks
+    Auto Loader. Which of the following modes could be selected by them to ensure
+    that the stream does not fail if a new column is encountered?
+  A: dropNewColumns
+  B: none
+  C: rescue
+  D: Any one from rescue or none can be used
+  E: Any one from rescue or dropNewColumns can be used
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 15
+  section_index: 1
+  question: "A data engineer executes the following query to optimize the join operation
+    between df1 and df2: joined_df = dfl.join(broadcast(df2), 'id', 'inner'). 
+    Which of the following correctly explains the working of the join?"
+  A: A copy of df2 will be broadcasted to all the worker nodes.
+  B: The join query will fail as inner should be replaced with broadcast.
+  C: Only the first 10 MBs of data from the DataFrame df2 will be used for the join.
+  D: The join query will fail as the broadcast_df should be used instead of broadcast.
+  E: The joined_df will be broadcasted to all the worker nodes as the broadcast function
+    is used on one of the DataFrames involved in the join.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 16
+  section_index: null
+  question: Which of the following statements is true about the result of the query
+    if one of the data analysts changes the schema for the company_info table?
+  A: The streaming query will fail as soon as the schema is changed for the company_info
+    table.
+  B: The streaming query will fail as soon as the next batch of data is received in
+    the stock_prices table only if the id column is dropped as part of the schema
+    change.
+  C: The streaming query will fail as soon as the next batch of data is received in
+    the stock_prices table.
+  D: The streaming query will fail as soon as the next batch of data is received in
+    the stock_prices tables only if the id column is dropped or renamed as part of
+    the schema change.
+  E: The schema for the company_info table cannot be changed while the streaming query
+    is running.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 17
+  section_index: null
+  question: Which of the following column statistics is not a part of the Parquet
+    file footers?
+  A: Min value
+  B: Max value
+  C: NULL counts
+  D: Mean value
+  E: The data type of columns
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 18
+  section_index: 1
+  question: To store the latest bills of all the customers, a broadband company uses
+    a delta table named bills with Change Data Feed enabled. Whenever a bill is generated
+    for a customer for the first time, the bill details are added to the table. Afterward,
+    each time a new bill is generated for a customer, only the bill_date and amount
+    columns are updated. If a customer parts ways with the company, the bill details
+    are deleted from the bills table. Which of the following queries should be used
+    to get the list of all the customers with details of their first-ever bill?
+  A: SELECT customer_id, bill_date, amount FROM table_changes ( I. @) WHERE _change_type
+    = ce a
+  B: 'SELECT customer_id, bill_date, amount FROM table_changes(''2.1: @) WHERE _change_type
+    - Tacs ty otele'
+  C: 'SELECT customer_id, bill_date, amount FROM table_changes(''2.1: @) WHERE _change_type
+    > (''1 mt'
+  D: "SELECT customer_id, bill_date, amount FROM table_changes( '2:1: 8) WHERE _change_type\
+    \ = \xB0 wy"
+  E: "SELECT customer_id, bill_date, amount FROM bills WHERE _change_type = \u2018\
+    I!"
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 19
+  section_index: null
+  question: Which of the following is the default trigger interval for a streaming
+    job in Databricks?
+  A: 1 second
+  B: 5 seconds
+  C: 10 seconds
+  D: 30 seconds
+  E: 60 seconds
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 20
+  section_index: 1
+  question: How does reducing the number of nodes or VMs while keeping the total storage
+    as it is in a cluster affect data shuffling?
+  A: Reducing the number of nodes or VMs while keeping the total storage as it is
+    will decrease the overall cluster performance.
+  B: Reducing the number of nodes or VMs while keeping the total storage as it is
+    will increase the network and disk I/O for shuffle operations.
+  C: Reducing the number of nodes or VMs while keeping the total storage as it is
+    will have no effect on shuffle operations.
+  D: Reducing the number of nodes or VMs while keeping the total storage as it is
+    can improve shuffle performance by reducing network and disk I/O.
+  E: Reducing the number of nodes or VMs while keeping the total storage as it is
+    will only affect CPU utilization during shuffle operations.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 21
+  section_index: 2
+  question: An e-commerce company maintains its product information in a delta table
+    named inventory with the following columns - product_id. product_name, quantity.
+    price and is_active .At the end of each month, they receive a new delta table
+    named updated_inventory with the same schema as the inventory table. Which of
+    the following MERGE INTO statements should be used to update the inventory table
+    based on the end-of-month updates given that if the product_id is missing from
+    the updated_inventory table, the is_active columninthe inventory table should
+    be turned to false?
+  A: 'MERGE INTO inventory USING updated_inventory
+
+    ON inventory.product_id = updated_inventory.product_id
+
+    WHEN MATCHED THEN
+
+    UPDATE SET
+
+    inventory. quantity = updated_inventory. quantity,
+
+    inventory.price = updated_inventory.price
+
+    WHEN NOT MATCHED BY SOURCE THEN
+
+    INSERT (product_id, product_name, quantity, price, is_active)
+
+    VALUES (updated_inventory.product_id, updated_inventory.product_name,
+
+    updated_inventory. quantity, updated_inventory.price, *i_)
+
+    WHEN NOT MATCHED BY TARGET THEN
+
+    UPDATE SET is_active = ta ;'
+  B: 'MERGE INTO inventory USING supplier_updates
+
+    ON inventory.product_id = updated entory. product_id
+
+    WHEN MATCHED THEN
+
+    UPDATE SET
+
+    inventory. quantity = updated_inventory. quantity,
+
+    inventory.price = updated_inventory.price
+
+    WHEN NOT MATCHED BY SOURCE THEN
+
+    INSERT (product_id, product_name, quantity, price)
+
+    VALUES (updated_inventory.product_id, updated_inventory.product_name,
+
+    updated_inventory. quantity, updated_inventory.price)
+
+    WHEN NOT MATCHED THEN
+
+    UPDATE SET is_active = ta'
+  C: "MERGE INTO inventory USING updated_inventory\nON inventory.product_id = updated_inventory.product_id\n\
+    WHEN MATCHED THEN\nUPDATE SET\nupdated_inventory. quantity = inventory.quantity,\n\
+    updated_inventory.price = inventory.price\nWHEN NOT MATCHED THEN\nINSERT (product_id,\
+    \ product_name, quantity, price, is_active)\nVALUES (updated_inventory.product_id,\
+    \ updated_inventory.product_name,\nupdated_inventory.quantity, updated_inventory.price,\
+    \ 7a )\nWHEN NOT MATCHED BY SOURCE THEN\nUPDATE SET is_active = \xA2"
+  D: 'MERGE INTO updated_inventory USING inventory
+
+    ON updated_inventory.product_id = inventory. product_id
+
+    WHEN MATCHED THEN
+
+    UPDATE SET
+
+    updated_inventory. quantity = inventory.quantity,
+
+    updated_inventory.price = inventory.price
+
+    WHEN NOT MATCHED THEN
+
+    INSERT (product_id, product_name, quantity, price, is_active)
+
+    VALUES (inventory.product_id, inventory. product_name,
+
+    inventory.quantity, inventory.price, wus)
+
+    WHEN NOT MATCHED BY SOURCE THEN
+
+    UPDATE SET is_active = ta ;'
+  E: 'MERGE INTO inventory USING updated_inventory
+
+    ON inventory.product_id = updated_inventory.product_id
+
+    WHEN MATCHED THEN
+
+    UPDATE SET
+
+    inventory. quantity = updated_inventory. quantity,
+
+    inventory.price = updated_inventory.price
+
+    WHEN NOT MATCHED THEN
+
+    INSERT (product_id, product_name, quantity, price, is_active)
+
+    VALUES (updated_inventory.product_id, updated_inventory.product_name,
+
+    updated_inventory. quantity, updated_inventory.price, *i_)
+
+    WHEN NOT MATCHED BY SOURCE THEN
+
+    UPDATE SET is_active = ta ;'
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 22
+  section_index: null
+  question: Which property should be changed in an Auto Loader pipeline to enable
+    the case-insensitive behavior of column names while iteratively reading Parquet
+    files from an S3 location if the schema evolution mode is selected as rescue ?
+  A: No changes are required as the column names in Auto Loader are always inferred
+    case-insensitively in rescue mode.
+  B: The readerCaseSensitive option should be set to false
+  C: The readerCaseSensitive option should be set to true
+  D: The readerCaseInsensitive option should be set to false
+  E: The readerCaseInsensitive option should be set to true
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 23
+  section_index: null
+  question: Which of the following is incorrect about the difference between using
+    an existing all-purpose cluster and a new job cluster while creating a job in
+    Databricks?
+  A: A new job cluster should be used if a dashboard needs to be updated after every
+    30 minutes.
+  B: If a terminated all-purpose cluster is selected, the job owner should have at
+    least Can Restart permission to run the job successfully.
+  C: If you choose a new job cluster while creating a job, the cluster is created
+    when the first task in the job starts.
+  D: If a job cluster while the job is run cluster is created.
+  E: If you choose a new job cluster while creating a job, the cluster is terminated
+    when the last task using the cluster is completed.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 24
+  section_index: 2
+  question: A deep clone of a delta table is created for testing the data. The original
+    table is named tickets whereas the deep-cloned table is named deep_tickets. Another
+    data engineer creates a delta table named shallow_tickets by shallow cloning the
+    newly created deep_tickets table and writes some records in it. Which of the following
+    is true about the data in the tickets table and the deep cloned deep_tickets table?
+  A: The records added to the shallow tickets table will not be added to the tickets
+    table but will be added to the deep_tickets table.
+  B: The records added to the shallow tickets table will be added to the tickets table
+    but will not be added to the deep_tickets table.
+  C: The records added to the shallow_tickets table will be added to the tickets table
+    as well as the deep_tickets table.
+  D: The records added to the shallow_tickets table will not be added to the tickets
+    table or the deep_tickets table.
+  E: The records cannot be added to the shallow_tickets table as it is a shallow clone
+    of a deep-cloned table.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 25
+  section_index: 1
+  question: Which of the following is not one of the partitioning hints in Spark?
+  A: COALESCE
+  B: SHUFFLE_HASH
+  C: REPARTITION
+  D: REPARTITION_BY_RANGE
+  E: REBALANCE
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 26
+  section_index: 1
+  question: 'A data engineer executes the following SQL query to create a Delta table:
+    CREATE TABLE data_changes (_change_type STRING, _changed_by STRING) TBLPROPERTIES
+    (delta.enableChangeDataFeed = true); Which of the following describes the output
+    of the above query?'
+  A: The Delta table will be created successfully but Change Data Feed will not be
+    enabled.
+  B: The SQL statement will result in an error and the Delta table will not be created.
+  C: The Delta table will be created successfully with the Change Data Feed enabled.
+  D: The Delta table will be created successfully but the _change_type column will
+    be removed.
+  E: The SQL statement will not return any error but the Delta table will not be created.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 27
+  section_index: null
+  question: What should be replaced with the blank to ensure that the records having
+    NA in the age column are not added to the DataFrame?
+  A: .option('mode', 'DROPMALFORMED')
+  B: .option('mode', 'DROPNA')
+  C: .option('drop', 'NA')
+  D: .option('mode', 'PERMISSIVE')
+  E: .option('mode', 'FAILFAST')
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 28
+  section_index: 1
+  question: Which of the following depicts the primary difference between the withWatermark
+    and window functions in a streaming query?
+  A: The withwatermark function defines a time threshold for data to be considered
+    late and discarded, while the window function defines a fixed-size time interval
+    for grouping data.
+  B: The withWatermark function is used for creating sliding time-based windows, while
+    the window function is used for specifying watermark thresholds to manage late
+    data.
+  C: The withWatermark function and the window function serve the same purpose and
+    can be used interchangeably in streaming queries.
+  D: The window function defines a time threshold for data to be considered late and
+    discarded, while the withwatermark function defines a fixed-size time interval
+    for grouping data.
+  E: The withwatermark function is used to define schema evolution for incoming data,
+    while the window function is used for data aggregation within specified time intervals.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 29
+  section_index: 1
+  question: A Kafka stream that acts as an upstream system in an ETL framework tends
+    to produce duplicate values within a batch. The streaming query reads the data
+    from the source and writes to the downstream delta table using the default trigger
+    interval. If the upstream system emits the data every 20 minutes, which of the
+    following strategies can be used to remove the duplicates before saving the data
+    to the downstream delta table while keeping the costs low?
+  A: Use dropDuplicates method after every 20 minutes on the target table.
+  B: Change the downstream table to a temporary table in the streaming query, drop
+    the duplicates from the temporary table every 20 minutes, and load the data to
+    the original downstream table.
+  C: Update the processing time to 20 minutes and add dropDuplicates() in the streaming
+    query.
+  D: Adding dropDuplicates() to the streaming query will remove duplicate values from
+    all previous batches of data.
+  E: Add withwatermark method in the streaming query with 20 minutes as the argument.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 30
+  section_index: null
+  question: Which of the following queries can be used by a data engineer to count
+    all the records that were updated in the source table?
+  A: spark.read.option(*).option(*).table(*).col('columnName').count()
+  B: spark.read.option(*).option(*).table(*).col('columnName').count()
+  C: spark.read.option(*).option(*).table(*).col('columnName').count()
+  D: All of the above
+  E: Both A and B
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 31
+  section_index: null
+  question: The source path for an Auto Loader has been set as s3://records/year=2023/month=11/seasonl.
+    parquet Which of the following partitioning details can be inferred by the above
+    path?
+  A: The year column will be inferred as the partition column as Auto Loader supports
+    partitioning only on one column.
+  B: The month column will be inferred as the partition column as Auto Loader supports
+    partitioning only on one column.
+  C: As Auto Loader does not support partitioning inference, no column will be selected
+    as partition column.
+  D: Both year and month column will be inferred as the partition columns.
+  E: A new column named year_month will be created for partitioning.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 32
+  section_index: 1
+  question: A filter operation is the most common operation on a delta table named
+    voters where columns number 58 and 59 are to be used for highly selective filters.
+    Which of the following strategies can be used by the data engineer while creating
+    the table to increase the query performance? The data engineer needs to keep the
+    overhead lower as new records are added to the table.
+  A: Update the value of delta.dataSkippingNumIndexedCols to 59
+  B: Statistics are collected for all the columns in a delta table, by default. Thus,
+    nothing needs to be done.
+  C: Re-order the columns by bringing columns 58 and 59 in the range of the first
+    16 columns as statistics are collected automatically for the first 16 columns
+    only.
+  D: Update the value of delta.dataSkippingNumIndexedCols to 2
+  E: Re-order the columns by bringing columns 58 and 59 in the range of the first
+    32 columns as statistics are collected automatically for the first 32 columns
+    only.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 33
+  section_index: null
+  question: Which of the following constraints can be enforced on a delta table to
+    prevent the addition of bad data?
+  A: CHECK
+  B: NOT NULL
+  C: DEFAULT
+  D: A and B
+  E: A, B, and C
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 34
+  section_index: null
+  question: Which of the following SCD types is most likely to have is_active column
+    with values as True and False?
+  A: Typeosco
+  B: Type1sco
+  C: Type2ScbD
+  D: Type3ScbD
+  E: None of the above
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 35
+  section_index: 1
+  question: Adeltatablenamed currency_conversion is updated daily at midnight by the
+    central banking system. The table contains the conversion rates between all the
+    currencies available in the banking system. The banks want to access the latest
+    conversion rate whenever the users execute a transaction. Which of the following
+    is the most efficient method that can be implemented by the central banking system
+    for sharing the conversion rates to all the banks without giving access to the
+    original table?
+  A: Create a DEEP CLONE of the original table
+  B: Manually send the data to all the banks at midnight
+  C: Create a VIEW from the original table
+  D: Create a SHALLOW CLONE of the original table
+  E: Create a new table using the CTAS command
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 36
+  section_index: null
+  question: Which of the following is not a type of widget supported in Databricks?
+  A: dropdown
+  B: combobox
+  C: multiselect
+  D: radio button
+  E: checkbox
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 37
+  section_index: null
+  question: Which of the following visualization types is not supported in Databricks?
+  A: Bar Chart
+  B: Pie Chart
+  C: Word Cloud
+  D: Heat Map
+  E: All of the above visualizations are supported in Databricks
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 38
+  section_index: 1
+  question: What is the primary benefit of using the Bronze layer in a multi-hop or
+    medallion architecture in Databricks?
+  A: it accelerates real-time data processing.
+  B: it stores only processed and aggregated data.
+  C: it maintains data lineage and historical records.
+  D: it enforces data access control and security.
+  E: it provides a user-friendly interface for data analysis.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 39
+  section_index: 1
+  question: 'The following command intends to add a check constraint on the routes
+    table but fails to execute: ALTER TABLE routes ADD CHECK (distance > @). As a
+    data engineer, which of the following changes will you suggest to make the above
+    command work?'
+  A: CHECK keyword should be replaced by STRAINT
+  B: The TABLE keyword should be removed.
+  C: ADD CHECK should be replaced by ADD CONSTRAINT CHECK
+  D: (distance > 8) should be replaced by distance > 6, i.e. the brackets around the
+    condition should be removed.
+  E: ADD CHECK should be replaced by ADD CONSTRAINT constraint_name CHECK
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 40
+  section_index: null
+  question: When selecting a partition column for optimizing data storage and query
+    performance in Databricks, which of the following considerations should be taken
+    into account?
+  A: Choose a column with a low cardinality that evenly distributes data.
+  B: Select a column with high cardinality to reduce the number of partitions.
+  C: Opt for a column with frequent updates to improve partition pruning.
+  D: Prioritize a column with complex data types for better organization.
+  E: Use a column unrelated to the data to enhance partitioning efficiency.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 41
+  section_index: null
+  question: Which of the following is the correct usage of row-level security in Databricks
+    using dynamic views?
+  A: "CREATE VIEW restricted_address AS SELECT cost CASE WHEN 1s_menber(': \u2018\
+    ) THEN address ELSE \xB0 Cl C.0 AS address FROM employees;"
+  B: "CREATE VIEW restricted_address AS SELECT cost CASE VWHEt ccount_group_menber(\
+    \ si.cic-#.') THEN address ELSE \xB0 Cl C.0 AS address FROM employees;"
+  C: CREATE VIEW restricted_address AS SELECT cost, address FROM employees WHERE is_member(
+    iaca.vi. ) or address like %AUS %;
+  D: CREATE VIEW restricted_address AS SELECT cost, address FROM employees WHERE cost>=25000;
+  E: All of the above options signify row-level security in Databricks.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 42
+  section_index: null
+  question: Which of the following explains the difference in querying the deep and
+    shallow clones of a delta table once the original table is dropped?
+  A: The original table can only be dropped after dropping the shallow and deep clones.
+  B: Querying both the shallow and deep clones will result in an error.
+  C: The shallow clone can be queried but querying the deep clone will result in an
+    error.
+  D: Both the clones can be queried without facing any errors.
+  E: The deep clone can be queried but querying the shallow clone will result in an
+    error.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 43
+  section_index: 1
+  question: Which of the following explains the difference between using the LOCATION
+    keyword while creating a database and a table?
+  A: Using the LOCATION keyword while creating a database or a table will mark them
+    as unmanaged or external.
+  B: Using the LOCATION keyword while creating a database will mark it as unmanaged
+    while using it with the CREATE TABLE command will mark the table as managed.
+  C: Using the LOCATION keyword with CREATE TABLE and CREATE DATABASE commands will
+    have no effect on them.
+  D: Using the LOCATION keyword while creating a table will mark the table as unmanaged
+    while using it with the CREATE DATABASE command will add the location where the
+    underlying tables of the database will be stored.
+  E: LOCATION keyword cannot be used with the CREATE DATABASE command whereas it can
+    be used while creating a table.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 44
+  section_index: 3
+  question: A data engineer needs to transfer the ownership of the job to another
+    user. Which of the following statements is true about the ownership transfer?
+  A: The ownership of a job can be changed only by the Admin or the creator of the
+    job.
+  B: The ownership of a job can be changed only by the creator of the job.
+  C: The ownership of a job can be changed by any user having Can Manage permission
+    on the job.
+  D: The ownership of a job can be changed only by the Admin.
+  E: The ownership of a job can be changed by the Admin or the creator of the job
+    or the user having Can Manage permission on the job.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 45
+  section_index: 1
+  question: 'A newly appointed data engineer needs USAGE privileges on the following
+    tables: Table 1: policy table from the insurance database Table 2: demographics
+    table from customers database Which of the following statements is correct about
+    the result of the execution of the following query: GRANT USAGE ON TABLES customers.demographics,
+    insurance.policy TO new_user;'
+  A: TABLES should be replaced by TABLE to execute the query correctly.
+  B: The query will fail as privileges on multiple tables cannot be granted in a single
+    GRANT statement.
+  C: The query will be successful, the new_user will have the requested privileges.
+  D: The query will not be successful as the GRANT statement cannot be used to grant
+    permissions on tables.
+  E: The query will be executed without errors, but the grants will be given on only
+    the first table.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 46
+  section_index: 1
+  question: A databricks engineer needs to create a secret scope to store a connection
+    string to connect the application to a JOBC source. In which of the following
+    ways the data engineer can create the secret scope?
+  A: The secret scope can only be created using Databricks CLI.
+  B: Only Databricks REST API can be used to create a secret scope.
+  C: dbutils.secrets() is the only way to create a secret scope in Databricks.
+  D: Databricks CLI, Databricks REST API and dbutils.secrets() can all be used to
+    create a secret scope.
+  E: Only Databricks CLI and Databricks REST API can be used to create secret scope.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 47
+  section_index: null
+  question: Which of the following columns from a Delta table cannot be classified
+    as a PII column?
+  A: passport_index
+  B: credit_card_index
+  C: biometrics
+  D: gender
+  E: name
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 48
+  section_index: null
+  question: Two data engineers are having different sets of permissions over a notebook.
+    One of them is having Can Manage permission whereas the other one is having Can
+    Edit permission. Which of the following statements defines the abilities of each
+    of them?
+  A: Only the data engineer with Can Manage permission can attach the notebook to
+    a cluster.
+  B: The data engineer with Can Edit permission can edit the notebook while the other
+    data engineer cannot.
+  C: Both the data engineers cannot detach the notebook from a terminated cluster.
+  D: The data engineer with Can Manage permission can change the permissions on the
+    notebook whereas the other data engineer cannot.
+  E: Both data engineers share the same set of abilities.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 49
+  section_index: 0
+  question: A data engineer creates a secret scope named prod and adds a secret with
+    key as authenticate and value as my_unique_authentication. What will be the output
+    if a data engineer executes the following command in a Python notebook?
+  A: The command will fail as the secrets cannot be read inside a notebook using the
+    get() method.
+  B: The command will be successful and [REDACTED] will be printed as the output.
+  C: my_unique_authentication will be printed as the output.
+  D: As soon as the command is executed, a file will be downloaded with the password.
+  E: The command will be executed successfully but no output will be printed.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 50
+  section_index: 1
+  question: Which of the following details are available in the Environment Tab of
+    Spark UI?
+  A: Properties like Runtime information, Spark properties and Hadoop properties.
+  B: Name of the environment - DEV, UAT or PROD.
+  C: The Cluster Metrics including network utilization, CPU usage and cluster memory
+    usage.
+  D: There is no Environment Tab in Databricks Spark UI.
+  E: List of environment-specific tasks like env_task_1, env_task_2 etc.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 51
+  section_index: null
+  question: A data engineer has set up a Databricks SOL alert on the speed column
+    which returns multiple values. Which of the following values would be selected
+    to trigger the alert?
+  A: The average of all the values.
+  B: The row number selected when setting up the alert.
+  C: The first value
+  D: The last value
+  E: If any of the values satisfy the condition, the alert will be triggered.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 52
+  section_index: null
+  question: 'are given the following error logs:'
+  A: right_outer join is not supported in Spark.
+  B: You cannot use multiple select operations in a single line of code.
+  C: All the columns from both the DataFrames cannot be selected.
+  D: medals column exists in both the DataFrames
+  E: medals column does not exist in any of the DataFrames being joined
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 53
+  section_index: null
+  question: Which of the following fields in Cluster UI can be searched to check the
+    utilization of the cluster CPU?
+  A: Ganglia UI under the Metrics Tab
+  B: Event Log Tab
+  C: Storage under the Spark UI Tab
+  D: CPU table under the Metrics Tab
+  E: CPU table under the Driver logs Tab
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 54
+  section_index: null
+  question: How many times the notification would be sent to the team if Just once
+    is selected in the when triggered, send notification field?
+  A: '0'
+  B: '1'
+  C: '2'
+  D: '3'
+  E: '4'
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 55
+  section_index: null
+  question: Which of the following will you not see on the Spark UI Home page?
+  A: Jobs Tab
+  B: Stages Tab
+  C: Tasks Tab
+  D: Environment Tab
+  E: JOBC/ODBC Server Tab
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 56
+  section_index: 1
+  question: A data engineer creates a task named filter_countries with no dependency.
+    After some days, the data engineer edits the job to add another task named get_capitals
+    which is dependent on the filter_countries task. After a week, the data engineer
+    creates another task named get_currencies which is also dependent on the filter_countries
+    task. Which of the following job flows is correct for the above scenario?
+  A: filter_countries -> get_capitals -> get_currencies
+  B: get_capitals -> filter_countries -> get_currencies
+  C: get_currencies -> filter_countries -> get_capitals
+  D: filter_countries -> get_currencies -> get_capitals
+  E: get_capitals -> get_currencies -> filter_countries
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 57
+  section_index: null
+  question: A team member has written a series of unit test cases to test an R function
+    named return_sample_dataframe. Which of the following libraries must be installed
+    by them to run the unit test cases?
+  A: testthem
+  B: testthis
+  C: testthat
+  D: null
+  E: null
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 58
+  section_index: null
+  question: A data engineering team is using Databricks Repos integrated with GitHub
+    for version control. The team got to know that there are some tasks that cannot
+    be performed through Databricks Repos and can only be done using GitHub. Which
+    of the following version control tasks cannot be performed in Databricks Repos?
+  A: Create a branch
+  B: Create a notebook
+  C: Clone a Git repository
+  D: Resolve Merge conflicts
+  E: All of the above tasks can
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 59
+  section_index: 2
+  question: Which of the following is not true about Unit testing and Integration
+    testing?
+  A: Integration testing is performed after Unit testing.
+  B: The internal functionality of the module should be known while performing Unit
+    testing.
+  C: Unit testing is usually performed by the developer.
+  D: Integration testing is a type of white-box testing.
+  E: Unit testing can be performed simultaneously for different modules.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 60
+  section_index: 2
+  question: Which of the following statements is true about the default retention
+    period of the job runs?
+  A: The details of a failed job run can be accessed for 45 days whereas the details
+    of a successful job run can only be accessed for 30 days.
+  B: The details of a failed as well as a successful job run can only be accessed
+    for 60 days.
+  C: The details of a failed job run can be accessed for 60 days whereas the details
+    of a successful job run can only be accessed for 30 days.
+  D: The details of a failed job run can only be accessed for 30 days whereas the
+    details of a successful job run can be accessed for 60 days.
+  E: The details of a failed as well as a successful job run can only be accessed
+    for 45 days.
+- exam_type: engineer-professional
+  exam_index: 5
+  question_index: 61
+  section_index: 1
+  question: "The Databricks admin installed some Python libraries as part of cluster\
+    \ creation. Now, a member of the team runs the following statement in one of their\
+    \ notebooks to remove the pandas library from their notebook: \u2018plp uninstall\
+    \ pandas Which of the statements describes the outcome?"
+  A: The library will be uninstalled from the notebook but will remain available to
+    all other notebooks.
+  B: "The library will not be uninstalled as the libraries installed on clusters cannot\
+    \ be uninstalled through \u2018:pip command."
+  C: The library will be uninstalled from the cluster and will not be available to
+    any other notebook attached to the cluster.
+  D: The library will not be uninstalled as -y should be used to uninstall the libraries
+    installed on a cluster.
+  E: The library will not be uninstalled.

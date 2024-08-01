@@ -1,0 +1,567 @@
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 0
+  section_index: 3
+  question: Which of the following commands can a data engineer use to compact small
+    data files of a Delta table into larger ones ?
+  A: PARTITION BY
+  B: ZORDER BY
+  C: COMPACT
+  D: VACUUM
+  E: OPTIMIZE
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 1
+  section_index: 3
+  question: A data engineer is trying to use Delta time travel to rollback a table
+    to a previous version, but the data engineer received an error that the data files
+    are no longer present. Which of the following commands was run on the table that
+    caused deleting the data files?
+  A: vacuum
+  B: OPTIMIZE
+  C: ZORDER BY
+  D: DEEP CLONE
+  E: DELETE
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 2
+  section_index: 3
+  question: In Delta Lake tables, which of the following is the primary format for
+    the data files?
+  A: Delta
+  B: Parquet
+  C: JSON
+  D: Hive-specific format
+  E: Both, Parquet and JSON
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 3
+  section_index: 1
+  question: Which of the following locations hosts the Databricks web application
+    ?
+  A: Data plane
+  B: Control plane
+  C: Databricks Filesystem
+  D: Databricks-managed cluster
+  E: Customer Cloud Account
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 4
+  section_index: 1
+  question: In Databricks Repos, which of the following operations a data engineer
+    can use to update the local version of a repo from its remote Git repository?
+  A: Clone
+  B: Commit
+  C: Merge
+  D: Push
+  E: Pull
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 5
+  section_index: 1
+  question: According to the Databricks Lakehouse architecture, which of the following
+    is located in the customer's cloud account?
+  A: Databricks web application
+  B: Notebooks
+  C: Repos
+  D: Cluster virtual machines
+  E: Workflows
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 6
+  section_index: 1
+  question: Which of the following best describes Databricks Lakehouse?
+  A: Single, flexible, high-performance system that supports data, analytics, and
+    machine learning workloads.
+  B: "Reliable data management system with transactional guarantees for organization'\
+    s structured data."
+  C: "Platform that helps reduce the costs of storing organization's open-format\
+    \ data files in the cloud."
+  D: Platform for developing increasingly complex machine learning workloads using
+    a simple, SQL-based solution.
+  E: Platform that scales data lake workloads for organizations without investing
+    on-premises hardware.
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 7
+  section_index: 1
+  question: If the default notebook language is SQL, which of the following options
+    a data engineer can use to run Python code in this SQL Notebook?
+  A: They need first to import the python module in a cell
+  B: This is not possible! They need to change the default language of the notebook
+    to Python
+  C: Databricks detects cells language automatically, so they can write Python syntax
+    in any cell
+  D: "They can add \u2018:language magic command at the start of a cell to force language\
+    \ detection."
+  E: "They can add \u2018:python at the start of a cell."
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 8
+  section_index: 1
+  question: Which of the following tasks is not supported by Databricks Repos, and
+    must be performed in your Git provider?
+  A: Clone, push to, or pull from a remote Git repository.
+  B: Create and manage branches for development work.
+  C: Create notebooks, and edit notebooks and other files.
+  D: Visually compare differences upon com
+  E: Delete branches
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 9
+  section_index: 3
+  question: Which of the following statements is Not true about Delta Lake ?
+  A: Delta Lake provides ACID transaction guarantees
+  B: Delta Lake provides scalable data and metadata handling
+  C: Delta Lake provides audit history and time travel
+  D: 'Delta Lake builds upon standard data formats: Parquet + XML'
+  E: Delta Lake supports unified streaming and batch data processing
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 10
+  section_index: 3
+  question: How long is the default retention period of the VACUUM command ?
+  A: 0 days
+  B: 7 days
+  C: 30 days
+  D: 90 days
+  E: 365 days
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 11
+  section_index: 2
+  question: The data engineering team has a Delta table called employees that contains
+    the employees personal information including their gross salaries. Which of the
+    following code blocks will keep in the table only the employees having a salary
+    greater than 3000 ?
+  A: DELETE FROM employees WHERE salary > 3000;
+  B: SELECT CASE WHEN salary <= 3000 THEN DELETE ELSE UPDATE END FROM employees;
+  C: UPDATE employees WHERE salary > 3000 WHEN MATCHED SELECT;
+  D: UPDATE employees WHERE salary <= 3000 WHEN MATCHED DELETE;
+  E: DELETE FROM employees WHERE salary <= 3000;
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 12
+  section_index: 2
+  question: A data engineer wants to create a relational object by pulling data from
+    two tables. The relational object must be used by other data engineers in other
+    sessions on the same cluster only. In order to save on storage costs, the date
+    engineer wants to avoid copying and storing physical data. Which of the following
+    relational objects should the data engineer create?
+  A: Temporary view
+  B: External table
+  C: Managed table
+  D: Global Temporary view
+  E: View
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 13
+  section_index: 2
+  question: "A data engineer has developed a code block to completely reprocess data
+    based on the following if-condition in Python: if process_mode it uial
+    cat is_table_exist: This if-condition is returning an invalid syntax error.
+    Which of the following changes should be made to the code block to fix this
+    error?"
+  A: 'if process_mode = ''init'' & not is_table_exist: print(''Start processing...'')'
+  B: 'if process_mode = ''init'' and not is_table_exist = True: print(''Start processing...'')'
+  C: 'if process_mode = ''init'' and is_table_exist = False: print(''Start processing...'')'
+  D: 'if (process_mode = ''init'') and (not is_table_exist): print(''Start processing...'')'
+  E: 'if process_mode == ''init'' and not is_table_exist: print(''Start processing...'')'
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 14
+  section_index: 1
+  question: 'Fill in the below blank to successfully create a table in Databricks
+    using data from an existing PostgreSQL database:'
+  A: org.apache.spark.sql.jdbc
+  B: postgresql
+  C: DELTA
+  D: dbserver
+  E: cloudfiles
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 15
+  section_index: 3
+  question: Which of the following commands can a data engineer use to create a new
+    table along with a comment?
+  A: CREATE TABLE COMMENT "Trial"
+  B: CREATE TABLE payments COMMENT ("Trial")
+  C: CREATE TABLE payments AS SELECT * FROM bank_transactions COMMENT "Trial"
+  D: CREATE TABLE payments AS SELECT * FROM bank_transactions COMMENT ("Trial")
+  E: COMMENT ("Trial") CREATE TABLE payments AS SELECT * FROM bank_transactions
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 16
+  section_index: 3
+  question: A junior data engineer usually uses Li!SLRI IN TQ command to write data
+    into a Delta table. A senior data engineer suggested using another command that
+    avoids writing of duplicate records. Which of the following commands is the one
+    suggested by the senior data engineer ?
+  A: MERGE INTO
+  B: APPLY CHANGES INTO
+  C: UPDATE
+  D: COPY INTO
+  E: INSERT OR OVERWRITE
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 17
+  section_index: 3
+  question: A data engineer is designing a Delta Live Tables pipeline. The source
+    system generates files containing changes captured in the source data. Each change
+    event has metadata indicating whether the specified record was inserted, updated,
+    or deleted. In addition to a timestamp column indicating the order in which the
+    changes happened. The data engineer needs to update a target table based on these
+    change events. Which of the following commands can the data engineer use to best
+    solve this problem?
+  A: MERGE INTO
+  B: APPLY CHANGES INTO
+  C: UPDATE
+  D: COPY INTO
+  E: cloud_files
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 18
+  section_index: 1
+  question: In PySpark, which of the following commands can you use to query the Delta
+    table employees created in
+  A: pyspark.sql.read(SELECT * FROM employees)
+  B: spark.sql("employees")
+  C: spark.format("sql").read("employees")
+  D: spark.table("employees")
+  E: Spark SQL tables can not be accessed from PySpark
+- exam_type: engineer-associate
+  exam_index: 2
+  question_index: 19
+  section_index: 2
+  question: Which of the following code blocks can a data engineer use to create a
+    user defined function (UDF) ?
+  A: 'CREATE FUNCTION plus_one(value INTEGER)
+
+    RETURN value +1'
+  B: 'CREATE UDF plus_one(value INTEGER)
+
+    RETURNS INTEGER
+
+    RETURN value +1;'
+  C: 'CREATE UDF plus_one(value INTEGER)
+
+    RETURN value +1;'
+  D: 'CREATE FUNCTION plus_one(value INTEGER)
+
+    RETURNS INTEGER
+
+    RETURN value +1;'
+  E: 'CREATE FUNCTION plus_one(value INTEGER)
+
+    RETURNS INTEGER
+
+    value +1;'
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 20
+  section_index: 3
+  question: When dropping a Delta table, which of the following explains why only
+    the table's metadata will be deleted, while the data files will be kept in the
+    storage ?
+  A: The table is deep cloned
+  B: The table is external
+  C: The user running the command to delete the data files
+  D: The table is managed
+  E: Delta prevents deleting files less than retention threshold, just to ensure that
+    no long-running operations are still referencing any of the files to be deleted
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 21
+  section_index: 2
+  question: Given the two tables students_course_1 and students_course_2. Which of
+    the following commands can a data engineer use to get all the students from the
+    above two tables without duplicate records ?
+  A: SELECT = FROM students_course_1 CROSS JOIN SELECT = FROM students_course_2
+  B: SELECT = FROM students_course_1 UNION SELECT = FROM students_course_2
+  C: SELECT = FROM students_course_1 INTERSECT SELECT = FROM students_course_2
+  D: SELECT = FROM students_course_1 OUTER JOIN SELECT = FROM students_course_2
+  E: SELECT = FROM students_course_1 INNER JOIN SELECT = FROM students_course_2
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 22
+  section_index: 3
+  question: 'Given the following command: CREATE DATABASE If NOT EXISTS ae db ; In
+    which of the following locations will the hr_db database be located?'
+  A: dbfs:/user/hive/warehouse
+  B: dbfs:/user/hive/db_hr
+  C: dbfs:/user/hive/databases/db_hr.db
+  D: dbfs:/user/hive/databases
+  E: dbfs:/user/hive
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 23
+  section_index: 2
+  question: Given the following table faculties, fill in the below blank to get the
+    students enrolled in less than 3 courses from the array column students
+  A: 'SELECT
+
+    faculty_id,
+
+    students,
+
+    AS few_courses_students
+
+    FROM faculties
+
+    FILTER (students, total_courses < 3)'
+  B: 'SELECT
+
+    faculty_id,
+
+    students,
+
+    AS few_courses_students
+
+    FROM faculties
+
+    TRANSFORM (students, total_courses < 3)'
+  C: 'SELECT
+
+    faculty_id,
+
+    students,
+
+    AS few_courses_students
+
+    FROM faculties
+
+    TRANSFORM (students, i -> i.total_courses < 3)'
+  D: 'SELECT
+
+    faculty_id,
+
+    students,
+
+    AS few_courses_students
+
+    FROM faculties
+
+    FILTER (students, i -> i.total_courses < 3)'
+  E: 'SELECT
+
+    faculty_id,
+
+    students,
+
+    AS few_courses_students
+
+    FROM faculties
+
+    CASE WHEN students.total_courses < 3 THEN students
+
+    ELSE NULL
+
+    END'
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 25
+  section_index: 3
+  question: Which of the following is used by Auto Loader to load data incrementally?
+  A: Multi-hop architecture
+  B: Spark Structured Streaming
+  C: COPY INTO
+  D: Databricks SQL
+  E: DEEP CLONE
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 27
+  section_index: 2
+  question: The data engineer team has a DLT pipeline that updates all the tables
+    once and then stops. The compute resources of the pipeline continue running to
+    allow for quick testing. Which of the following best describes the execution modes
+    of this DLT pipeline ?
+  A: The DLT pipeline executes in Continuous Pipeline mode under Production mode.
+  B: The DLT pipeline executes in Continuous Pipeline mode under Development mode.
+  C: The DLT pipeline executes in Triggered Pipeline mode under Production mode.
+  D: The DLT pipeline executes in Triggered Pipeline mode under Development mode.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 28
+  section_index: 3
+  question: 'A data engineer has defined the following data quality constraint in
+    a Delta Live Tables pipeline: fia 1S NOl NULL: Fill in the above blank so records
+    violating this constraint will be added to the target table, and reported in metrics'
+  A: ON VIOLATION ADD ROW
+  B: ON VIOLATION FAIL UPDATE
+  C: ON VIOLATION SUCCESS UPDATE
+  D: ON VIOLATION NULL
+  E: There is no need to add ON VIOLATION clause. By default, records violating the
+    constraint will be kept, and reported as invalid in the event log
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 29
+  section_index: 1
+  question: Which of the following will utilize Gold tables as their source?
+  A: Silver tables
+  B: Auto loader
+  C: Bronze tables
+  D: Dashboards
+  E: Streaming jobs
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 30
+  section_index: 3
+  question: Which of the following code blocks can a data engineer use to query the
+    existing streaming table events ?
+  A: spark.readStream('events')
+  B: spark.read.table('events')
+  C: spark.readStream.table('events')
+  D: spark.readStream().table('events')
+  E: spark.stream.read('events)
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 31
+  section_index: 1
+  question: In multi-hop architecture, which of the following statements best describes
+    the Bronze layer ?
+  A: it maintains data that powers analytics, machine learning, and production applications
+  B: it maintains raw data ingested from various sources
+  C: it represents a filtered, cleaned, and enriched version of data
+  D: It provides business-level aggregated version of data
+  E: It provides
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 33
+  section_index: 3
+  question: 'A data engineer has the following query in a Delta Live Tables pipeline:
+    CREATE LIVE TABLE aqgregated_sales AS SELECT store_id, sum(total) FROM cleaned_sales
+    GROUP BY store_id The pipeline is failing to start due to an error in this query
+    Which of the following changes should be made to this query to successfully start
+    the DLT pipeline ?'
+  A: CREATE STREAMING TABLE aqggregated_sales AS SELECT store_id, sum(total) FROM
+    LIVE.cleaned_sales GROUP BY store_id
+  B: CREATE TABLE aggregated_sales AS SELECT store_id, sum(total) FROM LIVE.cleaned_sales
+    GROUP BY store_id
+  C: CREATE LIVE TABLE aqgregated_sales AS SELECT store_id, sum(total) FROM LIVE.cleaned_sales
+    GROUP BY store_id
+  D: CREATE STREAMING LIVE TABLE aggregated_sales AS SELECT store_id, sum(total) FROM
+    cleaned_sales GROUP BY store_id
+  E: "CREATE STREAMING LIVE TABLE aggregated_sales AS SELECT store_id, sum(total)\
+    \ FROM STREAM(\xA2c leaned_sales} GROUP BY store_id"
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 34
+  section_index: 3
+  question: 'A data engineer has defined the following data quality constraint in
+    a Delta Live Tables pipeline: fia 1S NOT NULL: Fill in the above blank so records
+    violating this constraint will be dropped, and reported in metrics'
+  A: ON VIOLATION DROP ROW
+  B: ON VIOLATION FAIL UPDATE
+  C: ON VIOLATION DELETE ROW
+  D: ON VIOLATION DISCARD ROW
+  E: There is no need to add ON VIOLATION clause. By default, records violating the
+    constraint will be discarded, and reported as invalid in the event log
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 35
+  section_index: 1
+  question: Which of the following compute resources is available in Databricks SQL
+    ?
+  A: Single-node clusters
+  B: Multi-nodes clusters
+  C: On-premises clusters
+  D: SQL warehouses
+  E: SQL engines
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 36
+  section_index: 1
+  question: Which of the following is the benefit of using the Auto Stop feature of
+    Databricks SQL warehouses ?
+  A: Improves the performance of the warehouse by automatically stopping ideal services
+  B: Minimizes the total running time of the warehouse
+  C: Provides higher security by automatically stopping unused ports of the warehouse
+  D: Increases the availability of the warehouse by automatically stopping long-running
+    SQL queries
+  E: Databricks SQL does not have Auto Stop feature
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 37
+  section_index: 4
+  question: Which of the following alert destinations is Not supported in Databricks
+    SQL ?
+  A: Slack
+  B: Webhook
+  C: SMS
+  D: Microsoft Teams
+  E: Email
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 38
+  section_index: 4
+  question: A data engineering team has a long-running multi-tasks Job. The team members
+    need to be notified when the run of this job completes. Which of the following
+    approaches can be used to send emails to the team members when the job completes
+    ?
+  A: Slack
+  B: Webhook
+  C: SMS
+  D: Microsoft Teams
+  E: Email
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 39
+  section_index: 1
+  question: A data engineer wants to increase the cluster size of an existing Databricks
+    SQL warehouse. Which of the following is the benefit of increasing the cluster
+    size of Databricks SQL warehouses ?
+  A: Improves the latency of the queries execution
+  B: Speeds up the start up time of the SQL warehouse
+  C: Reduces cost since large clusters use Spot instances
+  D: The cluster size of SQL warehouses is not configurable. Instead, they can increase
+    the number of clusters
+  E: The cluster size can not be changed for existing SQL warehouses. Instead, they
+    can enable the auto-scaling option.
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 41
+  section_index: 4
+  question: The data engineer team has a DLT pipeline that updates all the tables
+    at defined intervals until manually stopped. The compute resources terminate when
+    the pipeline is stopped. Which of the following best describes the execution modes
+    of this DLT pipeline?
+  A: The DLT pipeline executes in Continuous Pipeline mode under Production mode.
+  B: The DLT pipeline executes in Continuous Pipeline mode under Development mode.
+  C: The DLT pipeline executes in Triggered Pipeline mode under Production mode.
+  D: The DLT pipeline executes in Triggered Pipeline mode under Development mode.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 42
+  section_index: 5
+  question: Which part of the Databricks Platform can a data engineer use to grant
+    permissions on tables to users ?
+  A: Data Studio
+  B: Cluster event log
+  C: Workflows
+  D: DBFS
+  E: Data Explorer
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 43
+  section_index: 5
+  question: Which of the following commands can a data engineer use to grant full
+    permissions to the HR team on the table employees?
+  A: GRANT FULL PRIVILEGES ON TABLE employees TO hr_team
+  B: GRANT FULL PRIVILEGES ON TABLE hr_team TO employees
+  C: GRANT ALL PRIVILEGES ON TABLE employees TO hr_team
+  D: GRANT ALL PRIVILEGES ON TABLE hr_team TO employees
+  E: GRANT SELECT, MODIFY, CREATE, READ_METADATA ON TABLE employees TO hr_team
+- exam_type: engineer-associate
+  exam_index: 1
+  question_index: 44
+  section_index: 5
+  question: 'A data engineer uses the following SQL query: ''ODIEY ON TAZLL emo loyees
+    [OQ br team''. Which of the following describes the ability given by the MODIFY
+    privilege?'
+  A: it gives the ability to add data from the table
+  B: it gives the ability to delete data from the table
+  C: It gives the ability to modify data in the table
+  D: All the above abilities are given by the MODIFY privilege
+  E: None of these options correctly describe the ability given by the MODIFY privilege

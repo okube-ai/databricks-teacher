@@ -10,7 +10,21 @@ databricks_job:
         max_workers: 2
       spark_version: 15.3.x-scala2.12
       node_type_id: Standard_DS3_v2
-
+#orchestrator: DLT
+#dlt:
+#  resource_name: pl-databricks-exam-questions
+#  catalog: ${vars.env}
+#  target: databricks
+#  development: ${vars.is_dev}
+#  configuration:
+#    pipeline_name: pl-databricks-exam-questions
+#
+#  serverless: True
+#
+#  libraries:
+#    - notebook:
+#        path: /.laktory/dlt/dlt_laktory_pl.py
+#
 #  access_controls:
 #    - group_name: account users
 #      permission_level: CAN_VIEW
@@ -19,9 +33,17 @@ databricks_job:
 
 udfs:
   - module_name: custom_functions
-    function_name: binary_to_chunk
+    function_name: binary_to_text
   - module_name: custom_functions
-    function_name: embed
+    function_name: summarize_guide
+  - module_name: custom_functions
+    function_name: get_section_content
+  - module_name: custom_functions
+    function_name: join_questions
+#  - module_name: custom_functions
+#    function_name: get_question_section
+#  - module_name: custom_functions
+#    function_name: get_question_section_index
 
 # --------------------------------------------------------------------------- #
 # Nodes                                                                       #
@@ -33,7 +55,7 @@ nodes:
   # Exam Questions                                                            #
   # ------------------------------------------------------------------------- #
 
-  - name: brz_exam_questions
+  - name: brz_udemy_exam_questions
     layer: BRONZE
     source:
       path: /Volumes/${vars.env}/sources/landing/events/udemy/databricks-exams/
@@ -42,53 +64,77 @@ nodes:
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
-      table_name: brz_exam_questions
+      table_name: brz_udemy_exam_questions
       mode: APPEND
-      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_exam_questions
-    transformer:
-      nodes:
-        - with_column:
-            name: _file
-            sql_expr: _metadata.file_path
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_udemy_exam_questions/checkpoint/
+#    transformer:
+#      nodes:
+#        - with_column:
+#            name: _file
+#            sql_expr: _metadata.file_path
 
-  - name: slv_exam_questions
+  - name: slv_udemy_exam_questions
 #    layer: SILVER
     source:
-      node_name: brz_exam_questions
+      node_name: brz_udemy_exam_questions
       as_stream: true
+#      filter: exam_type != 'analyst-associate' OR  CAST(exam_index AS int) > 4
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
-      table_name: slv_exam_questions
+      table_name: slv_udemy_exam_questions
       mode: APPEND
-      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_exam_questions
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_udemy_exam_questions/checkpoint/
     drop_duplicates:
       - question
     transformer:
       nodes:
         - with_columns:
-          - name: question
-            sql_expr: question
-          - name: choice_a
-            sql_expr: choices.A
-          - name: choice_b
-            sql_expr: choices.B
-          - name: choice_c
-            sql_expr: choices.C
-          - name: choice_d
-            sql_expr: choices.D
           - name: exam_type
             sql_expr: exam_type
-          - name: exam_number
+          - name: exam_index
             type: int
-            sql_expr: exam_number
-          - name: question_number
+            sql_expr: exam_index
+          - name: question_index
             type: int
-            sql_expr: question_number
-        - func_name: drop
-          func_args:
-            - _file
-            - choices
+            sql_expr: question_index
+          - name: section_index
+            type: int
+            sql_expr: section_index
+          - name: section_id
+            expr: F.concat_ws("-", "exam_type", "section_index")
+          - name: question
+            sql_expr: question
+          - name: A
+            sql_expr: A
+          - name: B
+            sql_expr: B
+          - name: C
+            sql_expr: C
+          - name: D
+            sql_expr: D
+          - name: E
+            sql_expr: E
+          - name: question_and_answers
+            expr: F.concat_ws("\n", "question", F.concat(F.lit("A) "), "A"), F.concat(F.lit("B) "), "B"), F.concat(F.lit("C) "), "C"), F.concat(F.lit("D) "), "D"), F.concat(F.lit("E) "), "E"))
+#        - func_name: drop
+#          func_args:
+#            - _file
+#            - choices
+#        - func_name: laktory.smart_join
+#          func_kwargs:
+#            other:
+#              node_name: slv_exam_guides
+#              selects:
+#                exam_type: exam_type
+#                content: exam_content
+#            "on":
+#              - exam_type
+#        - with_columns:
+#            - name: section_description
+#              expr: get_question_section("question", "exam_content")
+#            - name: section_index
+#              expr: get_question_section_index("section_description")
 
   # ------------------------------------------------------------------------- #
   # Exam Guides                                                               #
@@ -107,7 +153,7 @@ nodes:
       schema_name: databricks
       table_name: brz_exam_guides
       mode: APPEND
-      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_exam_guides
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_exam_guides/checkpoint/
     transformer:
       nodes:
         - with_column:
@@ -124,73 +170,146 @@ nodes:
       schema_name: databricks
       table_name: slv_exam_guides
       mode: APPEND
-      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_exam_guides
+      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_exam_guides/checkpoint/
     transformer:
       nodes:
       - with_columns:
         - name: content
           type: null
-          expr: F.explode(binary_to_chunk("content"))
-        - name: embedding
-          type: null
-          expr: embed("content")
+          expr: binary_to_text("content")
+#        - name: id
+#          expr: row_id("path", "content")
+#        - name: embedding
+#          type: null
+#          expr: embed("content")
         - name: exam_type
           type: null
           sql_expr: regexp_extract(_file, '/([^/.]+).pdf$', 1)
+        - name: summary
+          expr: summarize_guide("content")
       - func_name: drop
         func_args:
           - _file
           - modificationTime
 
 
-
   # ------------------------------------------------------------------------- #
-  # Documentation                                                             #
+  # Exam Sections                                                             #
   # ------------------------------------------------------------------------- #
 
-  - name: brz_documentation
+  - name: brz_exam_sections
     layer: BRONZE
     source:
-      path: /Volumes/${vars.env}/sources/landing/events/databricks/documentation/
-      format: BINARYFILE
-      as_stream: true
-      read_options:
-        cloudFiles.schemaEvolutionMode: none
+      path: /Volumes/${vars.env}/sources/landing/events/databricks/exam-sections/
+      format: JSON
+      as_stream: False
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
-      table_name: brz_documentation
-      mode: APPEND
-      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_documentation
-    transformer:
-      nodes:
-      - with_columns:
-        - name: _file
-          sql_expr: _metadata.file_path
+      table_name: brz_exam_sections
+      mode: OVERWRITE
 
-
-  - name: slv_documentation
+  - name: slv_exam_sections
 #    layer: SILVER
     source:
-      node_name: brz_documentation
-      as_stream: true
+      node_name: brz_exam_sections
+      as_stream: false
     sink:
       catalog_name: ${vars.env}
       schema_name: databricks
-      table_name: slv_documentation
-      mode: APPEND
-      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_documentation
+      table_name: slv_exam_sections
+      mode: OVERWRITE
     transformer:
       nodes:
       - with_columns:
+        - name: exam_type
+          type: null
+          sql_expr: exam_type
+        - name: index
+          type: int
+          sql_expr: index
+        - name: name
+          sql_expr: name
+        - name: weight
+          type: double
+          sql_expr: weight
+        - name: id
+          expr: F.concat_ws("-", "exam_type", "index")
+      - func_name: laktory.smart_join
+        func_kwargs:
+          other:
+            node_name: slv_exam_guides
+            selects:
+              exam_type: exam_type
+              content: exam_content
+          "on":
+            - exam_type
+
+      - with_columns:
         - name: content
-          type: null
-          expr: F.explode(binary_to_chunk("content"))
-        - name: embedding
-          type: null
-          expr: embed("content")
+          expr: get_section_content("exam_content", "name")
+
+      - func_name: join_questions
+        func_kwargs:
+          other:
+            node_name: slv_udemy_exam_questions
+
       - func_name: drop
         func_args:
-          - _file
-          - modificationTime
-          - length
+          - section
+          - exam_content
+
+
+#
+#  # ------------------------------------------------------------------------- #
+#  # Documentation                                                             #
+#  # ------------------------------------------------------------------------- #
+#
+#  - name: brz_documentation
+#    layer: BRONZE
+#    source:
+#      path: /Volumes/${vars.env}/sources/landing/events/databricks/documentation/
+#      format: BINARYFILE
+#      as_stream: true
+#      read_options:
+#        cloudFiles.schemaEvolutionMode: none
+#    sink:
+#      catalog_name: ${vars.env}
+#      schema_name: databricks
+#      table_name: brz_documentation
+#      mode: APPEND
+#      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/brz_documentation
+#    transformer:
+#      nodes:
+#      - with_columns:
+#        - name: _file
+#          sql_expr: _metadata.file_path
+#
+#
+#  - name: slv_documentation
+##    layer: SILVER
+#    source:
+#      node_name: brz_documentation
+#      as_stream: true
+#    sink:
+#      catalog_name: ${vars.env}
+#      schema_name: databricks
+#      table_name: slv_documentation
+#      mode: APPEND
+#      checkpoint_location: /Volumes/${vars.env}/sources/landing/laktory/pipelines/pl-databricks-exams/slv_documentation
+#    transformer:
+#      nodes:
+#      - with_columns:
+#        - name: content
+#          type: null
+#          expr: F.explode(binary_to_chunk("content"))
+#        - name: id
+#          expr: row_id("path", "content")
+#        - name: embedding
+#          type: null
+#          expr: embed("content")
+#      - func_name: drop
+#        func_args:
+#          - _file
+#          - modificationTime
+#          - length

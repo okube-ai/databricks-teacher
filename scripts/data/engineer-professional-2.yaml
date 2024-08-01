@@ -1,0 +1,839 @@
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 0
+  section_index: 1
+  question: Which of the following describes the minimal permissions a data engineer
+    needs to attach a notebook to an existing cluster?
+  A: Can Attach To privilege on the cluster
+  B: Can Restart privilege on the cluster
+  C: Can Manage privilege on the cluster
+  D: Cluster creation allowed + Can Attach To privileges on the cluster
+  E: Cluster creation allowed + Can Restart privileges on the cluster
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 1
+  section_index: null
+  question: Which of the following describes the minimal permissions a data engineer
+    needs to start an existing cluster, and attach a notebook to it?
+  A: Can Attach To privilege on the cluster
+  B: Can Restart privilege on the cluster
+  C: Can Manage privilege on the cluster
+  D: Cluster creation allowed + Can Attach To privileges on the cluster
+  E: Cluster creation allowed + Can Restart privileges on the cluster
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 2
+  section_index: 1
+  question: 'The data engineering team has a Delta Lake table created with the following
+    query: CREATE TABLE customers_clone AS SELECT + FROM customers. A data engineer
+    wants to drop the table with the following query: DROP TABLE. Which statement
+    describes the result of running this drop command?'
+  A: An error will occur as the table is deep cloned from the customers table
+  B: An error will occur as the table is shallow cloned from the customers table
+  C: Only the table's metadata will be deleted from the catalog, while the data files
+    will be kept in the storage
+  D: Both the table's metadata and the data files will be deleted
+  E: The table will not be dropped until VACUUM command is run
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 3
+  section_index: null
+  question: For production Structured Streaming jobs, which of the following retry
+    policies is recommended to use ?
+  A: Unlimited Retries, with 1 Maximum Concurrent Run
+  B: Unlimited Retries, with Unlimited Concurrent Runs
+  C: No Retries, with 1 Maximum Concurrent Run
+  D: No Retries, with Unlimited Concurrent Runs
+  E: 1Retry, with 1 Maximum Concurrent Run
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 5
+  section_index: null
+  question: In Delta Lake tables, which of the following is the file format for the
+    transaction log ?
+  A: Delta
+  B: Parquet
+  C: JSON
+  D: Hive-specific format
+  E: Both, Parquet and JSON
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 6
+  section_index: null
+  question: Which of the following describes the minimal permissions a data engineer
+    needs to modify permissions of an existing cluster ?
+  A: Can Restart privilege on the cluster
+  B: Can Manage privilege on the cluster
+  C: Cluster creation allowed + Can Restart privileges on the cluster
+  D: Cluster creation allowed + Can Manage privileges on the cluster
+  E: Only administrators can modify permissions on existing clusters
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 7
+  section_index: 1
+  question: Which of the following is the default target file size when compacting
+    small files of a Delta table by manually running OPTIMIZE command ?
+  A: 64MB
+  B: 128MB
+  C: 256MB
+  D: 512MB
+  E: 1024MB
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 8
+  section_index: 2
+  question: A feature built into Delta Lake that allows to automatically generate
+    CDC feeds about Delta Lake tables
+  A: Auto Optimize
+  B: Optimized writes
+  C: Spark Watermarking
+  D: Slowly Changing Dimension (SCD)
+  E: Change Data Feed (CDF)
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 9
+  section_index: null
+  question: Which of the following could explain the senior data engineer's remark?
+  A: Watermarking is also needed to only track state information for a window of time
+    in which we expect records could be delayed.
+  B: A ranking function is also needed to ensure processing only the most recent records
+  C: A window function is also needed to apply deduplication for each non-overlapping
+    interval.
+  D: The new records need also to be deduplicated against previously inserted data
+    into the table.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 10
+  section_index: 2
+  question: Which of the following describes the ability given by the MODIFY privilege
+    ?
+  A: it gives the ability to add data from the table
+  B: it gives the ability to delete data from the table
+  C: It gives the ability to modify data in the table
+  D: All the above abilities are given by the MODIFY privilege
+  E: None of these options correctly describe the ability given by the MODIFY privilege
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 11
+  section_index: 1
+  question: 'Given the following Structured Streaming query: (spark.readStream.table(''cedc-s'').writeStream.option(''checkpointLocation'',
+    checkpointPath).table(). Which of the following is the trigger Interval for this
+    query ?'
+  A: Every half second
+  B: Every half min
+  C: Every half hour
+  D: The query will run in batch mode to process all available data at once, then
+    the trigger stops.
+  E: More information is needed to determine the correct response
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 12
+  section_index: null
+  question: Which of the following statements regarding the retention policy of Delta
+    lake CDF is correct ?
+  A: Running the VACUUM command on the table deletes CDF data as well
+  B: Running the VACUUM command on the table does not deletes CDF data
+  C: Running the VACUUM command on the table does not deletes CDF data unless CASCADE
+    clause is set to true
+  D: CDF data files can be purged by running VACUUM CHANGES command
+  E: CDF data files can never be permanently purged from Delta Lake
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 13
+  section_index: 1
+  question: Which statement describes the resulting course_students table ?
+  A: it's a virtual table that has no physical data. The SELECT statement will be
+    executed each time the course_students table is queried.
+  B: "it's a cluster-scoped virtual table. The SELECT statement will be executed\
+    \ only the first time the course_students table is queried. The query output will\
+    \ be stored in the memory of the currently active cluster."
+  C: "It's a Delta Lake table. The SELECT statement will be executed at the table\
+    \ creation, and its output will be stored in Delta format on the underlying storage."
+  D: "it's a cluster-scoped table. The SELECT statement will be executed at the\
+    \ table creation, but its output will be stored in the memory of the currently\
+    \ active cluster."
+  E: "it's a session-scoped table. The SELECT statement will be executed at the\
+    \ table creation, but its output will be stored in the cache of the current active\
+    \ Spark session."
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 14
+  section_index: 1
+  question: "A data engineer has a streaming job that updates a Delta table named\
+    \ \u2018user_activities' by the results of a join between a streaming Delta\
+    \ table \u2018activity_logs' and a static Delta table \u2018users'.\
+    \ They noticed that adding new users into the \u2018users' table does not\
+    \ automatically trigger updates to the \u2018user_activities' table, even\
+    \ when there were activities for those users in the \u2018activity_logs'\
+    \ table. Which of the following likely explains this issue ?"
+  A: The users table must be refreshed with REFRESH TABLE command for each microbatch
+    of this join
+  B: This stream-static join is not stateful by default unless they set the spark
+    configuration delta.statefulStreamStaticJoin to true.
+  C: The streaming portion of this stream-static join drives the join process. Only
+    new data appearing on the streaming side of the join will trigger the processing.
+  D: The static portion of the stream-static join drives this join process only in
+    batch mode.
+  E: In Delta Lake, static tables can not be joined with streaming tables.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 15
+  section_index: 1
+  question: "Given the following query on the Delta table \u2018customers' on\
+    \ which Change Data Feed is enabled:\n\nspark.read\n.option(ree\n.option(=\nstable(cuitac\n\
+    .ftilter(col(\"newrite\n-Tode(\n-table(su:\n\nWhich statement describes the result\
+    \ of this query each time it is executed?"
+  A: Newly updated records will be merged into the target table, modifying previous
+    entries with the same primary keys
+  B: Newly updated records will be appended to the target table.
+  C: Newly updated records will overwrite the target table.
+  D: The entire history of updated records will be appended to the target table at
+    each execution, which leads to duplicate entries
+  E: The entire history of updated records will overwrite the target table at each
+    execution.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 16
+  section_index: 1
+  question: A data engineer wants to use Autoloader to ingest input data into a target
+    table, and automatically evolve the schema of the table when new fields are detected.
+    Which option should be used in the provided Spark query?
+  A: option('cloudFiles.schemaEvolutionMode', 'addNewColumns')
+  B: option('cloudFiles.mergeSchema', True)
+  C: option('mergeSchema', True)
+  D: schema(schema_definition, mergeSchema=True)
+  E: Autoloader can not automatically evolve the schema of the table when new fields
+    are detected
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 17
+  section_index: 1
+  question: 'Given the following query:
+
+
+    spark.table("#722").filter(soci: -dropDuplicates([:.cu_).write.toTable(3
+
+
+    Which statement describes the result of executing this query?'
+  A: An incremental job will overwrite the stream_sink table by those deduplicated
+    records from stream_data_stage that have been added since the last time the job
+    was run.
+  B: An incremental job will overwrite the stream_data_stage table by those deduplicated
+    records from stream_sink that have been added since the last time the job was
+    run.
+  C: A batch job will overwrite the stream_sink table by deduplicated records calculated
+    from all 'recent' items in the stream_data_stage table
+  D: A batch job will overwrite the stream_data_stage table by deduplicated records
+    calculated from all 'recent' items in the stream_sink table
+  E: A batch job will overwrite the stream_data_stage table by those deduplicated
+    records from stream_sink that have been added since the last time the job was
+    run.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 18
+  section_index: 1
+  question: "The data engineering team has a Delta table named \u2018users'.\
+    \ A recent CHECK constraint has been added to the table using the following command:\
+    \ ALTER TABLE users ADD CONSTRAINT valid_age CHECK (age> @); The team attempted\
+    \ to insert a batch of new records to the table, but there were some records with\
+    \ negative age values which caused the write to fail because of the constraint\
+    \ violation. Which statement describes the outcome of this batch insert?"
+  A: All records except those that violate the table constraint have been inserted
+    in the table. Records violating the constraint have been ignored.
+  B: All records except those that violate the table constraint have been inserted
+    in the table. Records violating the constraint have been recorded into the transaction
+    log.
+  C: Only records processed before reaching the first violating record have been inserted
+    in the table
+  D: None of the records have been inserted into the table.
+  E: The outcome depends on the action defined using the ON VIOLATION clause in the
+    table properties.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 19
+  section_index: 1
+  question: Which of the following is Not a valid Delta Lake File Statistics ?
+  A: The total number of records in the added data file.
+  B: The minimum value in each of the first 32 columns
+  C: The maximum value in each of the first 32 columns
+  D: The average value for each of the first 32 columns
+  E: The number of null values for each of the first 32 columns
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 20
+  section_index: 1
+  question: Which statement regarding Delta Lake File Statistics is Not correct?
+  A: The statistics are leveraged for data skipping when executing selective queries.
+  B: The statistics are generally uninformative for string fields with very high cardinality.
+  C: Delta Lake captures statistics in the transaction log for each added data file
+  D: By default, Delta Lake captures statistics on the first 32 columns of the table.
+  E: Nested fields do not count when determining the first 32 columns in the table.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 21
+  section_index: null
+  question: Which of the following definitions correctly describes a Slowly Changing
+    Dimension of Type 0 ?
+  A: "It's a table where noc ges are allowed."
+  B: "It's a table where history will be kept in the additional column"
+  C: "it's a table where the new arriving data overwrites the existing one."
+  D: "it's a table that stores and manages both current and historical data over\
+    \ time."
+  E: "It's a table that maintains current records, while older records are stored\
+    \ in another table."
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 22
+  section_index: 2
+  question: Which SCD Type is this table ?
+  A: SCD Type0
+  B: SCD Type1
+  C: SCD Type2
+  D: it's a combination of Type 0 and Type 2 SCDs
+  E: More information is needed to determine the SCD Type of this table
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 23
+  section_index: 1
+  question: "The data engineering team maintains a Delta Lake table of SCD Type 1.\
+    \ A junior data engineer noticed a folder named \u2018_change_data' in the\
+    \ table directory, and wants to understand what this folder is used for. Which\
+    \ of the following describes the purpose of this folder?"
+  A: "The \u2018_change_data' folder is a metadata directory to track the update\
+    \ to the table definition"
+  B: "The \u2018_change_data' folder is the default directory to track the evolution\
+    \ in schema definition"
+  C: "All SCD Type 1 tables have the \u2018_change_data' folder to track the\
+    \ updates applied on the table's data"
+  D: "Optimized Writes feature is enabled on the table. The \u2018_change_data'\
+    \ folder is the location where the optimized data is stored"
+  E: "CDF feature is enabled on the table. The \u2018_change_data' folder is\
+    \ the location where CDF data is stored"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 24
+  section_index: 1
+  question: "A data engineer has the following streaming query with a blank: spark.\
+    \ readStream stable( 2: - groupBy (-agq( count( aval cL\xE9 ewritestream soption(\
+    \ zl stable( = They want to calculate the orders count and average quantity for\
+    \ each non-overlapping 15-minute interval. Which option correctly fills in the\
+    \ blank to meet this requirement ?"
+  A: trigger(processingTime="15 minutes")
+  B: window("order_timestamp", "15 minutes")
+  C: withWindow("order_timestamp", "15 minutes")
+  D: withWatermark("order_timestamp", "15 minutes")
+  E: interval("order_timestamp", "minutes")
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 25
+  section_index: 1
+  question: The data engineering team is looking for a simple solution to share part
+    of a large Delta Lake table with the data science team. Only department-specific
+    columns in the table need to be shared, but with different names. In addition,
+    there is some sensitive data that must be filtered out before sharing. Which of
+    the following objects can be created to meet the specified requirements?
+  A: A new Delta Table created using DEEP CLONE from the existing table
+  B: A new Delta Table created using SHALLOW CLONE from the existing table
+  C: A new Delta Table created using CTAS statement on the existing table
+  D: A stored view on the existing table
+  E: An ad-hoc query on the existing table
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 26
+  section_index: null
+  question: A junior data engineer has created the table orders_backup'\
+    \ as a copy of the table "orders". Recently, the team started getting\
+    \ an error when querying the orders_backup indicating that some data files are\
+    \ no longer present. The transaction logs for the orders tables show a recent\
+    \ run of VACUUM command. Which of the following explains how the data engineer\
+    \ created the orders_backup table ?
+  A: The orders_backup table was created using CTAS statement from orders table
+  B: The orders_backup table was created using CRAS statement from orders table
+  C: "The orders_backup table was created using Delta Lake's SHALLOW CLONE functionality\
+    \ from the orders table"
+  D: "The orders_backup table was created using Delta Lake's DEEP CLONE functionality\
+    \ from the orders table"
+  E: "The orders_backup table was created by fully copying the orders table'\
+    s directory"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 27
+  section_index: null
+  question: Which of the following statements regarding cloning tables on Databricks
+    is correct?
+  A: Any changes made to either deep or shallow clones affect only the clones themselves
+    and not the source table.
+  B: Any changes made to deep clones affect only the clones themselves and not the
+    source table. While, changes made to shallow clones affect the source table.
+  C: Any changes made to shallow clones affect only the clones themselves and not
+    the source table. While, changes made to deep clones affect the source table.
+  D: Changes made to either deep or shallow clones affect the source table.
+  E: Changes made to either deep or shallow clones affect the source table unless
+    CASCADE option is False.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 28
+  section_index: 1
+  question: 'A data engineer wants to optimize the following join operation by allowing
+    the smaller dataFrame to be sent to all executor nodes in the cluster:'
+  A: pyspark.sql.functions.distribute
+  B: pyspark.sql.functions.explode
+  C: pyspark.sql.functions.broadcast
+  D: pyspark.sql.functions.diffuse
+  E: pyspark.sql.functions.shuffle
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 29
+  section_index: 1
+  question: Based on the above schema and the specified requirement, which column
+    is a good candidate for partitioning?
+  A: key
+  B: value
+  C: topic
+  D: partition
+  E: timestamp
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 30
+  section_index: 1
+  question: The data engineering team wants to know if the tables that they maintain
+    in the Lakehouse are over-partitioned. Which of the following is an indicator
+    that a Delta Lake table is over-partitioned?
+  A: if the number of partitions in the table are too low
+  B: If most partitions in the table have less than 1 GB of data
+  C: If most partitions in the table have more than 1 GB of data
+  D: If the partitioning columns are fields of low cardinality
+  E: If the data in the table continues to arrive indefinitely.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 31
+  section_index: 1
+  question: "A data engineer is using the following spark configurations in a pipeline\
+    \ to enable Optimized Writes and Auto Compaction: spark. cont.3=\xB0 spark.cont.\
+    \ They also want to enable Z-order indexing with Auto Compaction to leverage data\
+    \ skipping on all the pipeline's tables. Which of the following solutions\
+    \ allows the data engineer to complete this task ?"
+  A: Use spark.conf.set("spark.databricks.delta.autoZorder.enabled", True)
+  B: Use spark.conf.set("spark.databricks.delta.autoCompact.zorder.enabled", True)
+  C: 'Z-order indexing with Auto Compaction can only be enabled on each table separately
+    using: ALTER TABLE table_name SET TBLPROPERTIES (delta.autoOptimize.zorder.enabled
+    = true)'
+  D: There is no need for extra configurations. Z-Ordering is enabled by default with
+    Auto Compaction
+  E: There is no way to enable Z-order indexing with Auto Compaction since it does
+    not support Z-Ordering
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 32
+  section_index: 1
+  question: Which statement describes the result of this code block each time it is
+    executed?
+  A: All records in the current version of the source tables will be considered in
+    the join operations. The matched records will overwrite the students_courses_details
+    table.
+  B: All records in the current version of the source tables will be considered in
+    the join operations. The unmatched records will overwrite the students_courses_details
+    table.
+  C: Only newly added records to any of the source tables will be considered in the
+    join operations. The matched records will overwrite the students_courses_details
+    table.
+  D: Only newly added records to any of the source tables will be considered in the
+    join operations. The unmatched records will overwrite the students_courses_details
+    table.
+  E: These join operations are stateful, meaning that they will wait for unmatched
+    records to be added to the source tables prior to calculating the results.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 33
+  section_index: null
+  question: "The data engineering team has a large Delta Lake table named \u2018user_posts'\
+    \ which is partitioned over the \u2018year' column. The table is used as\
+    \ an input streaming source in a streaming job. They want to remove previous 2\
+    \ years data from the table without breaking the append-only requirement of streaming\
+    \ sources. Which option correctly fills in the blank to enable stream processing\
+    \ from the table after deleting the partitions?"
+  A: hWatermark("year", "INTERVAL 2 YEARS")
+  B: window("year", "INTERVAL 2 YEARS")
+  C: -option("year", "ignoreDeletes")
+  D: -option("ignoreDeletes", "year")
+  E: -option("ignoreDeletes", True)
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 34
+  section_index: null
+  question: A data engineer created a new table along with a comment using the following\
+    \ query:\n\nCREATE TABLE payments\nCOMMENT "Trial" .\nAS SELECT + FROM\
+    \ bank_transactions\n\nWhich of the following commands allows the data engineer\
+    \ to review the comment of the table ?
+  A: SHOW TABLES payments
+  B: SHOW TBLPROPERTIES payments
+  C: SHOW COMMENTS payments
+  D: DESCRIBE TABLE payments
+  E: DESCRIBE EXTENDED payments
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 35
+  section_index: 1
+  question: Which of the following commands allows data engineers to perform an insert-only
+    merge?
+  A: MERGE INTO orders USING new_orders ON orders.orders_id = new_orders.orders_id
+    WHEN MATCHED INSERT *
+  B: MERGE INTO orders USING new_orders ON orders.orders_id = new_orders.orders_id
+    WHEN NOT MATCHED INSERT *
+  C: MERGE INTO orders USING new_orders ON orders.orders_id = new_orders.orders_id
+    WHEN MATCHED INSERT * WHEN NOT MATCHED IGNORE *
+  D: MERGE INTO orders USING new_orders ON orders.orders_id = new_orders.orders_id
+    WHEN NOT MATCHED INSERT * WHEN MATCHED IGNORE *
+  E: MERGE INTO orders USING new_orders ON orders.orders_id = new_orders.orders_id
+    WHEN NOT MATCHED INSERT * ELSE IGNORE *
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 36
+  section_index: null
+  question: Which of the following is considered a limitation when using the MERGE
+    INTO command ?
+  A: Merge can not be performed in streaming jobs unless it uses Watermarking
+  B: Merge can not be performed if multiple source rows matched and attempted to modify
+    the same target row in the table
+  C: Merge can not be performed if single source row matched and attempted to modify
+    the multiple target rows in the table
+  D: Merge does not support records deletion. It supports only upsert operations.
+  E: All the above are considered limitations of the MERGE INTO command
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 37
+  section_index: 1
+  question: 'A data engineer is using a foreachBatch logic to upsert data in a target
+    Delta table. The function to be called at each new microbatch processing is displayed
+    below with a blank: upsert_data(microBatchDF, batch_id): microBatchDF.createOrReplaceTempView(
+    s2hci_ sql_query Which option correctly fills in the blank to execute the sql
+    query in the function on a cluster with recent Databricks Runtime above 10.5 ?'
+  A: spark.sql(sql_query)
+  B: batch_id.sql(sql_query)
+  C: microBatchDF.sql(sql_query)
+  D: microBatchDF.sparkSession.sql(sql_query)
+  E: microBatchDF._jdf.sparkSession().sql(sql_query)
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 38
+  section_index: 1
+  question: A data engineer has been asked to develop a nightly batch job for workforce\
+    \ productivity analytics. The job will process events of employees productivity\
+    \ of the previous day, and store the performance of each employee in the Delta\
+    \ table "employees_performance". The table has the following schema:\
+    \ 'date DATE, employee_id STRING, rating DOUBLE'. The data engineering team wants\
+    \ data to be stored in the table with the ability to compare employees' performance\
+    \ across time. Which of the following code blocks accomplishes this task?
+  A: performance_df.write.format('delta').saveAsTable('employees_performance')
+  B: performance_df.write.mode('append').saveAsTable('employees_performance')
+  C: performance_df.write.mode('overwrite').saveAsTable('employees_performance')
+  D: performance_df.write.option('dateFormat', 'yyyy-MM-dd').saveAsTable('employees_performance')
+  E: performance_df.write.partitionBy('date').saveAsTable('employees_performance')
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 39
+  section_index: 1
+  question: "The data engineering team has a large Delta table named \u2018user_messages'\
+    \ with the following schema: msg_id INT, user_id INT, msg_time TIMESTAMP, msg_title\
+    \ STRING, msg_body STRING The msg_body field represents user messages in free-form\
+    \ text. The table has a performance issue when it's queried with filters\
+    \ on this field. Which of the following could explain the reason for this performance\
+    \ issue ?"
+  A: The table does not leverage file skipping because it's not partitioned on the
+    msg_body column.
+  B: The table does not leverage file skipping because it's not optimized with Z-ORDER
+    on the msg_body column.
+  C: The table does not leverage file skipping because Delta Lake statistics are uninformative
+    for string fields with very high cardinality
+  D: The table does not leverage file skipping because Delta Lake statistics are only
+    captured on the first 3 columns in a table.
+  E: The table does not leverage file skipping because Delta Lake statistics are not
+    captured on columns of type STRING
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 40
+  section_index: 2
+  question: "The data engineering team has a pipeline that ingest Kafka source data\
+    \ into a Multiplex bronze table. This Delta table is partitioned based on the\
+    \ topic and month columns. A new data engineer notices that the \u2018user_activity'\
+    \ topic contains Personal Identifiable Information (PII) that needs to be deleted\
+    \ every two months based on the company's Service-Level Agreement (SLA).\
+    \ Which statement describes how table partitioning can help to meet this requirement?"
+  A: Table partitioning allows immediate files deletion without running VACUUM command
+  B: Table partitioning allows delete queries to leverage partition boundaries.
+  C: Table partitioning reduces query latency when deleting large data files
+  D: Table partitioning does not allow to time travel the PII data after deletion
+  E: None of the above statements is correct. Table partitioning can not help to meet
+    the specified requirement.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 41
+  section_index: null
+  question: In which of the following locations will the employees table be located?
+  A: dbfs:/user/hive/warehouse
+  B: dbfs:/user/hive/warehouse/db_hr.db
+  C: dbfs:/user/hive/warehouse/db_hr
+  D: dbfs:/user/hive/databases/db_hr.db
+  E: More information is needed to determine the correct answer
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 42
+  section_index: 1
+  question: 'The data engineering team has a dynamic view with following definition:
+    CREATE VIEW students_vw AS SELECT = FROM students WHERE CASE WHEN 1S _member(
+    ict. let ELSE 1s_active IS FALSE Which statement describes the results returned
+    by querying this view?'
+  A: Members of the instructors group will only see the records of active students.
+    While users that are not members of the specified group will only see the records
+    of inactive students.
+  B: Members of the instructors group will only see the records of active students.
+    While users that are not members of the specified group will see null values for
+    the records of inactive students
+  C: Only members of the instructors group will see the records of all students no
+    matter if they are active or not. While users that are not members of the specified
+    group will only see the records of inactive students
+  D: Only members of the instructors group will see the records of all students no
+    matter if they are active or not. While users that are not members of the specified
+    group will see null values for the records of inactive students
+  E: Only members of the instructors group will see the records of all students no\
+    \ matter if they are active or not. While users that are not members of the specified\
+    \ group will see "REDACTED" values for the records of inactive students
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 43
+  section_index: 1
+  question: Which of the following commands can a data engineer use to grant full
+    permissions to the HR team on the table employees ?
+  A: GRANT FULL PRIVILEGES ON TABLE employees TO hr_team
+  B: GRANT FULL PRIVILEGES ON TABLE hr_team TO employees
+  C: GRANT ALL PRIVILEGES ON TABLE employees TO hr_team
+  D: GRANT ALL PRIVILEGES ON TABLE hr_team TO employees
+  E: GRANT SELECT, MODIFY, CREATE, READ_METADATA ON TABLE employees TO hr_team
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 44
+  section_index: null
+  question: The data engineering team has a secret scope named "prod-scope"\
+    \ that contains sensitive secrets in a production workspace. A data engineer in\
+    \ the team is writing a security and compliance documentation, and wants to explain\
+    \ who could use the secrets in this secret scope. Which of the following roles\
+    \ is able to use the secrets in the specified secret scope?
+  A: Workspace Administrators
+  B: Secret creators
+  C: Users with MANAGE permission on the secret scope
+  D: Users with READ permission on the secret scope
+  E: All the above are able to use the secrets in the secret scope
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 45
+  section_index: null
+  question: "In Spark UI, which of the following SQL metrics is displayed on the query'\
+    s details page?"
+  A: Query duration
+  B: Query execution time
+  C: Succeeded Jobs
+  D: Spill size
+  E: Number of input rows
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 46
+  section_index: null
+  question: 'A data engineer is analyzing a Spark job via the Spark UI. They have
+    the following summary metrics for 27 completed tasks in a particular stage
+
+
+    Metric c 26th percentile 75th percentile
+
+
+    Durat an
+
+
+    Which conclusion can the data engineer draw from the above statistics ?'
+  A: All task are operating over partitions with even amounts of data
+  B: All task are operating over empty or near empty partitions
+  C: All tasks are operating over partitions with larger skewed amounts of data.
+  D: Number of tasks are operating over partitions with larger skewed amounts of data.
+  E: Number of tasks are operating over near empty partitions
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 47
+  section_index: 1
+  question: A data engineer has heard recently that users who have access to Databricks
+    Secrets could be able to display the values of secrets in notebooks. Which of
+    the following could be a workaround to print the value of a Databricks secret
+    in plain text ?
+  A: 'db_password = dbutils.secrets.get("prod-scope", "db-password")
+
+    display(db_password)'
+  B: 'db_password = dbutils.secrets.get("prod-scope", "db-password", redacted=False)
+
+    print(db_password)'
+  C: 'db_password = dbutils.secrets.get("prod-scope", "db-password")
+
+    print(db_password, redacted=False)'
+  D: 'db_password = dbutils.secrets.get("prod-scope", "db-password")
+
+    for char in db_password:
+
+    print(char)'
+  E: There is no workaround to print secrets values in plain text in notebooks. A
+    string "REDACTED" will always be displayed when trying to print out a secret value.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 48
+  section_index: 4
+  question: "A data engineer wanted to create the job \u2018process-sales' using\
+    \ Databricks REST API. However, they sent by mistake 2 POST requests to the endpoint\
+    \ \u2018api/2.1/jobs/create'. Which statement describes the result of these\
+    \ requests?"
+  A: Only the first job will be created in the workspace. The second request will\
+    \ fail with an error indicating that a job named "process-sales" is\
+    \ already created.
+  B: The second job will overwrite the previous one created using the first request.
+  C: 2 jobs will be created in the workspace, but the second one will be renamed\
+    \ to "process-sales (1)"
+  D: 2 jobs named "process-sales" will be created in the workspace with\
+    \ the same job_id
+  E: 2 jobs named "process-sales" will be created in the workspace, but\
+    \ with different job_id
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 49
+  section_index: 4
+  question: A data engineer wants to use Databricks REST API to retrieve the metadata
+    of a job run using its run_id. Which of the following REST API calls achieves
+    this requirement ?
+  A: "Send POST request to the endpoint \u2018api/2.1/jobs/runs/get'"
+  B: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get'"
+  C: "Send POST request to the endpoint \u2018api/2.1/jobs/runs/get-output'"
+  D: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-output'"
+  E: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-metadata'"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 50
+  section_index: null
+  question: Which of the following commands prints the current working directory of
+    a notebook in Databricks Repos ?
+  A: '%sh pwd'
+  B: print(sys.path)
+  C: os.path.abspath()
+  D: "os.environ['PYTHONPATH']"
+  E: "ricks Repos, the working directory of any notebook is \u2018/databricks/driver'"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 51
+  section_index: null
+  question: Which of the following establishes a Python file as a notebook in Databricks
+    ?
+  A: "The magic command %databricks on the first line of the file's source code"
+  B: "The comment \u2018# Databricks notebook source' on the first line of the\
+    \ file's source code"
+  C: "The import of the dbutils.notebook module in the file's source code"
+  D: "The creation of a spark session using SparkSession.builder.getOrCreate() in\
+    \ the file's source code"
+  E: None of the above statements is correct. Notebooks are binary files with .pydb
+    file extension.
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 52
+  section_index: 0
+  question: A data engineer wants to upload a CSV file from local system storage to
+    the DBFS of a Databricks workspace. They have Databricks CLI already configured
+    on the local system. Which of the following Databricks CLI commands can the data
+    engineer use to complete this task ?
+  A: workspace
+  B: fs
+  C: jobs
+  D: configure
+  E: libraries
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 53
+  section_index: null
+  question: Which of the following statements correctly describes Unit Testing ?
+  A: "It's an approach to simulate a user experience to ensure that the application\
+    \ can run properly under real-world scenarios"
+  B: "it's an approach to test the interaction between subsystems of an application\
+    \ to ensure that modules work properly as a group."
+  C: "it's an approach to test individual units of code to determine whether\
+    \ they still work as expected if new changes are made to them in the future"
+  D: "it's an approach to verify if each feature of the application works as\
+    \ per the business requirements"
+  E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
+    \ of an application"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 54
+  section_index: 2
+  question: Which of the following statements correctly describes Integration Testing
+    ?
+  A: "It's an approach to simulate a user experience to ensure that the application\
+    \ can run properly under real-world scenarios"
+  B: "it's an approach to test the interaction between subsystems of an application\
+    \ to ensure that modules work properly as a group."
+  C: "it's an approach to test individual units of code to determine whether\
+    \ they still work as expected if new changes are made to them in the future"
+  D: "it's an approach to verify if each feature of the application works as\
+    \ per the business requirements"
+  E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
+    \ of an application"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 55
+  section_index: 1
+  question: Which of the following describes Cron syntax in Databricks Jobs ?
+  A: "It's an expression to represent the maximum concurrent runs of a job"
+  B: "it's an expression to represent the retry policy of a job"
+  C: "it's an expression to describe the email notification events (start, success,\
+    \ failure)"
+  D: "It's an expression to represent the run timeout of a job"
+  E: "It's an expression to represent complex job schedule that can be defined\
+    \ programmatically"
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 56
+  section_index: 4
+  question: A data engineer has a Job with multiple tasks that takes more than 2 hours
+    to complete. In the last run, the final task unexpectedly failed. Which of the
+    following actions can the data engineer perform to complete this run while minimizing
+    the execution time?
+  A: They can rerun this Job Run to execute all the tasks
+  B: They can repair this Job Run so only the failed tasks will be re-executed
+  C: They need to delete the failed Run, and start a new Run for the Job
+  D: They can keep the failed Run, and simply start a new Run for the Job
+  E: They can run the Job in Production mode which automatically retries execution
+    in case of errors
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 57
+  section_index: null
+  question: As a general rule, before scheduling notebooks in production, which of
+    the following commands should be removed from the code?
+  A: Magic commands
+  B: Overwrite table commands
+  C: Markup language commands
+  D: Display commands
+  E: Import commands
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 58
+  section_index: 1
+  question: Which of the following statements best describes the use of Python wheels
+    in Databricks ?
+  A: Task 1 will partially fail. Tasks 2 and 3 will be skipped
+  B: Task 1 will partially fail. Tasks 2 and 3 will run and succeed
+  C: Task 1 will completely fail. Tasks 2 and 3 will be skipped
+  D: Task 1 will completely fail. Tasks 2 and 3 will run and succeed
+  E: All tasks will partially fail
+- exam_type: engineer-professional
+  exam_index: 2
+  question_index: 59
+  section_index: 1
+  question: If there is an error in the notebook 1 that is associated with Task 1,
+    which statement describes the run result of this job?
+  A: Task 1 will partially fail. Tasks 2 and 3 will be skipped
+  B: Task 1 will partially fail. Tasks 2 and 3 will run and succeed
+  C: Task 1 will completely fail. Tasks 2 and 3 will be skipped
+  D: Task 1 will completely fail. Tasks 2 and 3 will run and succeed
+  E: All tasks will partially fail
