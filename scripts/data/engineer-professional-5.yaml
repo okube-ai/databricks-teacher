@@ -1,6 +1,6 @@
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 0
+  exam_index: 5
+  question_index: 0
   section_index: 2
   question: 'A data engineer has scheduled a job that uses the legacy code involving
     a shell script. The job is scheduled to run every day at 2 PM. The shell script
@@ -19,8 +19,8 @@
   E: "-error is missing from the \u2018sh magic command and -e is missing from the\
     \ cp command"
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 2
+  exam_index: 5
+  question_index: 2
   section_index: null
   question: What could be the possible reason for this outcome?
   A: -e is missing from the cp command, it should be cp /tmp/raw_data.csv /FileStore/data.csv
@@ -32,8 +32,8 @@
   E: "-error is missing from the \u2018sh magic command and -e is missing from the\
     \ cp command"
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 3
+  exam_index: 5
+  question_index: 3
   section_index: 3
   question: A Databricks workspace admin has enabled access control on the clusters.
     A new team member has been added to the team and wants to run a notebook to ingest
@@ -47,8 +47,8 @@
   D: Either A or B
   E: Either B or C
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 4
+  exam_index: 5
+  question_index: 4
   section_index: 1
   question: Assuming that the first job is created successfully. Which of the following
     statements explains the outcome when the second data engineer tries to create
@@ -60,8 +60,8 @@
     cannot share a name
   E: The task in the second job will be appended to the existing job.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 5
+  exam_index: 5
+  question_index: 5
   section_index: 1
   question: Which of the following defines the difference between cache() and persist()
     in Spark?
@@ -74,8 +74,8 @@
   E: cache() should be used to persist a DataFrame for a small period of time. To
     persist a DataFrame for a longer period, persist() should be used.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 6
+  exam_index: 5
+  question_index: 6
   section_index: 2
   question: When mounting an external data source in Databricks, which of the following
     options provides the best approach for managing secrets, such as access keys or
@@ -87,8 +87,8 @@
   D: Storing secrets in Databricks Secrets.
   E: Using a third-party password manager to securely store and retrieve the secrets.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 7
+  exam_index: 5
+  question_index: 7
   section_index: null
   question: The data engineering team wants to check the list of files that will be
     deleted after running the VACUUM command. Which of the following commands can
@@ -99,8 +99,8 @@
   D: VACUUM transactions 69 DRY RUN
   E: VACUUM transactions 2.5 DAYS DO_
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 8
+  exam_index: 5
+  question_index: 8
   section_index: 2
   question: Which of the following statements is not true about clusters in Databricks?
   A: An all-purpose cluster can be created using the UI, CLI or REST API.
@@ -110,8 +110,8 @@
   E: A job cluster is less costly than an all-purpose cluster when used to run the
     same notebook.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 9
+  exam_index: 5
+  question_index: 9
   section_index: null
   question: 'A Databricks user needs to cancel the run of a job but does not have
     the access to the REST API or the UI. The only access provided to the user is
@@ -124,8 +124,8 @@
   D: databricks runs cancel --run-id 96746
   E: databricks run cancel --job-id 2795 --run-id 96746
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 10
+  exam_index: 5
+  question_index: 10
   section_index: 1
   question: Assuming cluster 1198-132537-dht25rtr exists, what will be the expected
     outcome?
@@ -140,8 +140,8 @@
   E: The job named test_api will be created but can only be triggered by clicking
     Run Now in Jobs UI.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 11
+  exam_index: 5
+  question_index: 11
   section_index: 2
   question: How can a Workspace Admin ensure that an all-purpose cluster retains its
     configurations even if it remains terminated for over 30 days?
@@ -151,8 +151,8 @@
   D: Pin the cluster
   E: Use Databricks CLI to create the cluster
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 12
+  exam_index: 5
+  question_index: 12
   section_index: 1
   question: Now, the data engineer tries to add a record to the table using INSERT
     INTO command. Which of the following would be the output of the INSERT INTO command?
@@ -163,8 +163,8 @@
   D: The record will not be inserted in the table but an OK message will be displayed.
   E: The record will be inserted in the venues.csv file but not in the venues table.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 13
+  exam_index: 5
+  question_index: 13
   section_index: 1
   question: A data engineer created a new cluster named s3mount and attached a notebook
     to it. which mounts an S3 bucket to DBFS. The other data engineers are using an
@@ -180,8 +180,8 @@
   E: The mount point will be accessible on the prod-support cluster after the data
     engineer runs dbutils.fs.refreshMounts()
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 14
+  exam_index: 5
+  question_index: 14
   section_index: 2
   question: A data engineer recently learned about the schema evolution modes in Databricks
     Auto Loader. Which of the following modes could be selected by them to ensure
@@ -192,8 +192,8 @@
   D: Any one from rescue or none can be used
   E: Any one from rescue or dropNewColumns can be used
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 15
+  exam_index: 5
+  question_index: 15
   section_index: 1
   question: "A data engineer executes the following query to optimize the join operation
     between df1 and df2: joined_df = dfl.join(broadcast(df2), 'id', 'inner'). 
@@ -205,8 +205,8 @@
   E: The joined_df will be broadcasted to all the worker nodes as the broadcast function
     is used on one of the DataFrames involved in the join.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 16
+  exam_index: 5
+  question_index: 16
   section_index: null
   question: Which of the following statements is true about the result of the query
     if one of the data analysts changes the schema for the company_info table?
@@ -223,8 +223,8 @@
   E: The schema for the company_info table cannot be changed while the streaming query
     is running.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 17
+  exam_index: 5
+  question_index: 17
   section_index: null
   question: Which of the following column statistics is not a part of the Parquet
     file footers?
@@ -234,8 +234,8 @@
   D: Mean value
   E: The data type of columns
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 18
+  exam_index: 5
+  question_index: 18
   section_index: 1
   question: To store the latest bills of all the customers, a broadband company uses
     a delta table named bills with Change Data Feed enabled. Whenever a bill is generated
@@ -255,8 +255,8 @@
   E: "SELECT customer_id, bill_date, amount FROM bills WHERE _change_type = \u2018\
     I!"
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 19
+  exam_index: 5
+  question_index: 19
   section_index: null
   question: Which of the following is the default trigger interval for a streaming
     job in Databricks?
@@ -266,8 +266,8 @@
   D: 30 seconds
   E: 60 seconds
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 20
+  exam_index: 5
+  question_index: 20
   section_index: 1
   question: How does reducing the number of nodes or VMs while keeping the total storage
     as it is in a cluster affect data shuffling?
@@ -282,8 +282,8 @@
   E: Reducing the number of nodes or VMs while keeping the total storage as it is
     will only affect CPU utilization during shuffle operations.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 21
+  exam_index: 5
+  question_index: 21
   section_index: 2
   question: An e-commerce company maintains its product information in a delta table
     named inventory with the following columns - product_id. product_name, quantity.
@@ -392,8 +392,8 @@
 
     UPDATE SET is_active = ta ;'
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 22
+  exam_index: 5
+  question_index: 22
   section_index: null
   question: Which property should be changed in an Auto Loader pipeline to enable
     the case-insensitive behavior of column names while iteratively reading Parquet
@@ -405,8 +405,8 @@
   D: The readerCaseInsensitive option should be set to false
   E: The readerCaseInsensitive option should be set to true
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 23
+  exam_index: 5
+  question_index: 23
   section_index: null
   question: Which of the following is incorrect about the difference between using
     an existing all-purpose cluster and a new job cluster while creating a job in
@@ -421,8 +421,8 @@
   E: If you choose a new job cluster while creating a job, the cluster is terminated
     when the last task using the cluster is completed.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 24
+  exam_index: 5
+  question_index: 24
   section_index: 2
   question: A deep clone of a delta table is created for testing the data. The original
     table is named tickets whereas the deep-cloned table is named deep_tickets. Another
@@ -440,8 +440,8 @@
   E: The records cannot be added to the shallow_tickets table as it is a shallow clone
     of a deep-cloned table.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 25
+  exam_index: 5
+  question_index: 25
   section_index: 1
   question: Which of the following is not one of the partitioning hints in Spark?
   A: COALESCE
@@ -450,8 +450,8 @@
   D: REPARTITION_BY_RANGE
   E: REBALANCE
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 26
+  exam_index: 5
+  question_index: 26
   section_index: 1
   question: 'A data engineer executes the following SQL query to create a Delta table:
     CREATE TABLE data_changes (_change_type STRING, _changed_by STRING) TBLPROPERTIES
@@ -465,8 +465,8 @@
     be removed.
   E: The SQL statement will not return any error but the Delta table will not be created.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 27
+  exam_index: 5
+  question_index: 27
   section_index: null
   question: What should be replaced with the blank to ensure that the records having
     NA in the age column are not added to the DataFrame?
@@ -476,8 +476,8 @@
   D: .option('mode', 'PERMISSIVE')
   E: .option('mode', 'FAILFAST')
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 28
+  exam_index: 5
+  question_index: 28
   section_index: 1
   question: Which of the following depicts the primary difference between the withWatermark
     and window functions in a streaming query?
@@ -495,8 +495,8 @@
   E: The withwatermark function is used to define schema evolution for incoming data,
     while the window function is used for data aggregation within specified time intervals.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 29
+  exam_index: 5
+  question_index: 29
   section_index: 1
   question: A Kafka stream that acts as an upstream system in an ETL framework tends
     to produce duplicate values within a batch. The streaming query reads the data
@@ -514,8 +514,8 @@
     all previous batches of data.
   E: Add withwatermark method in the streaming query with 20 minutes as the argument.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 30
+  exam_index: 5
+  question_index: 30
   section_index: null
   question: Which of the following queries can be used by a data engineer to count
     all the records that were updated in the source table?
@@ -525,8 +525,8 @@
   D: All of the above
   E: Both A and B
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 31
+  exam_index: 5
+  question_index: 31
   section_index: null
   question: The source path for an Auto Loader has been set as s3://records/year=2023/month=11/seasonl.
     parquet Which of the following partitioning details can be inferred by the above
@@ -540,8 +540,8 @@
   D: Both year and month column will be inferred as the partition columns.
   E: A new column named year_month will be created for partitioning.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 32
+  exam_index: 5
+  question_index: 32
   section_index: 1
   question: A filter operation is the most common operation on a delta table named
     voters where columns number 58 and 59 are to be used for highly selective filters.
@@ -559,8 +559,8 @@
     32 columns as statistics are collected automatically for the first 32 columns
     only.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 33
+  exam_index: 5
+  question_index: 33
   section_index: null
   question: Which of the following constraints can be enforced on a delta table to
     prevent the addition of bad data?
@@ -570,8 +570,8 @@
   D: A and B
   E: A, B, and C
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 34
+  exam_index: 5
+  question_index: 34
   section_index: null
   question: Which of the following SCD types is most likely to have is_active column
     with values as True and False?
@@ -581,8 +581,8 @@
   D: Type3ScbD
   E: None of the above
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 35
+  exam_index: 5
+  question_index: 35
   section_index: 1
   question: Adeltatablenamed currency_conversion is updated daily at midnight by the
     central banking system. The table contains the conversion rates between all the
@@ -597,8 +597,8 @@
   D: Create a SHALLOW CLONE of the original table
   E: Create a new table using the CTAS command
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 36
+  exam_index: 5
+  question_index: 36
   section_index: null
   question: Which of the following is not a type of widget supported in Databricks?
   A: dropdown
@@ -607,8 +607,8 @@
   D: radio button
   E: checkbox
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 37
+  exam_index: 5
+  question_index: 37
   section_index: null
   question: Which of the following visualization types is not supported in Databricks?
   A: Bar Chart
@@ -617,8 +617,8 @@
   D: Heat Map
   E: All of the above visualizations are supported in Databricks
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 38
+  exam_index: 5
+  question_index: 38
   section_index: 1
   question: What is the primary benefit of using the Bronze layer in a multi-hop or
     medallion architecture in Databricks?
@@ -628,8 +628,8 @@
   D: it enforces data access control and security.
   E: it provides a user-friendly interface for data analysis.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 39
+  exam_index: 5
+  question_index: 39
   section_index: 1
   question: 'The following command intends to add a check constraint on the routes
     table but fails to execute: ALTER TABLE routes ADD CHECK (distance > @). As a
@@ -642,8 +642,8 @@
     condition should be removed.
   E: ADD CHECK should be replaced by ADD CONSTRAINT constraint_name CHECK
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 40
+  exam_index: 5
+  question_index: 40
   section_index: null
   question: When selecting a partition column for optimizing data storage and query
     performance in Databricks, which of the following considerations should be taken
@@ -654,8 +654,8 @@
   D: Prioritize a column with complex data types for better organization.
   E: Use a column unrelated to the data to enhance partitioning efficiency.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 41
+  exam_index: 5
+  question_index: 41
   section_index: null
   question: Which of the following is the correct usage of row-level security in Databricks
     using dynamic views?
@@ -668,8 +668,8 @@
   D: CREATE VIEW restricted_address AS SELECT cost, address FROM employees WHERE cost>=25000;
   E: All of the above options signify row-level security in Databricks.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 42
+  exam_index: 5
+  question_index: 42
   section_index: null
   question: Which of the following explains the difference in querying the deep and
     shallow clones of a delta table once the original table is dropped?
@@ -681,8 +681,8 @@
   E: The deep clone can be queried but querying the shallow clone will result in an
     error.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 43
+  exam_index: 5
+  question_index: 43
   section_index: 1
   question: Which of the following explains the difference between using the LOCATION
     keyword while creating a database and a table?
@@ -698,8 +698,8 @@
   E: LOCATION keyword cannot be used with the CREATE DATABASE command whereas it can
     be used while creating a table.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 44
+  exam_index: 5
+  question_index: 44
   section_index: 3
   question: A data engineer needs to transfer the ownership of the job to another
     user. Which of the following statements is true about the ownership transfer?
@@ -712,8 +712,8 @@
   E: The ownership of a job can be changed by the Admin or the creator of the job
     or the user having Can Manage permission on the job.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 45
+  exam_index: 5
+  question_index: 45
   section_index: 1
   question: 'A newly appointed data engineer needs USAGE privileges on the following
     tables: Table 1: policy table from the insurance database Table 2: demographics
@@ -729,8 +729,8 @@
   E: The query will be executed without errors, but the grants will be given on only
     the first table.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 46
+  exam_index: 5
+  question_index: 46
   section_index: 1
   question: A databricks engineer needs to create a secret scope to store a connection
     string to connect the application to a JOBC source. In which of the following
@@ -742,19 +742,19 @@
     create a secret scope.
   E: Only Databricks CLI and Databricks REST API can be used to create secret scope.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 47
+  exam_index: 5
+  question_index: 47
   section_index: null
   question: Which of the following columns from a Delta table cannot be classified
     as a PII column?
-  A: passport_number
-  B: credit_card_number
+  A: passport_index
+  B: credit_card_index
   C: biometrics
   D: gender
   E: name
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 48
+  exam_index: 5
+  question_index: 48
   section_index: null
   question: Two data engineers are having different sets of permissions over a notebook.
     One of them is having Can Manage permission whereas the other one is having Can
@@ -769,8 +769,8 @@
     notebook whereas the other data engineer cannot.
   E: Both data engineers share the same set of abilities.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 49
+  exam_index: 5
+  question_index: 49
   section_index: 0
   question: A data engineer creates a secret scope named prod and adds a secret with
     key as authenticate and value as my_unique_authentication. What will be the output
@@ -782,8 +782,8 @@
   D: As soon as the command is executed, a file will be downloaded with the password.
   E: The command will be executed successfully but no output will be printed.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 50
+  exam_index: 5
+  question_index: 50
   section_index: 1
   question: Which of the following details are available in the Environment Tab of
     Spark UI?
@@ -794,8 +794,8 @@
   D: There is no Environment Tab in Databricks Spark UI.
   E: List of environment-specific tasks like env_task_1, env_task_2 etc.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 51
+  exam_index: 5
+  question_index: 51
   section_index: null
   question: A data engineer has set up a Databricks SOL alert on the speed column
     which returns multiple values. Which of the following values would be selected
@@ -806,8 +806,8 @@
   D: The last value
   E: If any of the values satisfy the condition, the alert will be triggered.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 52
+  exam_index: 5
+  question_index: 52
   section_index: null
   question: 'are given the following error logs:'
   A: right_outer join is not supported in Spark.
@@ -816,8 +816,8 @@
   D: medals column exists in both the DataFrames
   E: medals column does not exist in any of the DataFrames being joined
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 53
+  exam_index: 5
+  question_index: 53
   section_index: null
   question: Which of the following fields in Cluster UI can be searched to check the
     utilization of the cluster CPU?
@@ -827,8 +827,8 @@
   D: CPU table under the Metrics Tab
   E: CPU table under the Driver logs Tab
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 54
+  exam_index: 5
+  question_index: 54
   section_index: null
   question: How many times the notification would be sent to the team if Just once
     is selected in the when triggered, send notification field?
@@ -838,8 +838,8 @@
   D: '3'
   E: '4'
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 55
+  exam_index: 5
+  question_index: 55
   section_index: null
   question: Which of the following will you not see on the Spark UI Home page?
   A: Jobs Tab
@@ -848,8 +848,8 @@
   D: Environment Tab
   E: JOBC/ODBC Server Tab
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 56
+  exam_index: 5
+  question_index: 56
   section_index: 1
   question: A data engineer creates a task named filter_countries with no dependency.
     After some days, the data engineer edits the job to add another task named get_capitals
@@ -862,8 +862,8 @@
   D: filter_countries -> get_currencies -> get_capitals
   E: get_capitals -> get_currencies -> filter_countries
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 57
+  exam_index: 5
+  question_index: 57
   section_index: null
   question: A team member has written a series of unit test cases to test an R function
     named return_sample_dataframe. Which of the following libraries must be installed
@@ -874,8 +874,8 @@
   D: null
   E: null
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 58
+  exam_index: 5
+  question_index: 58
   section_index: null
   question: A data engineering team is using Databricks Repos integrated with GitHub
     for version control. The team got to know that there are some tasks that cannot
@@ -887,8 +887,8 @@
   D: Resolve Merge conflicts
   E: All of the above tasks can
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 59
+  exam_index: 5
+  question_index: 59
   section_index: 2
   question: Which of the following is not true about Unit testing and Integration
     testing?
@@ -899,8 +899,8 @@
   D: Integration testing is a type of white-box testing.
   E: Unit testing can be performed simultaneously for different modules.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 60
+  exam_index: 5
+  question_index: 60
   section_index: 2
   question: Which of the following statements is true about the default retention
     period of the job runs?
@@ -915,8 +915,8 @@
   E: The details of a failed as well as a successful job run can only be accessed
     for 45 days.
 - exam_type: engineer-professional
-  exam_number: 5
-  question_number: 61
+  exam_index: 5
+  question_index: 61
   section_index: 1
   question: "The Databricks admin installed some Python libraries as part of cluster\
     \ creation. Now, a member of the team runs the following statement in one of their\

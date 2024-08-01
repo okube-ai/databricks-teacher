@@ -1,6 +1,6 @@
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 1
+  exam_index: 3
+  question_index: 1
   section_index: 1
   question: A data analyst is running a shell script in all the notebooks attached
     to the cluster. The shell script contains a long set of commands which is taking
@@ -12,8 +12,8 @@
   D: Increase the number of worker nodes to speed up the script
   E: Run the notebook using Databricks API
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 2
+  exam_index: 3
+  question_index: 2
   section_index: null
   question: Which of the following is a valid response to a JSON workload passed to
     2.0/jobs/create endpoint of Databricks REST API?
@@ -23,8 +23,8 @@
   D: 'success: true'
   E: 'payload: {job_id: 13746}'
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 3
+  exam_index: 3
+  question_index: 3
   section_index: null
   question: A data engineer wants to unmount a mount point mounted at /mnt/mountPoint1.
     Which of the following commands can be used by the data engineer?
@@ -34,8 +34,8 @@
   D: dbutils.widgets("/mnt/mountPoint1")
   E: dbutils.remove_moun /mnt/mountPoint
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 4
+  exam_index: 3
+  question_index: 4
   section_index: 2
   question: A Databricks admin has created a Cluster and provided Can Restart permission
     to a group of users named data_analysts. Which of the following cluster-related
@@ -46,8 +46,8 @@
   D: View the cluster metrics
   E: Edit the cluster
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 5
+  exam_index: 3
+  question_index: 5
   section_index: null
   question: Which of the data constraint forced the job to fail?
   A: The individual cell output is limited to 6 MB which caused the job to fail.
@@ -61,8 +61,8 @@
   E: The reason for the job failure cannot be determined solely by the size of the
     output as there is no limitation on the output size of the cells in a notebook.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 6
+  exam_index: 3
+  question_index: 6
   section_index: 2
   question: 'While creating a cluster for the engineering team, the Databricks admin
     added the ENV=PROD in Environment variables. The engineering team is using this
@@ -82,8 +82,8 @@
   E: "The environment variable's value will be updated in the cluster properties\
     \ and all the notebooks attached to the cluster will start using the updated value."
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 7
+  exam_index: 3
+  question_index: 7
   section_index: 2
   question: Which of the following statements is true about the data present in the
     tables? Assume that the UNDROP command, recently launched by Databricks, cannot
@@ -98,8 +98,8 @@
   E: The data in flights table cannot be recovered but the data in the airports table
     can be accessed at the DBFS location.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 8
+  exam_index: 3
+  question_index: 8
   section_index: null
   question: Which of the following statements depicts the correct usage of 2.0/jobs/update
     and 2.0/jobs/reset endpoints of the Databricks REST API?
@@ -119,8 +119,8 @@
     an existing job whereas 2.0/jobs/update is used to update the ID of an existing
     job.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 9
+  exam_index: 3
+  question_index: 9
   section_index: null
   question: Which of the following statements about interoperability between supported
     languages in Databricks notebooks is true?
@@ -134,8 +134,8 @@
     other language.
   E: SQL variables are the only ones that can be used in cells having other
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 10
+  exam_index: 3
+  question_index: 10
   section_index: 1
   question: An engineering team has a lot of members ranging from data analysts to
     data scientists. Some of the team members use an S3 bucket to access the data
@@ -148,8 +148,8 @@
   D: Select the readOQnly option while mounting the S3 bucket
   E: Mount the S3 bucket using the AWS instance profile
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 11
+  exam_index: 3
+  question_index: 11
   section_index: null
   question: Which of the following is correct about the Package cells in a Databricks
     notebook?
@@ -159,8 +159,8 @@
   D: A package cell returns an executable file when executed.
   E: A package cell can only work with Python classes.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 12
+  exam_index: 3
+  question_index: 12
   section_index: 0
   question: The compliance team is looking at some of the VACUUM commands used in
     the past on the hotel_bookings Delta table. The team is curious to know which
@@ -178,8 +178,8 @@
   E: Commands 3 and 6 will have the same effect whereas Commands 2 and 4 will have
     no effect on data files.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 13
+  exam_index: 3
+  question_index: 13
   section_index: 1
   question: Which of the following statements is true about the checkpoints in a streaming
     query?
@@ -190,8 +190,8 @@
   D: Both Band C
   E: All of the above
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 14
+  exam_index: 3
+  question_index: 14
   section_index: 2
   question: After attending a Spark conference, each one of the data engineers was
     asked to write one capability of AQE(Adaptive Query Execution). Which of the below
@@ -202,8 +202,8 @@
   D: Data Engineer 4 - Sort merge joins can be converted to broadcast joins.
   E: All of the above is true.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 15
+  exam_index: 3
+  question_index: 15
   section_index: 2
   question: Which of the following statements is not true about AutoLoader in Databricks?
   A: Auto Loader can load files from AWS S3, Google Cloud Storage as well as Databricks
@@ -214,8 +214,8 @@
   D: Auto Loader can be used to fetch image files from cloud storage.
   E: All of the above are false.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 16
+  exam_index: 3
+  question_index: 16
   section_index: 2
   question: A data engineering team needs to enable Change Data Capture(CDC) for all
     the newly created Delta tables. Which of the following statements can be used?
@@ -225,8 +225,8 @@
   D: All the Delta tables have CDC enabled, by default.
   E: SET spark.databricks.delta.properties.default.enableChangeDataCapture = true
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 17
+  exam_index: 3
+  question_index: 17
   section_index: 1
   question: Which of the following is true about the creators_new and creators_old
     tables?
@@ -243,8 +243,8 @@
     but not in the creators_old table whereas neither of the clones of the creators
     table can access the table properties.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 18
+  exam_index: 3
+  question_index: 18
   section_index: 1
   question: 'A data engineer executes the following query: spark.readStream.format(22:V\stable(tiars''swritestream\-option(*:.format(-option('':stable(te
     c''). What will be the result of the query and the performance table if a column
@@ -260,8 +260,8 @@
   E: The query will be stopped and the column name in the performance table will remain
     the same.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 19
+  exam_index: 3
+  question_index: 19
   section_index: null
   question: Which of the following statements explains the working of Z-ordering for
     a Delta table?
@@ -274,8 +274,8 @@
   D: Z-ordering works only on the text data columns.
   E: Z-ordering clears the column with text-only data before performing the ordering.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 20
+  exam_index: 3
+  question_index: 20
   section_index: 1
   question: Which of the following statements is correct about the rescue schema evolution
     mode in Auto Loader?
@@ -290,8 +290,8 @@
   E: On detection of a new column, the schema is evolved and the column is added to
     the _rescued_data column but the stream does not fail.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 21
+  exam_index: 3
+  question_index: 21
   section_index: 0
   question: Which of the following correctly fills the numbered blanks to achieve
     the expected result?
@@ -306,8 +306,8 @@
   E: 1. .drop('_commit_timestamp') \n2. .withColumnRenamed('change type', 'typeOfChange').withColumnRenamed('_commit_version',
     'version') \n3. .mode('overwrite')
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 22
+  exam_index: 3
+  question_index: 22
   section_index: 1
   question: "Which of the following is true about the join's functionality?"
   A: The updates made to the data present in the conversion_rate table will result
@@ -320,8 +320,8 @@
     has been processed and the other batch of data is yet to arrive for processing.
   E: The streaming join will fail as the default join type is outer join
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 23
+  exam_index: 3
+  question_index: 23
   section_index: null
   question: Which of the following Languages is/are supported by the DLT(Delta Live
     Tables) in Databricks?
@@ -331,8 +331,8 @@
   D: Python, SQL and Scala
   E: Python and SQL
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 24
+  exam_index: 3
+  question_index: 24
   section_index: 1
   question: Which of the following methods can be used to define a function which
     can be executed on the output of every micro-batch in a Spark Streaming query?
@@ -342,8 +342,8 @@
   D: explain()
   E: fun()
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 25
+  exam_index: 3
+  question_index: 25
   section_index: 1
   question: Which of the following methods can be used to remove duplicate columns
     after an inner join between two?
@@ -353,8 +353,8 @@
   D: dropDuplicateColumns()
   E: None of the above
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 26
+  exam_index: 3
+  question_index: 26
   section_index: null
   question: "Which of the following locations will be used to store the DLT'\
     s events log if the Delta Live Table's storage location has been set up as\
@@ -365,8 +365,8 @@
   D: /teams/prod/pipelines/events
   E: /teams/prod/system
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 27
+  exam_index: 3
+  question_index: 27
   section_index: null
   question: 'A team is working on the execution of a streaming query that uses Auto
     Loader to fetch CSV files from the cloud storage. Which of the following queries
@@ -377,8 +377,8 @@
   D: spark.readStream.format().option("schema", schema).option("load")
   E: spark.readStream.format().option("schema", schema).option("load")
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 28
+  exam_index: 3
+  question_index: 28
   section_index: 1
   question: A team of data engineers is testing a stream-stream join in Spark. Which
     of the following statements is true about these types of joins?
@@ -389,8 +389,8 @@
     as its source.
   E: A stream-stream join can only be performed in Scala.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 30
+  exam_index: 3
+  question_index: 30
   section_index: 1
   question: A new data engineer created a cluster with 6 workers. How many executors
     will be created as part of the cluster creation?
@@ -401,8 +401,8 @@
   E: A new cluster with 6 worker nodes cannot be created as the workers can be 2,
     4 or 8.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 31
+  exam_index: 3
+  question_index: 31
   section_index: 1
   question: A column named id serves as the PRIMARY KEY for the orders table as well
     as a FOREIGN KEY to the users table. Which of the following commands can be used
@@ -414,8 +414,8 @@
   D: ALTER orders DROP PRIMARY_KEY;
   E: ALTER TABLE orders DROP PRIMARY_KEY CASCADE;
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 32
+  exam_index: 3
+  question_index: 32
   section_index: 1
   question: Which of the following statements about data skipping is not true?
   A: Data skipping features are not enabled by default and need to be enabled using
@@ -426,8 +426,8 @@
   D: Data skipping helps in faster queries.
   E: Data skipping on columns having long string values is a costly operation.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 33
+  exam_index: 3
+  question_index: 33
   section_index: 2
   question: 'Which of the following tables will not be automatically broadcasted in
     case of a join with a table 2 GB in size if the spark.sql.autoBroadcastJoinThreshold
@@ -438,8 +438,8 @@
   D: Tables 1, 2 and 3
   E: Tables 2, 3 and 4
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 34
+  exam_index: 3
+  question_index: 34
   section_index: 1
   question: An upstream system sends more than 1000 files every hour with each file
     containing 5000-30000 records. The size of each file ranges from 580MB to 1.22
@@ -453,8 +453,8 @@
   D: maxFilesPerTrigger and maxRecordsPerTrigger
   E: maxFilesPerTrigger , maxBytesPerTrigger , maxRowsPerTrigger and maxRecordsPerTrigger
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 35
+  exam_index: 3
+  question_index: 35
   section_index: 2
   question: An insurance company Stores its data in such a way that the start_date
     and end_date of all the current and expired policies can be fetched from a single
@@ -468,8 +468,8 @@
   D: Type 3 SCD
   E: Type 4 SCD
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 36
+  exam_index: 3
+  question_index: 36
   section_index: 1
   question: Which technique can be used by the data engineer to solve this problem
     in an efficient manner?
@@ -480,8 +480,8 @@
   D: OPTIMIZE command should be used on the delta table.
   E: The data should be converted to CSV for faster reads.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 37
+  exam_index: 3
+  question_index: 37
   section_index: null
   question: Three different types of views available in Databricks i.e view, temporary
     view and global temporary view are being used in a single notebook. Which of the
@@ -493,8 +493,8 @@
   D: All the views except the temporary view will be accessible.
   E: Temporary and global temporary views will not be accessible.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 38
+  exam_index: 3
+  question_index: 38
   section_index: 1
   question: 'A data engineer tries to execute the following set of statements to test
     the data for radio and TV channels with valid frequencies:'
@@ -508,8 +508,8 @@
   E: All the commands will be executed successfully and the output will show 1 record
     from the tv_channels table.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 39
+  exam_index: 3
+  question_index: 39
   section_index: null
   question: Which of the following layers of a multi-hop architecture is most likely
     to include joins transformation?
@@ -519,8 +519,8 @@
   D: Platinum
   E: None of the above
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 40
+  exam_index: 3
+  question_index: 40
   section_index: 1
   question: 'A data engineer creates a user-defined function named sum which accepts
     two arguments. The first argument is of type integer while the second being a
@@ -535,8 +535,8 @@
   E: An error will be returned on the function call as the built-in sum function accepts
     only one argument.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 41
+  exam_index: 3
+  question_index: 41
   section_index: 1
   question: Which of the following statements can be used to create a partitioned
     delta table named records based on the year and month columns?
@@ -546,8 +546,8 @@
   D: CREATE records (id int, year int, month int) PARTITION BY year, month;
   E: CREATE records (id i int) PARTITION BY (year and month);
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 42
+  exam_index: 3
+  question_index: 42
   section_index: 1
   question: Which of the following statements correctly depicts the difference between
     SCHEMA and DATABASE keywords in Databricks?
@@ -559,8 +559,8 @@
     the SCHEMA keyword will not add delta logs for that database.
   E: Both B and D
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 43
+  exam_index: 3
+  question_index: 43
   section_index: null
   question: A new member has recently been added to a team of developers. The new
     member has been assigned a task to review a notebook. What is the minimum notebook-level
@@ -572,8 +572,8 @@
   D: Can Edit permission
   E: Can Manage permission
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 44
+  exam_index: 3
+  question_index: 44
   section_index: null
   question: 'A secret value stored in the env scope with its key set as password needs
     to be replaced with a new value. One of the data engineers suggests executing
@@ -589,8 +589,8 @@
   E: The command will result in an error as the scope should be deleted before executing
     this command.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 45
+  exam_index: 3
+  question_index: 45
   section_index: 2
   question: "A mobile company needs to delete the data(daily) of all the users who\
     \ requested to cancel their SIM card in the last 24 hours to be compliant with\
@@ -610,8 +610,8 @@
     followed by the VACUUM command over the Delta table with 24 hours as the retention
     period.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 46
+  exam_index: 3
+  question_index: 46
   section_index: null
   question: 'A data engineer wants to restrict access to the name column used in the
     following dynamic view definition: CREATE VIEW policy_view AS SELECT name, policy_id,
@@ -627,8 +627,8 @@
   E: "CREATE VIEW policy_view AS SELECT name(IF \u2018scum. \xA9 in member), policy_id,\
     \ age FROM policy"
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 47
+  exam_index: 3
+  question_index: 47
   section_index: 2
   question: The newly imported CSV files contain Pll data which is needed to be restricted
     until it becomes a part of a Delta table. The CSV files are currently stored in
@@ -642,8 +642,8 @@
     to DataFrames.
   E: The folder permission should be changed to No Permissions for all the users.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 48
+  exam_index: 3
+  question_index: 48
   section_index: 3
   question: A data engineer creates a job using the Databricks Jobs UI. Which of the
     following permissions is granted to the user being the creator of the job?
@@ -653,8 +653,8 @@
   D: Admin permission
   E: No permission
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 49
+  exam_index: 3
+  question_index: 49
   section_index: 4
   question: Which one of the following destinations is not supported for a Databricks
     SQL alert?
@@ -664,8 +664,8 @@
   D: Slack
   E: Email
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 50
+  exam_index: 3
+  question_index: 50
   section_index: 1
   question: A data engineer is working on a notebook that involves a large number
     of complex transformations. They want to Know more about the working of each transformation.
@@ -677,8 +677,8 @@
   D: explain(True)
   E: explain
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 51
+  exam_index: 3
+  question_index: 51
   section_index: 1
   question: Which of the following can be used to debug errors in Databricks notebook
     at the code level?
@@ -688,8 +688,8 @@
   D: '1'
   E: 1, 3
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 52
+  exam_index: 3
+  question_index: 52
   section_index: 1
   question: Which of the following explains the usage of a SparkListener?
   A: SparkListener can be used at the end of the spark application to call an application
@@ -701,8 +701,8 @@
   E: SparkListener is an always-on Databricks-specific tool, used for debugging spark
     code.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 53
+  exam_index: 3
+  question_index: 53
   section_index: 1
   question: Which of the following pairs of Spark UI Tabs and the details they display
     are not correctly matched?
@@ -712,8 +712,8 @@
   D: Jobs Tab - Thread Dump
   E: Executors Tab - Heap Histogram
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 54
+  exam_index: 3
+  question_index: 54
   section_index: 1
   question: An alert was created on the football match data. The status of the alert
     is being shown as OK. What can be interpreted from the current state of the alert?
@@ -726,8 +726,8 @@
   E: OK state is just an indicator of the successful deletion of the alert from the
     system.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 55
+  exam_index: 3
+  question_index: 55
   section_index: 1
   question: The following Databricks notebook is exported as a .ipynb file without
     clearing the command outputs. Another user imports this notebook into their workspace.
@@ -745,8 +745,8 @@
   E: The command outputs will be visible but the logs in Spark UI will not be visible
     in the imported notebook even if it is attached to the same cluster.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 56
+  exam_index: 3
+  question_index: 56
   section_index: 1
   question: Atask clean_data running as part of the Databricks job got failed, while
     the task dependent on clean_data still needed to be run. Which of the following
@@ -760,8 +760,8 @@
   E: The task(s) dependent on clean_data will continue to run as per the execution
     plan.
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 57
+  exam_index: 3
+  question_index: 57
   section_index: 1
   question: In the software engineering process in Databricks, who among the following
     is most likely to write a unit test for testing a function?
@@ -771,8 +771,8 @@
   D: SQL Analyst
   E: Tester(who will be testing that function)
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 59
+  exam_index: 3
+  question_index: 59
   section_index: 1
   question: 'A data engineer was attending a testing conference and heard the following
     lines: ''The following testing evaluates the system''s capability to work smoothly
@@ -786,8 +786,8 @@
   D: Integration testing
   E: Performance testing
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 60
+  exam_index: 3
+  question_index: 60
   section_index: 0
   question: Which of the following cells will be the first to return an error when
     run in a sequence?
@@ -797,8 +797,8 @@
   D: df = pd.DataFrame(listl)
   E: pip uninstall pandas
 - exam_type: engineer-professional
-  exam_number: 3
-  question_number: 61
+  exam_index: 3
+  question_index: 61
   section_index: 1
   question: A data engineer wants to pass the name of the task as a task parameter.
     Which of the following parameter correctly fulfills the requirement?

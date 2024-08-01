@@ -1,6 +1,6 @@
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 1
+  exam_index: 5
+  question_index: 1
   section_index: 4
   question: In Databricks, setting up a refresh schedule for dashboards is essential
     for ensuring that the displayed data is current. How does one configure a refresh
@@ -11,8 +11,8 @@
   D: Utilizing an external tool to trigger refreshes in the Databricks dashboard.
   E: Sending periodic requests to the Databricks support team to refresh the dashboard.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 2
+  exam_index: 5
+  question_index: 2
   section_index: 1
   question: When integrating Databricks SQL with popular visualization tools such
     as Tableau, Power BI, and Looker, which of the following steps is commonly involved
@@ -28,8 +28,8 @@
   E: Using email to transfer data snapshots from Databricks SQL to the visualization
     tools.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 3
+  exam_index: 5
+  question_index: 3
   section_index: 3
   question: 'Consider the following SalesData table: Region Product SalesAmount North
     A 100 South 200 East 150 West 300 An SQL query is executed, resulting in the following
@@ -47,8 +47,8 @@
   E: SELECT Region, Product, SUM(SalesAmount) AS TotalSales FROM SalesData GROUP BY
     GROUPING SETS ((Region, Product), (Region), ());
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 4
+  exam_index: 5
+  question_index: 4
   section_index: 1
   question: What are the essential steps to execute a basic SQL query in Databricks?
   A: Write a SQL query in a Databricks notebook, validate the syntax, execute the
@@ -61,8 +61,8 @@
   E: Import data into a Databricks dataset, use a BI tool to run the SQL query, and
     export the results to a CSV file.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 5
+  exam_index: 5
+  question_index: 5
   section_index: 5
   question: When conducting a sophisticated analysis in data analytics, which activity
     best illustrates the thoughtful integration of varied datasets?
@@ -73,8 +73,8 @@
   D: Separating datasets to preserve the uniqueness of each system's data.
   E: Randomly alternating between systems for data retrieval to maintain diversity.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 6
+  exam_index: 5
+  question_index: 6
   section_index: 2
   question: In the context of Delta Lake tables in Databricks, how is historical data
     maintained, and what command is used to access this history?
@@ -88,8 +88,8 @@
   E: Historical data is maintained in separate snapshot tables, accessed with the
     SHOW SNAPSHOT command.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 7
+  exam_index: 5
+  question_index: 7
   section_index: 3
   question: Given a database with a table Orders containing columns OrderId, CustomerId,
     OrderDate, and Amount, you want to retrieve the list of orders placed by a particular
@@ -101,8 +101,8 @@
   D: SELECT CustomerId, Amount FROM Orders WHERE OrderId = 123 AND Amount > 500;
   E: SELECT ~ FROM Orders WHERE CustomerId = 123 AND Amount > 500;
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 8
+  exam_index: 5
+  question_index: 8
   section_index: 4
   question: In Databricks, a data analyst is working on a dashboard composed of multiple
     visualizations and wants to ensure a consistent color scheme across all visualizations
@@ -119,8 +119,8 @@
   E: Implement a script in the dashboard code to automatically adjust the colors of
     all visualizations.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 9
+  exam_index: 5
+  question_index: 9
   section_index: 4
   question: In a Databricks dashboard designed to track regional sales data, an analyst
     introduces a parameter that allows users to select a specific region from a dropdown
@@ -139,8 +139,8 @@
   E: The parameter functions as a decorative element, enhancing the visual appeal
     but not the data content.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 10
+  exam_index: 5
+  question_index: 10
   section_index: 5
   question: In the context of statistics, what are key moments of a statistical distribution?
   A: The mean, median, and mode, which define the central tendency of the distribution.
@@ -152,8 +152,8 @@
   E: The skewness and kurtosis, which describe the shape and tail behavior of the
     distribution.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 11
+  exam_index: 5
+  question_index: 11
   section_index: 1
   question: You are using Databricks to load data from a CSV file located in DBFS
     (dbfs:/data/sales.csv) into a Delta table named SalesData. The CSV file has a
@@ -169,8 +169,8 @@
   E: "COPY INTO SalesData FROM \u2018dbhfs:/data/sales.csv' FORMAT = CSV FORMAT_OPTIONS\
     \ (\u2018header' = \u2018true');"
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 12
+  exam_index: 5
+  question_index: 12
   section_index: 5
   question: How is data enhancement commonly applied in analytics?
   A: By converting unstructured data into structured format for easier database storage.
@@ -180,8 +180,8 @@
   E: By incorporating external data sources to enrich existing datasets for deeper
     insights.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 13
+  exam_index: 5
+  question_index: 13
   section_index: 1
   question: A data analyst is using Databricks SQL to visualize data showing the monthly
     sales trends across different regions. To effectively communicate the data, the
@@ -195,8 +195,8 @@
     time.
   E: Heatmap, for representing the intensity of sales in different regions.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 14
+  exam_index: 5
+  question_index: 14
   section_index: 2
   question: In a Databricks Lakehouse, you are working with silver-level data which
     involves refined, cleansed, and transformed datasets. You have a silver table
@@ -215,8 +215,8 @@
   E: Employ SELECT DISTINCT customer_id, interaction_date, ... FROM CustomerInteractions
     to create a distinct list of interactions.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 15
+  exam_index: 5
+  question_index: 15
   section_index: 1
   question: As a data analyst, you are preparing to present your findings from a recent
     study. To effectively communicate these insights, you decide to use Databricks
@@ -228,8 +228,8 @@
   D: Crafting a SQL query to gather and summarize the relevant data.
   E: Scheduling meetings with stakeholders to discuss data interpretations.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 16
+  exam_index: 5
+  question_index: 16
   section_index: 3
   question: "Consider the following table named \u2018Employee':\n\nEmployeeID\n\
     4\n\nGiven the output:\n\nName\nJane Smith\nBob Brown\n\nName Department\nJohn\
@@ -241,8 +241,8 @@
   D: SELECT Department, Name FROM Employee WHERE Salary > 50000;
   E: SELECT Name, Department FROM Employee WHERE Salary OVER 50000;
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 17
+  exam_index: 5
+  question_index: 17
   section_index: 2
   question: What is the correct method to rename a table in Databricks?
   A: Modify the table name in the metadata file.
@@ -251,8 +251,8 @@
   D: Delete the old table and create a new one with the desired name.
   E: Usethe RENAME TABLE command.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 18
+  exam_index: 5
+  question_index: 18
   section_index: 3
   question: A data analyst is working with a database in Databricks and needs to
     update a table named SalesData. The analyst has a new batch of data that includes
@@ -274,8 +274,8 @@
     is specifically for loading data from external sources, and MERGE INTO is for
     updating existing records only.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 19
+  exam_index: 5
+  question_index: 19
   section_index: 1
   question: Which of the following best describes the functionality of Partner Connect
     in the Databricks environment?
@@ -290,8 +290,8 @@
   E: tool designed exclusively for managing and scheduling SQL queries within the
     Databricks platform.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 20
+  exam_index: 5
+  question_index: 20
   section_index: 2
   question: In Azure Databricks, when using a table visualization type for SQL queries,
     which of the following statements accurately reflects its capabilities and limitations?
@@ -306,8 +306,8 @@
   E: Table visualizations in Databricks automatically aggregate data within the result
     set, providing a summary view.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 21
+  exam_index: 5
+  question_index: 21
   section_index: 2
   question: What are the primary benefits of implementing Delta Lake within the Databricks
     Lakehouse architecture?
@@ -318,8 +318,8 @@
   D: It offers high-speed streaming data ingestion and real-time analytics capabilities.
   E: Delta Lake primarily enhances data security and compliance features.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 22
+  exam_index: 5
+  question_index: 22
   section_index: 4
   question: "When sharing Databricks SQL dashboards, there are two primary settings:\
     \ \u2018Run as viewer' and \u2018Run as owner'. What are the pros and\
@@ -337,8 +337,8 @@
   E: "\u2018Run as viewer' and 'Run as owner' both provide the same level of data\
     \ visibility (pro), but may have limitations in customizing query execution (con)."
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 23
+  exam_index: 5
+  question_index: 23
   section_index: 2
   question: In the context of Unity Catalog in Databricks, what is the purpose of
     specifying a MANAGED LOCATION when creating a catalog or schema?
@@ -349,8 +349,8 @@
   E: To specify the computational resources for processing data in the catalog or
     schema.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 24
+  exam_index: 5
+  question_index: 24
   section_index: 3
   question: You are analyzing a dataset OrderDetails in a Databricks SQL environment,
     which includes OrderlD, ProductID, Quantity, and UnitPrice. Your objective is
@@ -364,8 +364,8 @@
   D: SELECT ProductID, AVG(UnitPrice * Quantity) FROM OrderDetails GROUP BY ProductID;
   E: SELECT ProductID, SUM(Quantity) FROM OrderDetails GROUP BY ProductID;
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 25
+  exam_index: 5
+  question_index: 25
   section_index: 2
   question: In Databricks, how does the persistence of data differ between a view
     and a temporary view?
@@ -377,8 +377,8 @@
   E: Both views and temporary views do not store data physically, but a view persists
     beyond the session.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 26
+  exam_index: 5
+  question_index: 26
   section_index: 1
   question: What is the primary purpose of Databricks SQL endpoints/warehouses in
     a data analytics environment?
@@ -392,8 +392,8 @@
   E: To act as the primary interface for application development and deployment within
     the Databricks ecosystem.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 27
+  exam_index: 5
+  question_index: 27
   section_index: 2
   question: What are the primary responsibilities of a table owner in Databricks?
   A: Optimizing the table for faster query performance.
@@ -402,8 +402,8 @@
   D: Regularly updating the table data to keep it current.
   E: Managing user access and permissions for the table.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 28
+  exam_index: 5
+  question_index: 28
   section_index: 1
   question: When importing data from an Amazon S3 bucket into a Databricks environment
     using Databricks SQL, which SQL command is typically used to perform this operation?
@@ -414,8 +414,8 @@
   D: "LOAD DATA INPATH \u2018s3://mybucket/mydata.csv'' INTO TABLE my_table;"
   E: "COPY INTO my_table FROM 's3://mybucket/mydata.csv' FILEFORMAT = CSV;"
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 29
+  exam_index: 5
+  question_index: 29
   section_index: 4
   question: In Databricks SQL, when creating a basic, schema-specific visualization,
     what is the first step you should take?
@@ -425,8 +425,8 @@
   D: Select the visualization type from the visualization menu.
   E: Adjust the data refresh rate to ensure real-time visualization.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 30
+  exam_index: 5
+  question_index: 30
   section_index: 3
   question: In a Databricks environment, you are optimizing the performance of a data
     processing task that involves complex operations on arrays within a Spark SQL
@@ -438,8 +438,8 @@
   D: SELECT COLLECT_LIST(scores) FROM dataset GROUP BY scores;
   E: SELECT ARRAY_CONTAINS(scores, 16) FROM dataset;
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 31
+  exam_index: 5
+  question_index: 31
   section_index: 1
   question: In the context of Databricks SQL, which of the following statements accurately
     describes both a caution and a benefit of working with streaming data?
@@ -455,8 +455,8 @@
   E: 'Benefit: Streaming data simplifies data transformation. Caution: It can lead
     to increased costs due to the need for more computing resources.'
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 32
+  exam_index: 5
+  question_index: 32
   section_index: 3
   question: "In a Databricks SQL context, consider a dataset with columns \u2018Department'\
     , \u2018Employee', and \u2018Sales'. You are required to analyze the\
@@ -480,8 +480,8 @@
     , subtotals for each combination of \u2018Department and \u2018Employee'\
     , and a grand total."
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 33
+  exam_index: 5
+  question_index: 33
   section_index: 4
   question: A data analyst is creating a dashboard to present monthly sales data to
     company executives. The initial version of the dashboard contains accurate data
@@ -498,8 +498,8 @@
     accurate interpretation of the data.
   E: Formatting is primarily used to reduce the size of the data set visually displayed.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 34
+  exam_index: 5
+  question_index: 34
   section_index: 4
   question: In Databricks, what is the impact on a dashboard if the configured refresh
     rate for the dashboard is set to be less frequent than the 'Auto Stop' setting
@@ -514,8 +514,8 @@
   E: The dashboard will stop refreshing once the warehouse enters 'Auto Stop' mode,
     potentially leading to outdated data being displayed.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 35
+  exam_index: 5
+  question_index: 35
   section_index: 3
   question: In a Databricks SQL environment, you are tasked with analyzing sales data.
     The table SalesRecords contains columns SalelD, ProductID, SaleAmount, and SaleDate.
@@ -532,8 +532,8 @@
   E: SELECT ProductID FROM SalesRecords WHERE SaleAmount > 56@ AND SaleDate = (SELECT
     MIN(SaleDate) FROM SalesRecords GROUP BY ProductID);
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 36
+  exam_index: 5
+  question_index: 36
   section_index: 3
   question: You have a table customer_orders in Databricks SQL with a column order_info
     in JSON format. This column includes a nested array items, where each element
@@ -546,8 +546,8 @@
   E: SELECT order_info:items[*].product_id, order_info:items[*].quantity FROM customer_orders
     UNNEST items;
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 37
+  exam_index: 5
+  question_index: 37
   section_index: 2
   question: How can you determine if a table in Databricks is managed or unmanaged?
   A: By the type of data stored in the table.
@@ -556,8 +556,8 @@
   D: By the speed of query execution on the table.
   E: By the number of columns in the table.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 38
+  exam_index: 5
+  question_index: 38
   section_index: 1
   question: Which of the following best describes the key audience and side audiences
     for Databricks SQL? Select the most appropriate option.
@@ -572,8 +572,8 @@
   E: The key audience includes both data analysts and data scientists, with no significant
     side audiences.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 39
+  exam_index: 5
+  question_index: 39
   section_index: 4
   question: Regarding the accessibility and functionality of Databricks SQL dashboards,
     which statement best reflects their use in a business environment by various stakeholders?
@@ -588,8 +588,8 @@
   E: Databricks SQL dashboards are exclusively for top-level executives for strategic
     decision-making and are not accessible to other users.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 40
+  exam_index: 5
+  question_index: 40
   section_index: 2
   question: Which of the following is a critical organization-specific consideration
     when handling PII data?
@@ -600,8 +600,8 @@
   D: Developing a uniform public access policy for all PII data.
   E: Prioritizing cost-saving measures over data security for PII data.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 41
+  exam_index: 5
+  question_index: 41
   section_index: 1
   question: In Databricks SQL, what is the primary purpose of using the ANALYZE TABLE
     command?
@@ -611,8 +611,8 @@
   D: To change the data storage format of the table.
   E: To back up the table data to a specified location.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 42
+  exam_index: 5
+  question_index: 42
   section_index: 1
   question: Which of the following statements best describes the function of Databricks
     SQL queries in the Databricks platform?
@@ -627,8 +627,8 @@
   E: Databricks SQL queries are used exclusively for scheduling jobs and automating
     workflows, without any SQL code execution capabilities.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 43
+  exam_index: 5
+  question_index: 43
   section_index: 5
   question: Which of the following statements accurately distinguishes between discrete
     and continuous statistics in the context of data analysis?
@@ -642,8 +642,8 @@
   E: Discrete data is used for time series analysis, while continuous data is not
     suitable for this purpose.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 44
+  exam_index: 5
+  question_index: 44
   section_index: 2
   question: In the context of Databricks, how is Personally Identifiable Information
     (PII) typically handled to ensure data privacy and compliance?
@@ -653,8 +653,8 @@
   D: By anonymizing PII data through built-in Databricks functions.
   E: Through the use of Delta Lake features for fine-grained access control.
 - exam_type: analyst-associate
-  exam_number: 5
-  question_number: 45
+  exam_index: 5
+  question_index: 45
   section_index: 3
   question: What type of JOIN was used in the query?
   A: INNER JOIN

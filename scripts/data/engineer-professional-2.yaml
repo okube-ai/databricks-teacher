@@ -1,6 +1,6 @@
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 0
+  exam_index: 2
+  question_index: 0
   section_index: 1
   question: Which of the following describes the minimal permissions a data engineer
     needs to attach a notebook to an existing cluster?
@@ -10,8 +10,8 @@
   D: Cluster creation allowed + Can Attach To privileges on the cluster
   E: Cluster creation allowed + Can Restart privileges on the cluster
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 1
+  exam_index: 2
+  question_index: 1
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to start an existing cluster, and attach a notebook to it?
@@ -21,8 +21,8 @@
   D: Cluster creation allowed + Can Attach To privileges on the cluster
   E: Cluster creation allowed + Can Restart privileges on the cluster
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 2
+  exam_index: 2
+  question_index: 2
   section_index: 1
   question: 'The data engineering team has a Delta Lake table created with the following
     query: CREATE TABLE customers_clone AS SELECT + FROM customers. A data engineer
@@ -35,8 +35,8 @@
   D: Both the table's metadata and the data files will be deleted
   E: The table will not be dropped until VACUUM command is run
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 3
+  exam_index: 2
+  question_index: 3
   section_index: null
   question: For production Structured Streaming jobs, which of the following retry
     policies is recommended to use ?
@@ -46,8 +46,8 @@
   D: No Retries, with Unlimited Concurrent Runs
   E: 1Retry, with 1 Maximum Concurrent Run
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 5
+  exam_index: 2
+  question_index: 5
   section_index: null
   question: In Delta Lake tables, which of the following is the file format for the
     transaction log ?
@@ -57,8 +57,8 @@
   D: Hive-specific format
   E: Both, Parquet and JSON
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 6
+  exam_index: 2
+  question_index: 6
   section_index: null
   question: Which of the following describes the minimal permissions a data engineer
     needs to modify permissions of an existing cluster ?
@@ -68,8 +68,8 @@
   D: Cluster creation allowed + Can Manage privileges on the cluster
   E: Only administrators can modify permissions on existing clusters
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 7
+  exam_index: 2
+  question_index: 7
   section_index: 1
   question: Which of the following is the default target file size when compacting
     small files of a Delta table by manually running OPTIMIZE command ?
@@ -79,8 +79,8 @@
   D: 512MB
   E: 1024MB
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 8
+  exam_index: 2
+  question_index: 8
   section_index: 2
   question: A feature built into Delta Lake that allows to automatically generate
     CDC feeds about Delta Lake tables
@@ -90,8 +90,8 @@
   D: Slowly Changing Dimension (SCD)
   E: Change Data Feed (CDF)
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 9
+  exam_index: 2
+  question_index: 9
   section_index: null
   question: Which of the following could explain the senior data engineer's remark?
   A: Watermarking is also needed to only track state information for a window of time
@@ -103,8 +103,8 @@
     into the table.
   E: More information is needed to determine the correct response
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 10
+  exam_index: 2
+  question_index: 10
   section_index: 2
   question: Which of the following describes the ability given by the MODIFY privilege
     ?
@@ -114,8 +114,8 @@
   D: All the above abilities are given by the MODIFY privilege
   E: None of these options correctly describe the ability given by the MODIFY privilege
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 11
+  exam_index: 2
+  question_index: 11
   section_index: 1
   question: 'Given the following Structured Streaming query: (spark.readStream.table(''cedc-s'').writeStream.option(''checkpointLocation'',
     checkpointPath).table(). Which of the following is the trigger Interval for this
@@ -127,8 +127,8 @@
     the trigger stops.
   E: More information is needed to determine the correct response
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 12
+  exam_index: 2
+  question_index: 12
   section_index: null
   question: Which of the following statements regarding the retention policy of Delta
     lake CDF is correct ?
@@ -139,8 +139,8 @@
   D: CDF data files can be purged by running VACUUM CHANGES command
   E: CDF data files can never be permanently purged from Delta Lake
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 13
+  exam_index: 2
+  question_index: 13
   section_index: 1
   question: Which statement describes the resulting course_students table ?
   A: it's a virtual table that has no physical data. The SELECT statement will be
@@ -157,8 +157,8 @@
     \ table creation, but its output will be stored in the cache of the current active\
     \ Spark session."
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 14
+  exam_index: 2
+  question_index: 14
   section_index: 1
   question: "A data engineer has a streaming job that updates a Delta table named\
     \ \u2018user_activities' by the results of a join between a streaming Delta\
@@ -177,8 +177,8 @@
     batch mode.
   E: In Delta Lake, static tables can not be joined with streaming tables.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 15
+  exam_index: 2
+  question_index: 15
   section_index: 1
   question: "Given the following query on the Delta table \u2018customers' on\
     \ which Change Data Feed is enabled:\n\nspark.read\n.option(ree\n.option(=\nstable(cuitac\n\
@@ -193,8 +193,8 @@
   E: The entire history of updated records will overwrite the target table at each
     execution.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 16
+  exam_index: 2
+  question_index: 16
   section_index: 1
   question: A data engineer wants to use Autoloader to ingest input data into a target
     table, and automatically evolve the schema of the table when new fields are detected.
@@ -206,8 +206,8 @@
   E: Autoloader can not automatically evolve the schema of the table when new fields
     are detected
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 17
+  exam_index: 2
+  question_index: 17
   section_index: 1
   question: 'Given the following query:
 
@@ -230,8 +230,8 @@
     records from stream_sink that have been added since the last time the job was
     run.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 18
+  exam_index: 2
+  question_index: 18
   section_index: 1
   question: "The data engineering team has a Delta table named \u2018users'.\
     \ A recent CHECK constraint has been added to the table using the following command:\
@@ -250,8 +250,8 @@
   E: The outcome depends on the action defined using the ON VIOLATION clause in the
     table properties.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 19
+  exam_index: 2
+  question_index: 19
   section_index: 1
   question: Which of the following is Not a valid Delta Lake File Statistics ?
   A: The total number of records in the added data file.
@@ -260,8 +260,8 @@
   D: The average value for each of the first 32 columns
   E: The number of null values for each of the first 32 columns
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 20
+  exam_index: 2
+  question_index: 20
   section_index: 1
   question: Which statement regarding Delta Lake File Statistics is Not correct?
   A: The statistics are leveraged for data skipping when executing selective queries.
@@ -270,8 +270,8 @@
   D: By default, Delta Lake captures statistics on the first 32 columns of the table.
   E: Nested fields do not count when determining the first 32 columns in the table.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 21
+  exam_index: 2
+  question_index: 21
   section_index: null
   question: Which of the following definitions correctly describes a Slowly Changing
     Dimension of Type 0 ?
@@ -283,8 +283,8 @@
   E: "It's a table that maintains current records, while older records are stored\
     \ in another table."
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 22
+  exam_index: 2
+  question_index: 22
   section_index: 2
   question: Which SCD Type is this table ?
   A: SCD Type0
@@ -293,8 +293,8 @@
   D: it's a combination of Type 0 and Type 2 SCDs
   E: More information is needed to determine the SCD Type of this table
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 23
+  exam_index: 2
+  question_index: 23
   section_index: 1
   question: "The data engineering team maintains a Delta Lake table of SCD Type 1.\
     \ A junior data engineer noticed a folder named \u2018_change_data' in the\
@@ -311,8 +311,8 @@
   E: "CDF feature is enabled on the table. The \u2018_change_data' folder is\
     \ the location where CDF data is stored"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 24
+  exam_index: 2
+  question_index: 24
   section_index: 1
   question: "A data engineer has the following streaming query with a blank: spark.\
     \ readStream stable( 2: - groupBy (-agq( count( aval cL\xE9 ewritestream soption(\
@@ -325,8 +325,8 @@
   D: withWatermark("order_timestamp", "15 minutes")
   E: interval("order_timestamp", "minutes")
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 25
+  exam_index: 2
+  question_index: 25
   section_index: 1
   question: The data engineering team is looking for a simple solution to share part
     of a large Delta Lake table with the data science team. Only department-specific
@@ -339,8 +339,8 @@
   D: A stored view on the existing table
   E: An ad-hoc query on the existing table
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 26
+  exam_index: 2
+  question_index: 26
   section_index: null
   question: A junior data engineer has created the table orders_backup'\
     \ as a copy of the table "orders". Recently, the team started getting\
@@ -357,8 +357,8 @@
   E: "The orders_backup table was created by fully copying the orders table'\
     s directory"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 27
+  exam_index: 2
+  question_index: 27
   section_index: null
   question: Which of the following statements regarding cloning tables on Databricks
     is correct?
@@ -372,8 +372,8 @@
   E: Changes made to either deep or shallow clones affect the source table unless
     CASCADE option is False.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 28
+  exam_index: 2
+  question_index: 28
   section_index: 1
   question: 'A data engineer wants to optimize the following join operation by allowing
     the smaller dataFrame to be sent to all executor nodes in the cluster:'
@@ -383,8 +383,8 @@
   D: pyspark.sql.functions.diffuse
   E: pyspark.sql.functions.shuffle
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 29
+  exam_index: 2
+  question_index: 29
   section_index: 1
   question: Based on the above schema and the specified requirement, which column
     is a good candidate for partitioning?
@@ -394,8 +394,8 @@
   D: partition
   E: timestamp
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 30
+  exam_index: 2
+  question_index: 30
   section_index: 1
   question: The data engineering team wants to know if the tables that they maintain
     in the Lakehouse are over-partitioned. Which of the following is an indicator
@@ -406,8 +406,8 @@
   D: If the partitioning columns are fields of low cardinality
   E: If the data in the table continues to arrive indefinitely.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 31
+  exam_index: 2
+  question_index: 31
   section_index: 1
   question: "A data engineer is using the following spark configurations in a pipeline\
     \ to enable Optimized Writes and Auto Compaction: spark. cont.3=\xB0 spark.cont.\
@@ -424,8 +424,8 @@
   E: There is no way to enable Z-order indexing with Auto Compaction since it does
     not support Z-Ordering
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 32
+  exam_index: 2
+  question_index: 32
   section_index: 1
   question: Which statement describes the result of this code block each time it is
     executed?
@@ -444,8 +444,8 @@
   E: These join operations are stateful, meaning that they will wait for unmatched
     records to be added to the source tables prior to calculating the results.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 33
+  exam_index: 2
+  question_index: 33
   section_index: null
   question: "The data engineering team has a large Delta Lake table named \u2018user_posts'\
     \ which is partitioned over the \u2018year' column. The table is used as\
@@ -459,8 +459,8 @@
   D: -option("ignoreDeletes", "year")
   E: -option("ignoreDeletes", True)
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 34
+  exam_index: 2
+  question_index: 34
   section_index: null
   question: A data engineer created a new table along with a comment using the following\
     \ query:\n\nCREATE TABLE payments\nCOMMENT "Trial" .\nAS SELECT + FROM\
@@ -472,8 +472,8 @@
   D: DESCRIBE TABLE payments
   E: DESCRIBE EXTENDED payments
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 35
+  exam_index: 2
+  question_index: 35
   section_index: 1
   question: Which of the following commands allows data engineers to perform an insert-only
     merge?
@@ -488,8 +488,8 @@
   E: MERGE INTO orders USING new_orders ON orders.orders_id = new_orders.orders_id
     WHEN NOT MATCHED INSERT * ELSE IGNORE *
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 36
+  exam_index: 2
+  question_index: 36
   section_index: null
   question: Which of the following is considered a limitation when using the MERGE
     INTO command ?
@@ -501,8 +501,8 @@
   D: Merge does not support records deletion. It supports only upsert operations.
   E: All the above are considered limitations of the MERGE INTO command
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 37
+  exam_index: 2
+  question_index: 37
   section_index: 1
   question: 'A data engineer is using a foreachBatch logic to upsert data in a target
     Delta table. The function to be called at each new microbatch processing is displayed
@@ -515,8 +515,8 @@
   D: microBatchDF.sparkSession.sql(sql_query)
   E: microBatchDF._jdf.sparkSession().sql(sql_query)
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 38
+  exam_index: 2
+  question_index: 38
   section_index: 1
   question: A data engineer has been asked to develop a nightly batch job for workforce\
     \ productivity analytics. The job will process events of employees productivity\
@@ -531,8 +531,8 @@
   D: performance_df.write.option('dateFormat', 'yyyy-MM-dd').saveAsTable('employees_performance')
   E: performance_df.write.partitionBy('date').saveAsTable('employees_performance')
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 39
+  exam_index: 2
+  question_index: 39
   section_index: 1
   question: "The data engineering team has a large Delta table named \u2018user_messages'\
     \ with the following schema: msg_id INT, user_id INT, msg_time TIMESTAMP, msg_title\
@@ -551,8 +551,8 @@
   E: The table does not leverage file skipping because Delta Lake statistics are not
     captured on columns of type STRING
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 40
+  exam_index: 2
+  question_index: 40
   section_index: 2
   question: "The data engineering team has a pipeline that ingest Kafka source data\
     \ into a Multiplex bronze table. This Delta table is partitioned based on the\
@@ -567,8 +567,8 @@
   E: None of the above statements is correct. Table partitioning can not help to meet
     the specified requirement.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 41
+  exam_index: 2
+  question_index: 41
   section_index: null
   question: In which of the following locations will the employees table be located?
   A: dbfs:/user/hive/warehouse
@@ -577,8 +577,8 @@
   D: dbfs:/user/hive/databases/db_hr.db
   E: More information is needed to determine the correct answer
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 42
+  exam_index: 2
+  question_index: 42
   section_index: 1
   question: 'The data engineering team has a dynamic view with following definition:
     CREATE VIEW students_vw AS SELECT = FROM students WHERE CASE WHEN 1S _member(
@@ -600,8 +600,8 @@
     \ matter if they are active or not. While users that are not members of the specified\
     \ group will see "REDACTED" values for the records of inactive students
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 43
+  exam_index: 2
+  question_index: 43
   section_index: 1
   question: Which of the following commands can a data engineer use to grant full
     permissions to the HR team on the table employees ?
@@ -611,8 +611,8 @@
   D: GRANT ALL PRIVILEGES ON TABLE hr_team TO employees
   E: GRANT SELECT, MODIFY, CREATE, READ_METADATA ON TABLE employees TO hr_team
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 44
+  exam_index: 2
+  question_index: 44
   section_index: null
   question: The data engineering team has a secret scope named "prod-scope"\
     \ that contains sensitive secrets in a production workspace. A data engineer in\
@@ -625,8 +625,8 @@
   D: Users with READ permission on the secret scope
   E: All the above are able to use the secrets in the secret scope
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 45
+  exam_index: 2
+  question_index: 45
   section_index: null
   question: "In Spark UI, which of the following SQL metrics is displayed on the query'\
     s details page?"
@@ -636,8 +636,8 @@
   D: Spill size
   E: Number of input rows
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 46
+  exam_index: 2
+  question_index: 46
   section_index: null
   question: 'A data engineer is analyzing a Spark job via the Spark UI. They have
     the following summary metrics for 27 completed tasks in a particular stage
@@ -656,8 +656,8 @@
   D: Number of tasks are operating over partitions with larger skewed amounts of data.
   E: Number of tasks are operating over near empty partitions
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 47
+  exam_index: 2
+  question_index: 47
   section_index: 1
   question: A data engineer has heard recently that users who have access to Databricks
     Secrets could be able to display the values of secrets in notebooks. Which of
@@ -680,8 +680,8 @@
   E: There is no workaround to print secrets values in plain text in notebooks. A
     string "REDACTED" will always be displayed when trying to print out a secret value.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 48
+  exam_index: 2
+  question_index: 48
   section_index: 4
   question: "A data engineer wanted to create the job \u2018process-sales' using\
     \ Databricks REST API. However, they sent by mistake 2 POST requests to the endpoint\
@@ -698,8 +698,8 @@
   E: 2 jobs named "process-sales" will be created in the workspace, but\
     \ with different job_id
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 49
+  exam_index: 2
+  question_index: 49
   section_index: 4
   question: A data engineer wants to use Databricks REST API to retrieve the metadata
     of a job run using its run_id. Which of the following REST API calls achieves
@@ -710,8 +710,8 @@
   D: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-output'"
   E: "Send GET request to the endpoint \u2018api/2.1/jobs/runs/get-metadata'"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 50
+  exam_index: 2
+  question_index: 50
   section_index: null
   question: Which of the following commands prints the current working directory of
     a notebook in Databricks Repos ?
@@ -721,8 +721,8 @@
   D: "os.environ['PYTHONPATH']"
   E: "ricks Repos, the working directory of any notebook is \u2018/databricks/driver'"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 51
+  exam_index: 2
+  question_index: 51
   section_index: null
   question: Which of the following establishes a Python file as a notebook in Databricks
     ?
@@ -735,8 +735,8 @@
   E: None of the above statements is correct. Notebooks are binary files with .pydb
     file extension.
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 52
+  exam_index: 2
+  question_index: 52
   section_index: 0
   question: A data engineer wants to upload a CSV file from local system storage to
     the DBFS of a Databricks workspace. They have Databricks CLI already configured
@@ -748,8 +748,8 @@
   D: configure
   E: libraries
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 53
+  exam_index: 2
+  question_index: 53
   section_index: null
   question: Which of the following statements correctly describes Unit Testing ?
   A: "It's an approach to simulate a user experience to ensure that the application\
@@ -763,8 +763,8 @@
   E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
     \ of an application"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 54
+  exam_index: 2
+  question_index: 54
   section_index: 2
   question: Which of the following statements correctly describes Integration Testing
     ?
@@ -779,8 +779,8 @@
   E: "it's an approach to measure the reliability, speed, scalability, and responsiveness\
     \ of an application"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 55
+  exam_index: 2
+  question_index: 55
   section_index: 1
   question: Which of the following describes Cron syntax in Databricks Jobs ?
   A: "It's an expression to represent the maximum concurrent runs of a job"
@@ -791,8 +791,8 @@
   E: "It's an expression to represent complex job schedule that can be defined\
     \ programmatically"
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 56
+  exam_index: 2
+  question_index: 56
   section_index: 4
   question: A data engineer has a Job with multiple tasks that takes more than 2 hours
     to complete. In the last run, the final task unexpectedly failed. Which of the
@@ -805,8 +805,8 @@
   E: They can run the Job in Production mode which automatically retries execution
     in case of errors
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 57
+  exam_index: 2
+  question_index: 57
   section_index: null
   question: As a general rule, before scheduling notebooks in production, which of
     the following commands should be removed from the code?
@@ -816,8 +816,8 @@
   D: Display commands
   E: Import commands
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 58
+  exam_index: 2
+  question_index: 58
   section_index: 1
   question: Which of the following statements best describes the use of Python wheels
     in Databricks ?
@@ -827,8 +827,8 @@
   D: Task 1 will completely fail. Tasks 2 and 3 will run and succeed
   E: All tasks will partially fail
 - exam_type: engineer-professional
-  exam_number: 2
-  question_number: 59
+  exam_index: 2
+  question_index: 59
   section_index: 1
   question: If there is an error in the notebook 1 that is associated with Task 1,
     which statement describes the run result of this job?
