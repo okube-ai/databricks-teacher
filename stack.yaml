@@ -14,6 +14,8 @@ resources:
 #  databricks_sqlqueries: ${include.resources/sqlqueries.yaml}
   pipelines:
     pl-databricks-exams: ${include.resources/pl-databricks-exams.yaml}
+  databricks_jobs:
+    job-generate-databricks-exam-questions: ${include.resources/job-generate-databricks-exam-questions.yaml}
 #  databricks_jobs:
 #    job-databricks-exams: ${include.resources/job-databricks-exams.yaml}
 #  databricks_vectorsearchendpoints:

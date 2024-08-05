@@ -1,0 +1,11 @@
+name: job-generate-databricks-exam-questions
+tasks:
+  - task_key: generate-questions
+    notebook_task:
+      notebook_path: /.laktory/jobs/generate_databricks_exam_questions.py
+
+access_controls:
+  - group_name: account users
+    permission_level: CAN_VIEW
+  - group_name: role-engineers
+    permission_level: CAN_MANAGE_RUN

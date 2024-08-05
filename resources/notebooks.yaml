@@ -14,8 +14,16 @@ notebook-job-build_dcc:
     - group_name: role-engineers
       permission_level: CAN_RUN
 
-notebook-job-ingest-exam-sections:
-  source: ./notebooks/jobs/ingest_exam_sections.py
+notebook-job-build-databricks-exam-sections:
+  source: ./notebooks/jobs/build_databricks_exam_sections.py
+  access_controls:
+    - group_name: account users
+      permission_level: CAN_READ
+    - group_name: role-engineers
+      permission_level: CAN_RUN
+
+notebook-job-generate-databricks-exam-questions:
+  source: ./notebooks/jobs/generate_databricks_exam_questions.py
   access_controls:
     - group_name: account users
       permission_level: CAN_READ
