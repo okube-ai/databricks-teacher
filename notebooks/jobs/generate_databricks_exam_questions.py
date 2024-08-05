@@ -4,6 +4,7 @@
 # COMMAND ----------
 import time
 import json
+import uuid
 from datetime import datetime
 from collections import defaultdict
 from langchain.prompts import PromptTemplate
@@ -16,6 +17,7 @@ from laktory import models
 
 df = spark.read.table("dev.databricks.slv_exam_sections")
 pdf = df.toPandas()
+run_id = str(uuid.uuid4())
 
 # ----------------------------------------------------------------------- #
 # Set Prompt and Chain                                                    #
@@ -107,6 +109,8 @@ for _, row in pdf.iterrows():
                 name="databricks_exam_question",
                 producer=models.DataProducer(name="okube"),
                 data={
+                    "uuid": str(uuid.uuid4()),
+                    "run_id": run_id,
                     "created_at": created_at,
                     "exam_type": exam_type,
                     "section_index": section_index,
@@ -123,4 +127,3 @@ for _, row in pdf.iterrows():
                 },
             )
             event.to_databricks(suffix=f"{section_id}-{len(section_questions)-1:03d}")
-
