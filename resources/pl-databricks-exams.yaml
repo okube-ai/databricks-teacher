@@ -10,26 +10,6 @@ databricks_job:
         max_workers: 2
       spark_version: 15.3.x-scala2.12
       node_type_id: Standard_DS3_v2
-#orchestrator: DLT
-#dlt:
-#  resource_name: pl-databricks-exam-questions
-#  catalog: ${vars.env}
-#  target: databricks
-#  development: ${vars.is_dev}
-#  configuration:
-#    pipeline_name: pl-databricks-exam-questions
-#
-#  serverless: True
-#
-#  libraries:
-#    - notebook:
-#        path: /.laktory/dlt/dlt_laktory_pl.py
-#
-#  access_controls:
-#    - group_name: account users
-#      permission_level: CAN_VIEW
-#    - group_name: role-engineers
-#      permission_level: CAN_RUN
 
 udfs:
   - module_name: custom_functions
@@ -260,6 +240,10 @@ nodes:
     transformer:
       nodes:
       - with_columns:
+        - name: uuid
+          sql_expr: data.uuid
+        - name: run_id
+          sql_expr: data.run_id
         - name: created_at
           type: timestamp
           sql_expr: data.created_at
